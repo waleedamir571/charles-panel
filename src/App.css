@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+.login-head {
+  font-size: 3rem;
+  font-weight: 700;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-para {
+  color: #313957;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.custom-input {
+  font-size: 0.85rem !important;
+  padding: 10px 15px !important;
+  height: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.custom-input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.custom-input::placeholder {
+  color: gray;
+  font-size: 0.9rem;
+}
+
+.pr-12 {
+  padding-right: 12px !important;
+}
+
+.bg-none {
+  background-color: none !important;
+}
+
+.custom-label {
+  font-size: 14px;
+  color: #000;
+  line-height: 1;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-top: 3px;
+  vertical-align: middle;
+  margin-bottom: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.font-14 {
+  font-size: 14px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.font-13 {
+  font-size: 13px;
+}
+
+.font-16{
+  font-size: 16px;
+}
+
+.fs-10{
+  font-size: 2.5rem;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.color-blue {
+  color: #004aad;
+}
+
+.bg-blue {
+  background-color: #004aad !important;
+}
+
+.he-50 {
+  height: 60px;
+}
+
+.w-200{
+  width: 200px;
+}
+
+.lh-10{
+  line-height: 1.4;
+}
+
+.ls-md{
+  letter-spacing: 0.5px;
+}
+
+.ps-6{
+  padding-left:  4rem !important;
+}
+
+@media (max-width: 991px) { /* For Tablets & Mobile */
+  .responsive-bg {
+    height: 100vh !important;  /* Full screen height */
+    object-fit: cover !important;
   }
-  to {
-    transform: rotate(360deg);
+  .fs-10{
+    font-size: 2rem;
   }
 }
