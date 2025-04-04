@@ -1,249 +1,56 @@
 <?php include 'header.php'; ?>
 
-<style>
-  .header-section {
-  border-bottom: 1px solid #ddd;
-}
-
-.blue-section {
-  background-color: #1a4e8c;
-  color: white;
-  padding: 20px;
-  height: 100%;
-  min-height: 180px;
-  position: relative;
-}
-
-.logo-section {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.logo-box {
-  margin-right: 10px;
-}
-
-.logo-brackets {
-  font-size: 36px;
-  font-weight: bold;
-}
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.knotty {
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 1;
-}
-
-.logistics {
-  font-size: 24px;
-  color: #4b87d0;
-}
-
-.address {
-  font-size: 14px;
-  position: absolute;
-  bottom: 20px;
-}
-
-/* Info Styling */
-.info-row {
-  padding: 8px 15px;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.info-label {
-  font-weight: 600;
-  color: #333;
-}
-
-.info-value {
-  color: #666;
-}
-
-/* Time Section */
-.time-section {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 15px;
-}
-
-.time-box {
-  padding: 15px;
-  border-right: 1px solid #ddd;
-}
-
-.tonnage-header {
-  font-weight: bold;
-  text-align: center;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #ddd;
-}
-
-.hourly-value {
-  text-align: right;
-  padding: 5px 0;
-  font-style: italic;
-  color: #666;
-}
-
-.time-details {
-  text-align: center;
-  margin: 15px 0;
-}
-
-.start-label, .stop-label, .total-label {
-  font-weight: bold;
-  font-size: 12px;
-}
-
-.time-value {
-  font-size: 14px;
-}
-
-.date-value {
-  font-size: 12px;
-  color: #666;
-}
-
-.time-grid {
-  margin-top: 10px;
-}
-
-.grid-box {
-  border: 1px solid #ddd;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #999;
-}
-
-/* Trailer Types */
-.type-section {
-  padding: 15px;
-}
-
-.trailer-types {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
-  margin-top: 40px;
-}
-
-/* Load Count Section */
-.load-count-header {
-  text-align: center;
-  margin: 15px 0;
-  font-weight: bold;
-  font-size: 22px;
-}
-
-.load-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.load-table th {
-  background-color: #f5f5f5;
-  text-align: center;
-  padding: 10px;
-  font-size: 14px;
-}
-
-.load-table td {
-  text-align: center;
-  padding: 10px;
-  font-size: 14px;
-}
-
-/* Edit Button */
-.edit-btn {
-  background-color: #4a7ab8;
-  color: white;
-  margin: 20px 0;
-  padding: 8px 40px;
-  border-radius: 3px;
-  font-weight: 500;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .blue-section {
-    min-height: auto;
-  }
-  
-  .address {
-    position: relative;
-    bottom: auto;
-    margin-top: 20px;
-  }
-  
-  .time-box {
-    border-right: none;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .time-details {
-    font-size: 12px;
-  }
-}
-</style>
 
 <div className="main_content_iner">
      
-      <div className="row">
-        <div className="col-md-12">
-          <div className="header-section">
-            <div className="row">
-              <div className="col-md-4 blue-section">
-                <div className="logo-section">
-                  <div className="logo-box">
-                    <span className="logo-brackets">[&nbsp;&nbsp;]</span>
+<div class="">
+      <!-- Header Section -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="header-section">
+            <div class="row">
+              <div class="col-md-4 blue-section">
+                <div class="logo-section">
+                  <div class="logo-box">
+                    <span class="logo-brackets">[&nbsp;&nbsp;]</span>
                   </div>
-                  <div className="logo-text">
-                    <span className="knotty">KNOTTY</span>
-                    <span className="logistics">LOGISTICS</span>
+                  <div class="logo-text">
+                    <span class="knotty">KNOTTY</span>
+                    <span class="logistics">LOGISTICS</span>
                   </div>
                 </div>
-                <div className="address">
+                <div class="address">
                   387 15th St. W. #248<br />
                   Dickinson, ND 58601
                 </div>
               </div>
-              <div className="col-md-8">
-                <div className="row info-row">
-                  <div className="col-6 info-label">Contractor</div>
-                  <div className="col-6 info-value text-end">Allbiz 24 Transport</div>
+              <div class="col-md-8">
+                <div class="row info-row">
+                  <div class="col-6 info-label">Contractor</div>
+                  <div class="col-6 info-value text-end">Allbiz 24 Transport</div>
                 </div>
-                <div className="row info-row">
-                  <div className="col-3 info-label">Date</div>
-                  <div className="col-3 info-value">2-15-14</div>
-                  <div className="col-3 info-label">Ticket No</div>
-                  <div className="col-3 info-value text-end">10667</div>
+                <div class="row info-row">
+                  <div class="col-3 info-label">Date</div>
+                  <div class="col-3 info-value">2-15-14</div>
+                  <div class="col-3 info-label">Ticket No</div>
+                  <div class="col-3 info-value text-end">10667</div>
                 </div>
-                <div className="row info-row">
-                  <div className="col-6 info-label">Company Name</div>
-                  <div className="col-6 info-value text-end">Rough Rider SHG</div>
+                <div class="row info-row">
+                  <div class="col-6 info-label">Company Name</div>
+                  <div class="col-6 info-value text-end">Rough Rider SHG</div>
                 </div>
-                <div className="row info-row">
-                  <div className="col-6 info-label">Driver Name</div>
-                  <div className="col-6 info-value text-end">Jerrit Maudgett</div>
+                <div class="row info-row">
+                  <div class="col-6 info-label">Driver Name</div>
+                  <div class="col-6 info-value text-end">Jerrit Maudgett</div>
                 </div>
-                <div className="row info-row">
-                  <div className="col-3 info-label">Equip. #</div>
-                  <div className="col-3 info-value">
+                <div class="row info-row">
+                  <div class="col-3 info-label">Equip. #</div>
+                  <div class="col-3 info-value">
                     100 - TK<br />
                     101 - TR
                   </div>
-                  <div className="col-3 info-label">Type Material</div>
-                  <div className="col-3 info-value text-end">CL - 5</div>
+                  <div class="col-3 info-label">Type Material</div>
+                  <div class="col-3 info-value text-end">CL - 5</div>
                 </div>
               </div>
             </div>
@@ -251,68 +58,68 @@
         </div>
       </div>
 
-      {/* Time Section */}
-      <div className="row time-section">
-        <div className="col-md-4">
-          <div className="time-box">
-            <div className="tonnage-header">Tonnage</div>
-            <div className="hourly-value">Hourly</div>
+      <!-- Time Section -->
+      <div class="row time-section">
+        <div class="col-md-4">
+          <div class="time-box">
+            <div class="tonnage-header">Tonnage</div>
+            <div class="hourly-value">Hourly</div>
 
-            <div className="row time-details">
-              <div className="col-4">
-                <div className="start-label">START</div>
-                <div className="time-value">8:43 AM</div>
-                <div className="date-value">1/15/2013</div>
+            <div class="row time-details">
+              <div class="col-4">
+                <div class="start-label">START</div>
+                <div class="time-value">8:43 AM</div>
+                <div class="date-value">1/15/2013</div>
               </div>
-              <div className="col-4">
-                <div className="stop-label">STOP</div>
-                <div className="time-value">8:43 AM</div>
-                <div className="date-value">1/15/2013</div>
+              <div class="col-4">
+                <div class="stop-label">STOP</div>
+                <div class="time-value">8:43 AM</div>
+                <div class="date-value">1/15/2013</div>
               </div>
-              <div className="col-4">
-                <div className="total-label">TOTAL</div>
+              <div class="col-4">
+                <div class="total-label">TOTAL</div>
               </div>
             </div>
 
-            <div className="row time-grid">
-              <div className="col-6">
-                <div className="grid-box">M</div>
+            <div class="row time-grid">
+              <div class="col-6">
+                <div class="grid-box">M</div>
               </div>
-              <div className="col-6">
-                <div className="grid-box">M</div>
+              <div class="col-6">
+                <div class="grid-box">M</div>
               </div>
             </div>
-            <div className="row time-grid">
-              <div className="col-6">
-                <div className="grid-box">M</div>
+            <div class="row time-grid">
+              <div class="col-6">
+                <div class="grid-box">M</div>
               </div>
-              <div className="col-6">
-                <div className="grid-box">M</div>
+              <div class="col-6">
+                <div class="grid-box">M</div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="col-md-8">
-          <div className="type-section">
-            <div className="row trailer-types">
-              <div className="col">ED</div>
-              <div className="col">Side</div>
-              <div className="col">Belly</div>
-              <div className="col">TRI</div>
-              <div className="col">Flat Side</div>
-              <div className="col">Semi ED</div>
+        <div class="col-md-8">
+          <div class="type-section">
+            <div class="row trailer-types">
+              <div class="col">ED</div>
+              <div class="col">Side</div>
+              <div class="col">Belly</div>
+              <div class="col">TRI</div>
+              <div class="col">Flat Side</div>
+              <div class="col">Semi ED</div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Load Count Section */}
-      <div className="row">
-        <div className="col-md-12">
-          <h3 className="load-count-header">LOAD COUNT</h3>
-          <div className="table-responsive">
-            <table className="table table-bordered load-table">
+      <!-- Load Count Section -->
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="load-count-header">LOAD COUNT</h3>
+          <div class="table-responsive">
+            <table class="table table-bordered load-table">
               <thead>
                 <tr>
                   <th>
@@ -374,14 +181,15 @@
         </div>
       </div>
 
-    
-      <div className="row">
-        <div className="col-md-12 text-center">
-          <Button className="edit-btn">
-            Edit <span className="ms-2">✏️</span>
-          </Button>
+      <!-- Edit Button -->
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <button class="btn edit-btn">
+            Edit <span class="ms-2">✏️</span>
+          </button>
         </div>
       </div>
+    </div>
     </div>
 
     <?php include 'footer.php'; ?>
