@@ -1,12 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-import LoginForm from './components/LoginForm';
+import { BrowserRouter as Router } from "react-router-dom";
+import "./App.css";
+import AppRouter from "./router/AppRouter";
 
 function App() {
   return (
-   <>
-    <LoginForm />
-   </>
+    <>
+      <Router>
+        <AppRouter />
+      </Router>
+    </>
   );
 }
 
