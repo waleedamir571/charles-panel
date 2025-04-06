@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { MdVisibility, MdVisibilityOff } from "react-icons/md";
 import { Eye, EyeOff } from "lucide-react";
 import { Link } from "react-router-dom";
 
