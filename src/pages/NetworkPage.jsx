@@ -1,11 +1,11 @@
 import React from "react";
-import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
-import Main from "../components/Main";
+import Network from "../components/Network";
 import Footer from "../components/Footer";
+import Sidebar from "../components/Sidebar";
 import useScriptLoader from "../utils/loadScripts";
 
-const HomePage = () => {
+const NetworkPage = () => {
   useScriptLoader();
 
   return (
@@ -13,11 +13,11 @@ const HomePage = () => {
       <Sidebar />
       <section className="main_content dashboard_part large_header_bg">
         <Header />
-        <Main />
+        <Network />
       </section>
       <Footer />
     </>
   );
 };
 
-export default HomePage;
+export default NetworkPage;

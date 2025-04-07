@@ -44,6 +44,12 @@
   margin-bottom: 0;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+.border-none {
+  border: none !important;
+}
 .font-14 {
   font-size: 14px;
 }
@@ -118,6 +124,42 @@
 
 .hover-underline:hover {
   text-decoration: underline !important;
+}
+
+.job-hover:hover {
+  background-color: #244761 !important;
+  color: white !important;
+}
+
+.job-hover:hover .job-date,
+.job-hover:hover .job-preview {
+  color: white !important;
+}
+
+.btn-hover:hover {
+  color: #000 !important;
+  background-color: #f0f2f2 !important;
+}
+
+.hover-white:hover {
+  color: white !important;
+}
+
+.job-list-scroll::-webkit-scrollbar {
+  width: 9px;
+}
+
+.job-list-scroll::-webkit-scrollbar-thumb {
+  background-color: #b3d8fe; /* Blue */
+  border-radius: 8px;
+}
+
+.job-list-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.job-list-scroll {
+  scrollbar-color: #b3d8fe transparent; 
 }
 
 @media (max-width: 991px) {

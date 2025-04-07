@@ -1,23 +1,20 @@
 import React from "react";
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
-import Main from "../components/Main";
 import Footer from "../components/Footer";
-import useScriptLoader from "../utils/loadScripts";
+import JobTickets from "../components/Jobs/JobTickets";
 
-const HomePage = () => {
-  useScriptLoader();
-
+const JobTicketPage = () => {
   return (
     <>
       <Sidebar />
       <section className="main_content dashboard_part large_header_bg">
         <Header />
-        <Main />
+        <JobTickets />
       </section>
       <Footer />
     </>
   );
 };
 
-export default HomePage;
+export default JobTicketPage;

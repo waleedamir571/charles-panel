@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
     <>
       <nav className="sidebar dark_sidebar">
         <div className="logo d-flex justify-content-between">
-          <a className="large_logo" href="#">
-            <img src="img/home/logo.png" alt="" />
-          </a>
-          {/* <!-- <a className="small_logo" href="#"><img src="img/home/logo.png" alt="" /></a> --> */}
+          <Link className="large_logo" to="/">
+            <img src="/assets/img/home/logo.png" alt="" />
+          </Link>
+          {/* <!-- <a className="small_logo" href="#"><img src="/assets/img/home/logo.png" alt="" /></a> --> */}
           <div className="sidebar_close_icon d-lg-none">
             <i className="ti-close"></i>
           </div>
@@ -17,7 +18,7 @@ const Sidebar = () => {
           <li className="">
             <a className="has-arrow" href="#" aria-expanded="false">
               <div className="nav_icon_small">
-                <img src="img/menu-icon/1.svg" alt="" />
+                <img src="/assets/img/menu-icon/1.svg" alt="" />
               </div>
               <div className="nav_title">
                 <span>Dashboard </span>
@@ -25,39 +26,39 @@ const Sidebar = () => {
             </a>
             <ul>
               <li>
-                <a href="#">
-                  <img src="img/home/network.png" alt="" /> Network
-                </a>
+                <Link to="/network">
+                  <img src="/assets/img/home/network.png" alt="" /> Network
+                </Link>
               </li>
               <li>
-                <a href="#">
-                  <img src="img/home/job.png" alt="" /> Job
-                </a>
+                <Link to="/jobs">
+                  <img src="/assets/img/home/job.png" alt="" /> Job
+                </Link>
               </li>
               <li>
-                <a href="#">
-                  <img src="img/home/ticket.png" alt="" /> Ticket
-                </a>
+                <Link to="/">
+                  <img src="/assets/img/home/ticket.png" alt="" /> Ticket
+                </Link>
               </li>
               <li>
-                <a href="#">
-                  <img src="img/home/assets.png" alt="" /> Assets
-                </a>
+                <Link to="/">
+                  <img src="/assets/img/home/assets.png" alt="" /> Assets
+                </Link>
               </li>
               <li>
-                <a href="#">
-                  <img src="img/home/schedule.png" alt="" /> Schedule
-                </a>
+                <Link to="/">
+                  <img src="/assets/img/home/schedule.png" alt="" /> Schedule
+                </Link>
               </li>
               <li>
-                <a href="#">
-                  <img src="img/home/billing.png" alt="" /> Billing
-                </a>
+                <Link to="/">
+                  <img src="/assets/img/home/billing.png" alt="" /> Billing
+                </Link>
               </li>
               <li>
-                <a href="#">
-                  <img src="img/home/manage.png" alt="" /> Manage Co.
-                </a>
+                <Link to="/">
+                  <img src="/assets/img/home/manage.png" alt="" /> Manage Co.
+                </Link>
               </li>
             </ul>
           </li>
@@ -65,7 +66,7 @@ const Sidebar = () => {
           <li>
             <a href="crypto_wallet.html" aria-expanded="false">
               <div className="nav_icon_small">
-                <img src="img/menu-icon/2.svg" alt="" />
+                <img src="/assets/img/menu-icon/2.svg" alt="" />
               </div>
               <div className="nav_title">
                 <span>Crypto Wallet</span>
@@ -75,7 +76,7 @@ const Sidebar = () => {
           <li className="">
             <a href="buy_sell.html" aria-expanded="false">
               <div className="nav_icon_small">
-                <img src="img/menu-icon/3.svg" alt="" />
+                <img src="/assets/img/menu-icon/3.svg" alt="" />
               </div>
               <div className="nav_title">
                 <span>Buy & Sell</span>
@@ -85,7 +86,7 @@ const Sidebar = () => {
           <li className="">
             <a href="Trader_Profile.html" aria-expanded="false">
               <div className="nav_icon_small">
-                <img src="img/menu-icon/4.svg" alt="" />
+                <img src="/assets/img/menu-icon/4.svg" alt="" />
               </div>
               <div className="nav_title">
                 <span>Trader Profile</span>
@@ -95,7 +96,7 @@ const Sidebar = () => {
           <li className="">
             <a href="crypto_stats.html" aria-expanded="false">
               <div className="nav_icon_small">
-                <img src="img/menu-icon/5.svg" alt="" />
+                <img src="/assets/img/menu-icon/5.svg" alt="" />
               </div>
               <div className="nav_title">
                 <span>Crypto Stats</span>
@@ -105,7 +106,7 @@ const Sidebar = () => {
           <li className="">
             <a className="has-arrow" href="#" aria-expanded="false">
               <div className="nav_icon_small">
-                <img src="img/menu-icon/6.svg" alt="" />
+                <img src="/assets/img/menu-icon/6.svg" alt="" />
               </div>
               <div className="nav_title">
                 <span>Transactions</span>
@@ -129,7 +130,7 @@ const Sidebar = () => {
           <li className="">
             <a className="has-arrow" href="#" aria-expanded="false">
               <div className="nav_icon_small">
-                <img src="img/menu-icon/7.svg" alt="" />
+                <img src="/assets/img/menu-icon/7.svg" alt="" />
               </div>
               <div className="nav_title">
                 <span>Tickers</span>
@@ -147,7 +148,7 @@ const Sidebar = () => {
           <li className="">
             <a className="has-arrow" href="#" aria-expanded="false">
               <div className="nav_icon_small">
-                <img src="img/menu-icon/8.svg" alt="" />
+                <img src="/assets/img/menu-icon/8.svg" alt="" />
               </div>
               <div className="nav_title">
                 <span>Apps </span>
@@ -183,7 +184,7 @@ const Sidebar = () => {
           <li className="">
             <a className="has-arrow" href="#" aria-expanded="false">
               <div className="nav_icon_small">
-                <img src="img/menu-icon/Pages.svg" alt="" />
+                <img src="/assets/img/menu-icon/Pages.svg" alt="" />
               </div>
               <div className="nav_title">
                 <span>Pages</span>
@@ -234,7 +235,7 @@ const Sidebar = () => {
           <li className="">
             <a className="has-arrow" href="#" aria-expanded="false">
               <div className="nav_icon_small">
-                <img src="img/menu-icon/General.svg" alt="" />
+                <img src="/assets/img/menu-icon/General.svg" alt="" />
               </div>
               <div className="nav_title">
                 <span>General</span>

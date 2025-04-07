@@ -19,7 +19,7 @@ const Main = () => {
                   <div class="row pb-30">
                     <div class="col-md-2">
                       <div class="info-icon">
-                        <img src="img/home/ico1.png" alt="" />
+                        <img src="/assets/img/home/ico1.png" alt="" />
                       </div>
                     </div>
                     <div class="col-md-4">
@@ -28,7 +28,7 @@ const Main = () => {
                     </div>
                     <div class="col-md-2">
                       <div class="info-icon">
-                        <img src="img/home/ico1.png" alt="" />
+                        <img src="/assets/img/home/ico1.png" alt="" />
                       </div>
                     </div>
                     <div class="col-md-4">
@@ -40,7 +40,7 @@ const Main = () => {
               </div>
             </div>
             <div class="col-md-4">
-              <img class="w-100" src="img/home/weather.png" alt="" />
+              <img class="w-100" src="/assets/img/home/weather.png" alt="" />
             </div>
           </div>
 
@@ -57,7 +57,7 @@ const Main = () => {
 
                     <hr style={{ borderColor: "rgba(255,255,255,0.3);" }} />
                     <div class="header_more_tool">
-                      <img src="img/home/map.png" alt="" />
+                      <img src="/assets/img/home/map.png" alt="" />
                       {/*  <!-- <div class="dropdown">
                                         <span class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown">
                                           <i class="ti-more-alt"></i>
@@ -75,7 +75,7 @@ const Main = () => {
                   </div>
                 </div>
                 <div class="white_card_body pb-0">
-                  <img class="w-100" src="img/home/gps.png" alt="" />
+                  <img class="w-100" src="/assets/img/home/gps.png" alt="" />
                 </div>
               </div>
             </div>
@@ -109,7 +109,7 @@ const Main = () => {
 
                   <div class="text-center pt-30">
                     <button type="button" class="btn mb-3 btn-info1">
-                      <img src="img/home/driver.png" alt="" />
+                      <img src="/assets/img/home/driver.png" alt="" />
                       &nbsp;&nbsp;&nbsp; My Jobs
                     </button>
                   </div>
