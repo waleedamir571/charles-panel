@@ -27,7 +27,369 @@ body {
     max-width: 1310px;
   }
 }
+.header-section {
+  border-bottom: 1px solid #ddd;
+}
 
+
+.truck{
+  color: #000;
+
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.blue-section {
+  background-color: #1a4e8c;
+  color: white;
+  padding: 20px;
+  height: 100%;
+  min-height: 180px;
+  position: relative;
+  border-radius: 20px 0px 0px 0px;
+  background: linear-gradient(90deg, #1F385D 0%, #4175C3 100%);
+  position: relative;
+  left: 1%;
+}
+
+
+
+.tabs-bg{
+  /* border-radius: 15px;
+background: #F8F8F8; */
+}
+
+  .custom-tabs .nav-link {
+    background-color: white;
+    color: black;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    margin-left: 0.5rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .pb-15{
+    padding-top: 15px;
+  }
+
+  .custom-tabs .nav-link.active {
+    background-color: #0d6efd !important;
+    color: white !important;
+    border-color: #0d6efd !important;
+}
+
+.btn-dark1 {
+  color: #fff;
+  background-color: #4E5456;
+  border-color: #4E5456;
+  border-radius: 25px;
+}
+
+
+.tab-link {
+  color: #555;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.tab-link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.stat-card {
+  text-align: center;
+ 
+}
+
+.card2{
+  border-radius: 5px;
+border: 1px solid #C8C8C8;
+
+background: #E8F2FC;
+}
+
+.tab-link.active {
+  background-color: #5193D0;
+  color: white;
+}
+
+.cost{
+  color: #000;
+
+font-size: 32px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
+
+.job-text{
+  color: #000;
+    /* font-family: Outfit; */
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* Job card styling */
+.job-card1 {
+  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 15px;
+  background: #F8F8F8;
+}
+.job-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.1rem;
+}
+
+/* Progress bar colors */
+.bg-yellow-400 {
+  background-color: #facc15;
+}
+
+.bg-lime-400 {
+  background-color: #a3e635;
+}
+
+.bg-green-300 {
+  background-color: #86efac;
+}
+
+.bg-green-500 {
+  background-color: #22c55e;
+}
+
+/* Icon styling */
+.icon-container {
+  padding: 5px 5px;
+}
+
+.text-primary {
+  color: #3b82f6 !important;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .search-container .input-group {
+    width: 100%;
+  }
+  
+  .d-flex.justify-content-between {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .search-container {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logo-box {
+  margin-right: 10px;
+}
+
+.logo-brackets {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.knotty {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.logistics {
+  font-size: 24px;
+  color: #4b87d0;
+}
+
+.address {
+  font-size: 14px;
+  position: absolute;
+  bottom: 20px;
+}
+
+/* Info Styling */
+.info-row {
+  padding: 8px 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 35px;
+  color: #333;
+}
+
+.info-value {
+
+  color: #969AA8;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+/* Time Section */
+.time-section {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.time-box {
+  padding: 15px;
+  border-right: 1px solid #ddd;
+}
+
+.tonnage-header {
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.hourly-value {
+  text-align: right;
+  padding: 5px 0;
+  font-style: italic;
+  color: #666;
+}
+
+.time-details {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.start-label, .stop-label, .total-label {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.time-value {
+  font-size: 14px;
+}
+
+.date-value {
+  font-size: 12px;
+  color: #666;
+}
+
+.time-grid {
+  margin-top: 10px;
+}
+
+.grid-box {
+  /* border: 1px solid #ddd; */
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+
+/* Trailer Types */
+.type-section {
+  padding: 15px;
+}
+
+.trailer-types {
+  display: flex
+;
+  justify-content: space-around;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-top: 40px;
+  color: #000;
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+/* Load Count Section */
+.load-count-header {
+  text-align: center;
+  margin: 15px 0;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.load-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.load-table th {
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.load-table td {
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Edit Button */
+.edit-btn {
+  background-color: #4a7ab8;
+  color: white;
+  margin: 20px 0;
+  padding: 8px 40px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .blue-section {
+    min-height: auto;
+  }
+  
+  .address {
+    position: relative;
+    bottom: auto;
+    margin-top: 20px;
+  }
+  
+  .time-box {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .time-details {
+    font-size: 12px;
+  }
+}
 
 .filter-button {
   border: 1px solid #e2e8f0;
@@ -107,8 +469,6 @@ body {
   -moz-appearance: none;
   appearance: none;
 }
-
-
 .invoice-name {
   color: #000;
   font-size: 22px;
@@ -835,7 +1195,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #302D43;
+  color: #000;
   
   font-weight: 600;
   line-height: 1.2;
@@ -5620,10 +5980,17 @@ table.dataTable {
   padding-left: 20px;
 }
 
+.active{
+  color: #9FB703;
+
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
 .dash {
   color: #000;
-
-
   font-size: 26px;
   font-style: normal;
   font-weight: 400;
@@ -6212,7 +6579,7 @@ body::-webkit-scrollbar {
   background: #F9F9F9;
   margin: 0;
   z-index: 22;
-  border-radius: 0px;
+  border-radius: 20px;
   padding: 30px 30px;
 }
 
@@ -14330,7 +14697,12 @@ table.lms_table_active3.dataTable thead .sorting_desc::after {
 
 /* line 36, G:/admin_project/10 admin/cryptocurrency/scss/_product.scss */
 .text-muted {
-  color: #a4abc5 !important;
+  /* color: #a4abc5 !important; */
+  color: #000 !important;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 /* line 39, G:/admin_project/10 admin/cryptocurrency/scss/_product.scss */
