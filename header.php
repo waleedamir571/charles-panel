@@ -88,6 +88,38 @@
               <li><a href="#"><img src="img/home/manage.png" alt=""> Manage Co.</a></li>
             </ul>
         </li>
+        <div class="menu-container mt-4 mx-auto">
+
+            <!-- Top Tabs -->
+            <div class="top-tabs">
+                <div class="tab-item" id="driverTab">
+                <img src="img/home/drivernav.png" alt="Driver Icon">
+                <div>Driver</div>
+              </div>
+              <div class="tab-item" id="calendarTab">
+                <img src="img/home/calendernav.png" alt="Calendar Icon">
+                <div>Calendar</div>
+              </div>
+            </div>
+          
+            <!-- Driver Dropdown Items -->
+            <div class="dropdown-menu-items" id="driverDropdown" style="display: none;">
+              <a href="#" class="menu-link"><img src="img/home/inspect.png"> Inspect</a>
+              <a href="#" class="menu-link"><img src="img/home/tickets.png"> Tickets</a>
+              <a href="#" class="menu-link"><img src="img/home/docs.png"> Docs</a>
+              <a href="#" class="menu-link"><img src="img/home/alarms.png"> Alarms</a>
+            </div>
+          
+            <!-- Calendar Dropdown Items -->
+            <div class="dropdown-menu-items" id="calendarDropdown" style="display: none;">
+              <a href="#" class="menu-link"><img src="img/home/schedule.png"> Schedule</a>
+              <a href="#" class="menu-link"><img src="img/home/events.png"> Events</a>
+              <a href="#" class="menu-link"><img src="img/home/meetings.png"> Meetings</a>
+            </div>
+          
+          </div>
+          
+          
         <!-- <li class="">
             <a  href="crypto_wallet.html" aria-expanded="false">
               <div class="nav_icon_small">
@@ -350,3 +382,35 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const tabs = document.querySelectorAll(".tab-item");
+          const dropdowns = {
+            driverTab: document.getElementById("driverDropdown"),
+            calendarTab: document.getElementById("calendarDropdown")
+          };
+      
+          tabs.forEach(tab => {
+            tab.addEventListener("click", function () {
+              const tabId = this.id;
+              const isActive = this.classList.contains("active");
+      
+              // Hide all dropdowns & remove active from all tabs
+              tabs.forEach(t => t.classList.remove("active"));
+              Object.values(dropdowns).forEach(drop => drop.style.display = "none");
+      
+              // If tab was not active, activate it and show its dropdown
+              if (!isActive) {
+                this.classList.add("active");
+                dropdowns[tabId].style.display = "block";
+              }
+              // else: do nothing, dropdown already hidden by reset above
+            });
+          });
+        });
+      </script>
+      
+      
+      
+      

@@ -32,6 +32,73 @@ body {
 }
 
 
+.top-tabs {
+  display: flex
+;
+  /* background-color: #1b355d; */
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  padding: 15px;
+  color: #ccc;
+  background-color: transparent; /* no background by default */
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab-item.active {
+  background-color: #3a5a8b;
+  color: #fff;
+  border-bottom-left-radius: 12px;
+  border-radius: 20px 20px 0px 20px;
+  /* background-color: #4F84CA; */
+  /* z-index: 99999999; */
+}
+
+.tab-item img {
+  /* display: block; */
+  margin: 0 auto 5px;
+  /* width: 28px;
+  height: 28px; */
+}
+
+.dropdown-menu-items {
+  background-color: #2c4876;
+  padding: 10px 0;
+  border-radius: 16px;
+  background: #566781;
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.menu-link:hover {
+ 
+  border-radius: 15px;
+  background: #8FADD5;
+  color: white;
+}
+
+.menu-link img {
+  width: 20px;
+  margin-right: 10px;
+}
+
 .truck{
   color: #000;
 
