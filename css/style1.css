@@ -37,6 +37,121 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+/* Basic styling for the menu items */
+.menu-item {
+  padding: 10px;
+  color: black;
+  display: block; /* Ensure anchor takes up the full space */
+  text-decoration: none; /* Remove underlines from the anchor tag */
+  transition: background 0.3s ease;
+}
+
+.job-ticket3 {
+ 
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.75rem;
+  color: white;
+  
+  transition: all 0.2s ease;
+  border-radius: 15px;
+  background: #244761;
+}
+.btn-fixed {
+  position: fixed;
+  bottom: 30px;
+  left: 25px;
+  z-index: 9999;
+}
+
+.driver-icon-white {
+  display: none;  /* Hide the white icon by default */
+  transition: 0.3s ease;
+}
+
+.driver-icon:hover + .driver-icon-white {
+  display: block; /* Show the white icon when hovering over the first image */
+}
+
+.driver-icon {
+  transition: 0.3s ease;  /* Smooth transition */
+}
+
+
+.btn-info2 {
+  color: #000;
+  border-color: #4F84CA;
+  border-radius: 16px;
+  background: #4F84CA;
+  color: #FFF; 
+  height: 65px;
+  padding: 0px 50px 0px 50px;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 89.989px;
+  flex-shrink: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.heading{
+  color: #FFF;
+text-align: center;
+
+font-size: 22px;
+font-style: normal;
+font-weight: 300;
+line-height: 22px; /* 100% */
+letter-spacing: -0.25px;
+}
+
+.t-2{
+  position: relative;
+  top: 7px;
+  left: 10px;
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.job-ticket2 {
+  border-radius: 10px;
+  background: #4E5456;
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.75rem;
+  color: white;
+  /* display: flex;
+  justify-content: space-between; */
+  /* align-items: center; */
+  transition: all 0.2s ease;
+  border-radius: 10px;
+}
+
+/* Active state styling */
+.menu-item.active {
+  border-radius: 6px;
+  background: rgba(12, 31, 31, 0.06);
+  color: black !important; /* Ensure the text color remains black */
+}
+
+/* Optional: Style for the text inside p tag */
+.invoice-date {
+  margin: 0;
+}
+
+.invoice-date {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* .pb-10:hover{
+  border-radius: 6px;
+    background: rgba(12, 31, 31, 0.06);
+    padding: 10px;
+    color: black;
+} */
+
 .ticket-modal {
   background-color: white;
   border-radius: 8px;
@@ -165,14 +280,41 @@ body {
   transition: 0.3s;
 }
 
+/* Initially, hide the white image */
+/* Initially, hide the white image */
+/* Initially, hide the white image */
+/* Initially, hide the white image */
+.driver-icon-white {
+  display: none; /* Hide the white icon by default */
+}
+
+/* When the tab is active, hide the default image and show the white image */
+.tab-item.active .driver-icon {
+  display: none;  /* Hide the default image when active */
+}
+
+.tab-item.active .driver-icon-white {
+  display: block; /* Show the white image when active */
+}
+
+/* Tab item styling when active */
 .tab-item.active {
   background-color: #3a5a8b;
   color: #fff;
   border-bottom-left-radius: 12px;
   border-radius: 20px 20px 0px 20px;
-  /* background-color: #4F84CA; */
-  /* z-index: 99999999; */
 }
+
+/* Ensure no hover effect changes the image */
+.tab-item:hover .driver-icon,
+.tab-item:hover .driver-icon-white {
+  display: block; /* Do nothing on hover (no image change) */
+}
+
+
+
+
+
 
 .preview-box {
   border: 1px solid #ddd;
@@ -731,6 +873,10 @@ line-height: normal;
   font-weight: 500;
   line-height: normal;
   padding-left: 30px;
+}
+
+.d-content{
+  display: contents;
 }
 .invoice-date {
   color: #6b7280;
@@ -4982,7 +5128,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th:first-child::before {
 .header_iner {
   width: 96%;
   position: fixed;
-  top: 0;
+  top: 13px;
   z-index: 99;
   padding: 15px 30px;
   position: relative;

@@ -206,6 +206,25 @@
 <script src="js/dashboard_init.js"></script>
 <script src="js/custom.js"></script>
 
+<script>
+  // Select all menu items
+const menuItems = document.querySelectorAll('.menu-item');
+
+menuItems.forEach(item => {
+    item.addEventListener('click', function(e) {
+        // Prevent default behavior if necessary (useful for anchor tags if you don't want page reload)
+        e.preventDefault();
+        
+        // Remove 'active' class from all items
+        menuItems.forEach(i => i.classList.remove('active'));
+
+        // Add 'active' class to the clicked menu item (anchor tag)
+        this.classList.add('active');
+    });
+});
+
+</script>
+
 </body>
 
 </html>
