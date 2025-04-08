@@ -159,8 +159,113 @@
 }
 
 .job-list-scroll {
-  scrollbar-color: #b3d8fe transparent; 
+  scrollbar-color: #b3d8fe transparent;
 }
+
+.job-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.job-modal-content {
+  background: white;
+  border-radius: 16px;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 95%;
+  max-height: 600px;
+  overflow-y: auto;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.job-modal-content::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.job-header {
+  background-color: #355591;
+}
+
+.date-range-box-2 {
+  background-color: #E8F2FC !important;
+  border: 1px solid #4F84CA !important;
+}
+
+.location-box {
+  background-color: #343a40;
+  color: white;
+}
+
+.job-contact-card {
+  background: #274a8d; /* Dark blue background */
+  color: white;
+  border-radius: 16px;
+}
+
+.job-rate-pill {
+  background: #4597e0; /* Lighter blue */
+  border-radius: 16px;
+  min-width: 130px;
+  text-align: right;
+}
+
+/* Outer container for the tabs */
+.tabs-container {
+  display: flex;
+  background-color: #355591; /* Blue background for the container */
+  border-radius: 10px;
+  width: 100%; /* Full width */
+  overflow: hidden; /* Ensure buttons stay within rounded corners */
+}
+
+.tab-btn {
+  flex-grow: 1;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background-color: #5193D0; /* Initially transparent */
+  border: none; /* Remove borders */ 
+  border-radius: 10px;
+
+  padding: .5rem !important;
+}
+
+.tab-btn{
+  margin: .5rem .5rem;
+  padding: .8rem 0 !important;
+  border: none;
+}
+
+.tab-btn.active {
+  background-color: #5193D0; /* Active tab background color */
+  
+}
+
+/* Optional: Style for inactive tabs (when not active) */
+.tab-btn:not(.active) {
+  background-color: transparent; /* Transparent background for inactive tabs */
+}
+
+/* Optional: Style the container when the tab is active */
+.tabs-container button:hover {
+  cursor: pointer;
+}
+
+.job-modal-content {
+  position: relative; /* Ensure the bottom modal is inside the main modal */
+}
+
 
 @media (max-width: 991px) {
   .responsive-bg {

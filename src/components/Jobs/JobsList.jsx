@@ -1,159 +1,161 @@
 import React, { useState } from "react";
 import { FaCalendarAlt } from "react-icons/fa";
+import PendingJobModal from "./PendingJobModal";
+import CurrentJobModal from "./CurrentJobModal";
 
 const jobData = {
   pending: [
     {
-      company: "Knotty Logistic LLC",
-      dateRange: ["2025-04-07", "2025-04-15"],
+      company: "Global Transport LLC",
+      dateRange: ["2025-04-01", "2025-04-10"],
       color: "success",
       status: "accepted",
+      project: "Residential Development",
+      trucksRequired: 30,
+      startDate: "2025-06-01",
+      endDate: "2025-06-10",
+      billTo: "Green Builders",
+      hauledFor: "Sustained Freight",
+      location: "1234 Oakwood Blvd, Chicago, IL",
+      jobRate: 22.5,
+      contact: {
+        name: "James Smith",
+        phone: "(123) 456-7890",
+      },
     },
     {
-      company: "James Logistic",
-      dateRange: ["2025-04-07", "2025-04-10"],
-      color: "success",
-      status: "created",
-    },
-    {
-      company: "Knotty Logistic LLC",
+      company: "Rapid Freight Co.",
       dateRange: ["2025-04-08", "2025-04-15"],
       color: "warning",
-      status: "accepted",
+      status: "created",
+      project: "Commercial Complex",
+      trucksRequired: 40,
+      startDate: "2025-06-01",
+      endDate: "2025-06-15",
+      billTo: "Premium Contractors",
+      hauledFor: "Big Haulers Ltd.",
+      location: "5678 Market St, Los Angeles, CA",
+      jobRate: 20.0,
+      contact: {
+        name: "Sarah Johnson",
+        phone: "(987) 654-3210",
+      },
     },
     {
-      company: "James Logistic",
-      dateRange: ["2025-04-05", "2025-04-10"],
+      company: "Eco Logistics",
+      dateRange: ["2025-04-10", "2025-04-20"],
       color: "danger",
       status: "created",
-    },
-    {
-      company: "Knotty Logistic LLC",
-      dateRange: ["2025-04-07", "2025-04-15"],
-      color: "success",
-      status: "accepted",
-    },
-    {
-      company: "James Logistic",
-      dateRange: ["2025-04-07", "2025-04-10"],
-      color: "success",
-      status: "created",
-    },
-    {
-      company: "Knotty Logistic LLC",
-      dateRange: ["2025-04-08", "2025-04-15"],
-      color: "warning",
-      status: "accepted",
-    },
-    {
-      company: "James Logistic",
-      dateRange: ["2025-04-05", "2025-04-10"],
-      color: "danger",
-      status: "created",
+      project: "Environmental Project",
+      trucksRequired: 50,
+      startDate: "2025-06-10",
+      endDate: "2025-06-20",
+      billTo: "Earthworks Inc.",
+      hauledFor: "Clear Freight",
+      location: "7890 Riverside Dr, Dallas, TX",
+      jobRate: 18.0,
+      contact: {
+        name: "Michael Lee",
+        phone: "(555) 123-9876",
+      },
     },
   ],
   current: [
     {
-      company: "Knotty Logistic LLC",
+      company: "Skyline Transporters",
       dateRange: ["2025-04-07", "2025-04-15"],
       color: "success",
       status: "accepted",
+      project: "High-rise Construction",
+      trucksRequired: 20,
+      startDate: "2025-06-05",
+      endDate: "2025-06-12",
+      billTo: "Urban Construction",
+      hauledFor: "Skyline Freight",
+      location: "1122 Downtown Ave, New York, NY",
+      jobRate: 25.0,
+      contact: {
+        name: "David Richards",
+        phone: "(321) 765-4321",
+      },
     },
     {
-      company: "James Logistic",
-      dateRange: ["2025-04-07", "2025-04-10"],
+      company: "Swift Logistics",
+      dateRange: ["2025-04-08", "2025-04-12"],
       color: "success",
       status: "created",
-    },
-    {
-      company: "Knotty Logistic LLC",
-      dateRange: ["2025-04-08", "2025-04-15"],
-      color: "warning",
-      status: "accepted",
-    },
-    {
-      company: "James Logistic",
-      dateRange: ["2025-04-05", "2025-04-10"],
-      color: "danger",
-      status: "created",
+      project: "Suburban Development",
+      trucksRequired: 15,
+      startDate: "2025-06-12",
+      endDate: "2025-06-18",
+      billTo: "Suburban Projects Ltd.",
+      hauledFor: "Swift Movers",
+      location: "6789 Suburban Blvd, Miami, FL",
+      jobRate: 17.0,
+      contact: {
+        name: "Emily Davis",
+        phone: "(431) 567-8901",
+      },
     },
   ],
   complete: [
     {
-      company: "Knotty Logistic LLC",
-      dateRange: ["2025-04-07", "2025-04-15"],
+      company: "Mountain Movers",
+      dateRange: ["2025-04-08", "2025-04-10"],
       color: "success",
       status: "accepted",
-    },
-    {
-      company: "James Logistic",
-      dateRange: ["2025-04-07", "2025-04-10"],
-      color: "success",
-      status: "created",
-    },
-    {
-      company: "Knotty Logistic LLC",
-      dateRange: ["2025-04-08", "2025-04-15"],
-      color: "warning",
-      status: "accepted",
-    },
-    {
-      company: "James Logistic",
-      dateRange: ["2025-04-05", "2025-04-10"],
-      color: "danger",
-      status: "created",
+      project: "Mountain Resort",
+      trucksRequired: 35,
+      startDate: "2025-05-01",
+      endDate: "2025-05-10",
+      billTo: "Mountain Resorts",
+      hauledFor: "Peak Freight",
+      location: "1456 Summit Ave, Denver, CO",
+      jobRate: 30.0,
+      contact: {
+        name: "Johnathan Carter",
+        phone: "(654) 321-4321",
+      },
     },
   ],
   denied: [
     {
-      company: "Knotty Logistic LLC",
-      dateRange: ["2025-04-07", "2025-04-15"],
-      color: "success",
-      status: "accepted",
-    },
-    {
-      company: "James Logistic",
-      dateRange: ["2025-04-07", "2025-04-10"],
-      color: "success",
-      status: "created",
-    },
-    {
-      company: "Knotty Logistic LLC",
-      dateRange: ["2025-04-08", "2025-04-15"],
-      color: "warning",
-      status: "accepted",
-    },
-    {
-      company: "James Logistic",
-      dateRange: ["2025-04-05", "2025-04-10"],
+      company: "Atlantic Freight",
+      dateRange: ["2025-04-09", "2025-04-10"],
       color: "danger",
-      status: "created",
+      status: "denied",
+      project: "Coastal Development",
+      trucksRequired: 20,
+      startDate: "2025-06-01",
+      endDate: "2025-06-10",
+      billTo: "Coastal Builders",
+      hauledFor: "Atlantic Haulers",
+      location: "3142 Seaside Blvd, San Diego, CA",
+      jobRate: 20.0,
+      contact: {
+        name: "Rachel Green",
+        phone: "(999) 111-3333",
+      },
     },
   ],
   public: [
     {
-      company: "Knotty Logistic LLC",
-      dateRange: ["2025-04-07", "2025-04-15"],
+      company: "Phoenix Logistics",
+      dateRange: ["2025-04-08", "2025-04-09"],
       color: "success",
       status: "accepted",
-    },
-    {
-      company: "James Logistic",
-      dateRange: ["2025-04-07", "2025-04-10"],
-      color: "success",
-      status: "created",
-    },
-    {
-      company: "Knotty Logistic LLC",
-      dateRange: ["2025-04-08", "2025-04-15"],
-      color: "warning",
-      status: "accepted",
-    },
-    {
-      company: "James Logistic",
-      dateRange: ["2025-04-05", "2025-04-10"],
-      color: "danger",
-      status: "created",
+      project: "Desert Resort",
+      trucksRequired: 10,
+      startDate: "2025-05-01",
+      endDate: "2025-05-05",
+      billTo: "Phoenix Resorts",
+      hauledFor: "Desert Movers",
+      location: "4200 Sun Valley Rd, Phoenix, AZ",
+      jobRate: 22.0,
+      contact: {
+        name: "Sophia White",
+        phone: "(444) 555-7777",
+      },
     },
   ],
 };
@@ -192,6 +194,8 @@ const formatDate = (dateStr) => {
 function JobList({ tab }) {
   const jobs = jobData[tab] || [];
   const [statusFilter, setStatusFilter] = useState("all");
+  const [selectedJob, setSelectedJob] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   const filteredJobs = jobs.filter((job) =>
     statusFilter === "all" ? true : job.status === statusFilter
@@ -205,6 +209,10 @@ function JobList({ tab }) {
       key={idx}
       className="d-flex justify-content-between align-items-center flex-wrap p-3 mb-2 rounded text-black job-hover cursor-pointer gap-2"
       style={{ backgroundColor: "#E8F2FC" }}
+      onClick={() => {
+        setSelectedJob(job);
+        setShowModal(true);
+      }}
     >
       <div className="d-flex align-items-center justify-content-center">
         {tab === "pending" || tab === "current" ? (
@@ -213,11 +221,11 @@ function JobList({ tab }) {
             style={{ width: 40, height: 40 }}
           ></div>
         ) : tab === "complete" ? (
-          <img src="/images/icons/success.svg" alt="" className="me-2"/>
+          <img src="/images/icons/success.svg" alt="" className="me-2" />
         ) : tab === "denied" ? (
-          <img src="/images/icons/denied.svg" alt="" className="me-2"/>
+          <img src="/images/icons/denied.svg" alt="" className="me-2" />
         ) : (
-          <img src="/images/icons/public.svg" alt="" className="me-2"/>
+          <img src="/images/icons/public.svg" alt="" className="me-2" />
         )}
         <h3 className="fs-5 pt-2">{job.company}</h3>
       </div>
@@ -227,7 +235,15 @@ function JobList({ tab }) {
           {formatDate(job.dateRange[0])} - {formatDate(job.dateRange[1])}
         </div>
       ) : null}
-      <button className="btn btn-lg job-preview">PREVIEW</button>
+      <button
+        className="btn btn-lg job-preview"
+        onClick={() => {
+          setSelectedJob(job);
+          setShowModal(true);
+        }}
+      >
+        PREVIEW
+      </button>
     </div>
   );
 
@@ -280,7 +296,7 @@ function JobList({ tab }) {
             href="#"
             data-bs-toggle="modal"
             data-bs-target="#addcategory"
-            className="btn_1 btn btn-primary"
+            className="btn_1 btn bg-purple text-white p-2 px-3"
           >
             + Create Invite
           </a>
@@ -323,6 +339,7 @@ function JobList({ tab }) {
           maxHeight: "600px",
           overflowY: "auto",
           scrollbarWidth: "thin",
+          width: "auto",
         }}
       >
         {todayJobs.length > 0 && (
@@ -344,6 +361,25 @@ function JobList({ tab }) {
           <p className="text-muted">No jobs this week.</p>
         )}
       </div>
+      {showModal && selectedJob && tab === "pending" && (
+        <PendingJobModal
+          job={selectedJob}
+          onClose={() => {
+            setShowModal(false);
+            setSelectedJob(null);
+          }}
+        />
+      )}
+
+      {showModal && selectedJob && tab === "current" && (
+        <CurrentJobModal
+          job={selectedJob}
+          onClose={() => {
+            setShowModal(false);
+            setSelectedJob(null);
+          }}
+        />
+      )}
     </div>
   );
 }
