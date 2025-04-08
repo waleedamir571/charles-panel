@@ -1,20 +1,19 @@
 import React, { useState } from "react";
 import { FaCalendarAlt } from "react-icons/fa";
 
-// Sample data
 const jobData = {
   pending: [
     {
       company: "Knotty Logistic LLC",
       dateRange: ["2025-04-07", "2025-04-15"],
       color: "success",
-      status: "accepted", // 👈 NEW
+      status: "accepted",
     },
     {
       company: "James Logistic",
       dateRange: ["2025-04-07", "2025-04-10"],
       color: "success",
-      status: "created", // 👈 NEW
+      status: "created",
     },
     {
       company: "Knotty Logistic LLC",
@@ -29,28 +28,16 @@ const jobData = {
       status: "created",
     },
     {
-      company: "James Logistic",
-      dateRange: ["2025-04-07", "2025-04-10"],
-      color: "success",
-      status: "created", // 👈 NEW
-    },
-    {
       company: "Knotty Logistic LLC",
-      dateRange: ["2025-04-08", "2025-04-15"],
-      color: "warning",
+      dateRange: ["2025-04-07", "2025-04-15"],
+      color: "success",
       status: "accepted",
     },
     {
       company: "James Logistic",
-      dateRange: ["2025-04-05", "2025-04-10"],
-      color: "danger",
-      status: "created",
-    },
-    {
-      company: "James Logistic",
       dateRange: ["2025-04-07", "2025-04-10"],
       color: "success",
-      status: "created", // 👈 NEW
+      status: "created",
     },
     {
       company: "Knotty Logistic LLC",
@@ -65,13 +52,112 @@ const jobData = {
       status: "created",
     },
   ],
-  current: [],
-  complete: [],
-  denied: [],
-  public: [],
+  current: [
+    {
+      company: "Knotty Logistic LLC",
+      dateRange: ["2025-04-07", "2025-04-15"],
+      color: "success",
+      status: "accepted",
+    },
+    {
+      company: "James Logistic",
+      dateRange: ["2025-04-07", "2025-04-10"],
+      color: "success",
+      status: "created",
+    },
+    {
+      company: "Knotty Logistic LLC",
+      dateRange: ["2025-04-08", "2025-04-15"],
+      color: "warning",
+      status: "accepted",
+    },
+    {
+      company: "James Logistic",
+      dateRange: ["2025-04-05", "2025-04-10"],
+      color: "danger",
+      status: "created",
+    },
+  ],
+  complete: [
+    {
+      company: "Knotty Logistic LLC",
+      dateRange: ["2025-04-07", "2025-04-15"],
+      color: "success",
+      status: "accepted",
+    },
+    {
+      company: "James Logistic",
+      dateRange: ["2025-04-07", "2025-04-10"],
+      color: "success",
+      status: "created",
+    },
+    {
+      company: "Knotty Logistic LLC",
+      dateRange: ["2025-04-08", "2025-04-15"],
+      color: "warning",
+      status: "accepted",
+    },
+    {
+      company: "James Logistic",
+      dateRange: ["2025-04-05", "2025-04-10"],
+      color: "danger",
+      status: "created",
+    },
+  ],
+  denied: [
+    {
+      company: "Knotty Logistic LLC",
+      dateRange: ["2025-04-07", "2025-04-15"],
+      color: "success",
+      status: "accepted",
+    },
+    {
+      company: "James Logistic",
+      dateRange: ["2025-04-07", "2025-04-10"],
+      color: "success",
+      status: "created",
+    },
+    {
+      company: "Knotty Logistic LLC",
+      dateRange: ["2025-04-08", "2025-04-15"],
+      color: "warning",
+      status: "accepted",
+    },
+    {
+      company: "James Logistic",
+      dateRange: ["2025-04-05", "2025-04-10"],
+      color: "danger",
+      status: "created",
+    },
+  ],
+  public: [
+    {
+      company: "Knotty Logistic LLC",
+      dateRange: ["2025-04-07", "2025-04-15"],
+      color: "success",
+      status: "accepted",
+    },
+    {
+      company: "James Logistic",
+      dateRange: ["2025-04-07", "2025-04-10"],
+      color: "success",
+      status: "created",
+    },
+    {
+      company: "Knotty Logistic LLC",
+      dateRange: ["2025-04-08", "2025-04-15"],
+      color: "warning",
+      status: "accepted",
+    },
+    {
+      company: "James Logistic",
+      dateRange: ["2025-04-05", "2025-04-10"],
+      color: "danger",
+      status: "created",
+    },
+  ],
 };
 
-// Utility functions using JS Date
 const isToday = (dateStr) => {
   const today = new Date();
   const date = new Date(dateStr);
@@ -87,10 +173,10 @@ const isThisWeek = (dateStr) => {
   const date = new Date(dateStr);
 
   const startOfWeek = new Date(now);
-  startOfWeek.setDate(now.getDate() - now.getDay()); // Sunday
+  startOfWeek.setDate(now.getDate() - now.getDay());
 
   const endOfWeek = new Date(startOfWeek);
-  endOfWeek.setDate(startOfWeek.getDate() + 6); // Saturday
+  endOfWeek.setDate(startOfWeek.getDate() + 6);
 
   return date >= startOfWeek && date <= endOfWeek;
 };
@@ -121,23 +207,33 @@ function JobList({ tab }) {
       style={{ backgroundColor: "#E8F2FC" }}
     >
       <div className="d-flex align-items-center justify-content-center">
-        <div
-          className="me-3 bg-white rounded-circle"
-          style={{ width: 35, height: 35 }}
-        ></div>
+        {tab === "pending" || tab === "current" ? (
+          <div
+            className="me-3 bg-white rounded-circle"
+            style={{ width: 40, height: 40 }}
+          ></div>
+        ) : tab === "complete" ? (
+          <img src="/images/icons/success.svg" alt="" className="me-2"/>
+        ) : tab === "denied" ? (
+          <img src="/images/icons/denied.svg" alt="" className="me-2"/>
+        ) : (
+          <img src="/images/icons/public.svg" alt="" className="me-2"/>
+        )}
         <h3 className="fs-5 pt-2">{job.company}</h3>
       </div>
-      <div className="d-flex align-items-center justify-content-end text-muted job-date">
-        <FaCalendarAlt className={`me-2 text-${job.color}`} />
-        {formatDate(job.dateRange[0])} - {formatDate(job.dateRange[1])}
-      </div>
+      {tab === "pending" ? (
+        <div className="d-flex align-items-center justify-content-end text-muted job-date">
+          <FaCalendarAlt className={`me-2 text-${job.color}`} />
+          {formatDate(job.dateRange[0])} - {formatDate(job.dateRange[1])}
+        </div>
+      ) : null}
       <button className="btn btn-lg job-preview">PREVIEW</button>
     </div>
   );
 
   return (
     <div className="p-4 bg-white rounded shadow-sm ">
-      <div className="box_right d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 mb-4">
+      <div className="box_right d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 mb-3">
         <div className="d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-3 w-100">
           {/* Search box */}
           <div className="position-relative">
@@ -221,7 +317,6 @@ function JobList({ tab }) {
           </button>
         </div>
       </div>
-
       <div
         className="job-list-scroll"
         style={{
@@ -232,16 +327,15 @@ function JobList({ tab }) {
       >
         {todayJobs.length > 0 && (
           <>
-            <h6 className="mb-3 text-muted">Today</h6>
-            <hr className="text-gray fs-2" />
+            <h6 className="mb-2 text-muted">Today</h6>
             {todayJobs.map((job, i) => renderJobCard(job, `today-${i}`))}
           </>
         )}
 
         {weekJobs.length > 0 && (
           <>
-            <h6 className="mb-3 mt-4 text-muted">This Week</h6>
-            <hr className="text-gray fs-2" />
+            <hr />
+            <h6 className="mb-2 text-muted">This Week</h6>
             {weekJobs.map((job, i) => renderJobCard(job, `week-${i}`))}
           </>
         )}
