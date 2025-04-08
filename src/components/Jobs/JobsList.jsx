@@ -28,6 +28,42 @@ const jobData = {
       color: "danger",
       status: "created",
     },
+    {
+      company: "James Logistic",
+      dateRange: ["2025-04-07", "2025-04-10"],
+      color: "success",
+      status: "created", // 👈 NEW
+    },
+    {
+      company: "Knotty Logistic LLC",
+      dateRange: ["2025-04-08", "2025-04-15"],
+      color: "warning",
+      status: "accepted",
+    },
+    {
+      company: "James Logistic",
+      dateRange: ["2025-04-05", "2025-04-10"],
+      color: "danger",
+      status: "created",
+    },
+    {
+      company: "James Logistic",
+      dateRange: ["2025-04-07", "2025-04-10"],
+      color: "success",
+      status: "created", // 👈 NEW
+    },
+    {
+      company: "Knotty Logistic LLC",
+      dateRange: ["2025-04-08", "2025-04-15"],
+      color: "warning",
+      status: "accepted",
+    },
+    {
+      company: "James Logistic",
+      dateRange: ["2025-04-05", "2025-04-10"],
+      color: "danger",
+      status: "created",
+    },
   ],
   current: [],
   complete: [],
@@ -101,7 +137,7 @@ function JobList({ tab }) {
 
   return (
     <div className="p-4 bg-white rounded shadow-sm ">
-      <div className="box_right d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 mb-3">
+      <div className="box_right d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 mb-4">
         <div className="d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-3 w-100">
           {/* Search box */}
           <div className="position-relative">
@@ -186,24 +222,34 @@ function JobList({ tab }) {
         </div>
       </div>
 
-      {todayJobs.length > 0 && (
-        <>
-          <h6 className="mb-2 text-muted">Today</h6>
-          {todayJobs.map((job, i) => renderJobCard(job, `today-${i}`))}
-        </>
-      )}
+      <div
+        className="job-list-scroll"
+        style={{
+          maxHeight: "600px",
+          overflowY: "auto",
+          scrollbarWidth: "thin",
+        }}
+      >
+        {todayJobs.length > 0 && (
+          <>
+            <h6 className="mb-3 text-muted">Today</h6>
+            <hr className="text-gray fs-2" />
+            {todayJobs.map((job, i) => renderJobCard(job, `today-${i}`))}
+          </>
+        )}
 
-      {weekJobs.length > 0 && (
-        <>
-          <hr />
-          <h6 className="mb-2 text-muted">This Week</h6>
-          {weekJobs.map((job, i) => renderJobCard(job, `week-${i}`))}
-        </>
-      )}
+        {weekJobs.length > 0 && (
+          <>
+            <h6 className="mb-3 mt-4 text-muted">This Week</h6>
+            <hr className="text-gray fs-2" />
+            {weekJobs.map((job, i) => renderJobCard(job, `week-${i}`))}
+          </>
+        )}
 
-      {todayJobs.length === 0 && weekJobs.length === 0 && (
-        <p className="text-muted">No jobs this week.</p>
-      )}
+        {todayJobs.length === 0 && weekJobs.length === 0 && (
+          <p className="text-muted">No jobs this week.</p>
+        )}
+      </div>
     </div>
   );
 }
