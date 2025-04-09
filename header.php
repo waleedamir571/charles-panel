@@ -104,7 +104,7 @@
           
             <!-- Driver Dropdown Items -->
             <div class="dropdown-menu-items" id="driverDropdown" style="display: none;">
-              <a href="#" class="menu-link"><img src="img/home/inspect.png"> Inspect</a>
+              <a href="driver-inspect.php" class="menu-link"><img src="img/home/inspect.png"> Inspect</a>
               <a href="#" class="menu-link"><img src="img/home/tickets.png"> Tickets</a>
               <a href="#" class="menu-link"><img src="img/home/docs.png"> Docs</a>
               <a href="driver-reminder.php" class="menu-link"><img src="img/home/alarms.png"> Alarms</a>

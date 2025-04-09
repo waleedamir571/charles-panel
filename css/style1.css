@@ -28,6 +28,143 @@ body {
   }
 }
 
+.dropdown .dropdown-menu {
+  border: 0;
+  padding: 6px 0 10px 0;
+  margin: 0;
+  border-radius: 0 !important;
+  border-radius: 0px 0px 6px 6px;
+  border: 0.5px solid rgba(198, 195, 195, 0.28);
+  background: #4E5456;
+  color: white;
+}
+
+.dropdown .dropdown-menu1 {
+  border: 0;
+  padding: 6px 0 10px 0;
+  margin: 0;
+  border-radius: 0 !important;
+  /* background: grey; */
+  color: #FFF !important;
+  /* font-family: Outfit; */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  border-radius: 6px 6px 0px 0px;
+  /* border: 0.5px solid rgba(198, 195, 195, 0.28); */
+  background: #4E5456;
+}
+
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: .255em;
+  vertical-align: .255em;
+  content: "";
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-bottom: 0;
+  border-left: .3em solid transparent;
+  display: none;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.segmented-input {
+  width: 100%;
+  padding: 6px 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-radius: 6px;
+  position: relative;
+  z-index: 2;
+}
+
+.tire-section {
+  position: relative;
+  background-color: #f8f9fa;
+  padding-bottom: 14px; /* Space for the bottom line */
+}
+
+.tire-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  border-top: 5px solid #53585C;
+  border-radius: 6px;
+  background: repeating-linear-gradient(to right, #53585C, #53585C 1px, transparent 1px, transparent calc(100% / 3));
+  z-index: 1;
+}
+
+
+.form-inline-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.submit-btn1 {
+  background-color: #3b82f6;
+  border: none;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  border-radius: 9px;
+  background: #4F84CA;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.form-inline-group label {
+  white-space: nowrap;
+  margin: 0;
+  font-weight: 500;
+  color: #000;
+  font-family: Outfit;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+
+.form-inline-group input {
+  border: none;
+  border-bottom: 1px solid #5F6366;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  padding: 4px 8px;
+  flex: 1;
+}
+
+.submit-btn {
+  padding: 10px 30px;
+  background-color: #4D8BCE;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #3c78b3;
+}
+
 .airport-red{
   color: #FF5757;
 font-size: 20px;
@@ -937,7 +1074,7 @@ line-height: normal;
 }
 
 .d-content{
-  display: contents;
+  display: flex;
 }
 .invoice-date {
   color: #6b7280;
@@ -4915,7 +5052,7 @@ p a:hover {
   font-size: 16px;
   font-weight: 300;
   padding: 4px 20px;
-  color: #242934;
+  color: white;
 }
 
 /* line 454, G:/admin_project/10 admin/cryptocurrency/scss/_button.scss */
