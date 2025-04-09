@@ -5,7 +5,7 @@
 <div class="main_content_iner">
     <!-- Header Section -->
 
-    <div class="container-fluid p-0 white_card card_height_100 mb_30">
+    <div class="container-fluid p-0 white_card card_height_100 mb_30 ">
         <div class="mb-4">
             <div class="white_card_header">
                 <div class="row align-items-center">
@@ -75,89 +75,6 @@
 
                 <!-- Index Tab -->
                 <div class="tab-pane fade" id="jobs" role="tabpanel" aria-labelledby="jobs-tab">
-                    <div class="white_card_body">
-                        <div class="mt-4">
-                            <div class="job-ticket">
-                                <div class="d-flex align-items-center gap-2">
-                                    <span class="airport">(LAX) Airport,</span>
-                                    <span class="location">Los Angeles</span>
-                                </div>
-                                <div class="d-flex align-items-center gap-4">
-                                    <span class="airport">2JB872HB</span>
-                                    <span class="airport">12-21-24</span>
-                                </div>
-                            </div>
-    
-                            <div class="job-ticket">
-                                <div class="d-flex align-items-center gap-2">
-                                    <span class="airport">(LAX) Airport,</span>
-                                    <span class="location">Los Angeles</span>
-                                </div>
-                                <div class="d-flex align-items-center gap-4">
-                                    <span class="airport">2JB872HB</span>
-                                    <span class="airport">12-21-24</span>
-                                </div>
-                            </div>
-    
-                            <div class="job-ticket">
-                                <div class="d-flex align-items-center gap-2">
-                                    <span class="airport">(LAX) Airport,</span>
-                                    <span class="location">Los Angeles</span>
-                                </div>
-                                <div class="d-flex align-items-center gap-4">
-                                    <span class="airport">2JB872HB</span>
-                                    <span class="airport">12-21-24</span>
-                                </div>
-                            </div>
-    
-                            <div class="job-ticket">
-                                <div class="d-flex align-items-center gap-2">
-                                    <span class="airport">(LAX) Airport,</span>
-                                    <span class="location">Los Angeles</span>
-                                </div>
-                                <div class="d-flex align-items-center gap-4">
-                                    <span class="airport">2JB872HB</span>
-                                    <span class="airport">12-21-24</span>
-                                </div>
-                            </div>
-    
-                            <div class="job-ticket">
-                                <div class="d-flex align-items-center gap-2">
-                                    <span class="airport">(LAX) Airport,</span>
-                                    <span class="location">Los Angeles</span>
-                                </div>
-                                <div class="d-flex align-items-center gap-4">
-                                    <span class="airport">2JB872HB</span>
-                                    <span class="airport">12-21-24</span>
-                                </div>
-                            </div>
-    
-                            <div class="job-ticket">
-                                <div class="d-flex align-items-center gap-2">
-                                    <span class="airport">(LAX) Airport,</span>
-                                    <span class="location">Los Angeles</span>
-                                </div>
-                                <div class="d-flex align-items-center gap-4">
-                                    <span class="airport">2JB872HB</span>
-                                    <span class="airport">12-21-24</span>
-                                </div>
-                            </div>
-    
-                            <div class="job-ticket">
-                                <div class="d-flex align-items-center gap-2">
-                                    <span class="airport">(LAX) Airport,</span>
-                                    <span class="location">Los Angeles</span>
-                                </div>
-                                <div class="d-flex align-items-center gap-4">
-                                    <span class="airport">2JB872HB</span>
-                                    <span class="airport">12-21-24</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="tab-pane fade show active" id="index" role="tabpanel" aria-labelledby="index-tab">
                     <div class="white_card_body">
                         <div class="row g-4">
                             <!-- Job Card 1 -->
@@ -370,6 +287,89 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="tab-pane fade show active" id="index" role="tabpanel" aria-labelledby="index-tab">
+                    <div class="white_card_body">
+                        <div class="mt-4">
+                            <div class="job-ticket">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="airport">(LAX) Airport,</span>
+                                    <span class="location">Los Angeles</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-4">
+                                    <span class="airport">2JB872HB</span>
+                                    <span class="airport">12-21-24</span>
+                                </div>
+                            </div>
+    
+                            <div class="job-ticket">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="airport">(LAX) Airport,</span>
+                                    <span class="location">Los Angeles</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-4">
+                                    <span class="airport">2JB872HB</span>
+                                    <span class="airport">12-21-24</span>
+                                </div>
+                            </div>
+    
+                            <div class="job-ticket">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="airport">(LAX) Airport,</span>
+                                    <span class="location">Los Angeles</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-4">
+                                    <span class="airport">2JB872HB</span>
+                                    <span class="airport">12-21-24</span>
+                                </div>
+                            </div>
+    
+                            <div class="job-ticket">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="airport">(LAX) Airport,</span>
+                                    <span class="location">Los Angeles</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-4">
+                                    <span class="airport">2JB872HB</span>
+                                    <span class="airport">12-21-24</span>
+                                </div>
+                            </div>
+    
+                            <div class="job-ticket">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="airport">(LAX) Airport,</span>
+                                    <span class="location">Los Angeles</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-4">
+                                    <span class="airport">2JB872HB</span>
+                                    <span class="airport">12-21-24</span>
+                                </div>
+                            </div>
+    
+                            <div class="job-ticket">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="airport">(LAX) Airport,</span>
+                                    <span class="location">Los Angeles</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-4">
+                                    <span class="airport">2JB872HB</span>
+                                    <span class="airport">12-21-24</span>
+                                </div>
+                            </div>
+    
+                            <div class="job-ticket">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="airport">(LAX) Airport,</span>
+                                    <span class="location">Los Angeles</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-4">
+                                    <span class="airport">2JB872HB</span>
+                                    <span class="airport">12-21-24</span>
                                 </div>
                             </div>
                         </div>
