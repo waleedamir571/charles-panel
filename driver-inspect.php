@@ -22,7 +22,7 @@
                 <div class="row">
                     <div class="col-md-6">
 
-                        <div class="white_card_header">
+                        <div class="white_card_header1">
                             <div class="box_header m-0">
                                 <div class="main-title">
                                     <p class="m-0 info-label2">Truck No.</p>
@@ -39,7 +39,7 @@
                     </div>
                     <div class="col-md-6">
 
-                        <div class="white_card_header">
+                        <div class="white_card_header1">
                             <div class="box_header m-0">
                                 <div class="main-title">
                                     <p class="m-0 info-label2">Odometer Reading</p>
@@ -58,7 +58,7 @@
                 <div class="row">
                     <div class="col-md-6">
 
-                        <div class="white_card_header">
+                        <div class="white_card_header1">
                             <div class="box_header m-0">
                                 <div class="main-title">
                                     <p class="m-0 info-label2">Trailer</p>
@@ -75,7 +75,7 @@
                     </div>
                     <div class="col-md-6">
 
-                        <div class="white_card_header">
+                        <div class="white_card_header1">
                             <div class="box_header m-0">
                                 <div class="main-title">
                                     <p class="m-0 info-label2">Inspection Date</p>
@@ -96,7 +96,7 @@
                 <div class="row">
                     <div class="col-md-6">
 
-                        <div class="white_card_header">
+                        <div class="white_card_header1">
                             <div class="box_header m-0">
                                 <div class="main-title">
                                     <p class="m-0 info-label2">Time</p>

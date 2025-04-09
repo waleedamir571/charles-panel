@@ -33,7 +33,7 @@
                 <div class="row">
                     <div class="col-md-6">
 
-                        <div class="white_card_header">
+                        <div class="white_card_header1">
                             <div class="box_header m-0">
                                 <div class="main-title">
                                     <p class="m-0 info-label2">Start Date</p>
@@ -50,7 +50,7 @@
                     </div>
                     <div class="col-md-6">
 
-                        <div class="white_card_header">
+                        <div class="white_card_header1">
                             <div class="box_header m-0">
                                 <div class="main-title">
                                     <p class="m-0 info-label2">Time</p>
@@ -69,7 +69,7 @@
                 <div class="row">
                     <div class="col-md-6">
 
-                        <div class="white_card_header">
+                        <div class="white_card_header1">
                             <div class="box_header m-0">
                                 <div class="main-title">
                                     <p class="m-0 info-label2">Start Date</p>
@@ -86,7 +86,7 @@
                     </div>
                     <div class="col-md-6">
 
-                        <div class="white_card_header">
+                        <div class="white_card_header1">
                             <div class="box_header m-0">
                                 <div class="main-title">
                                     <p class="m-0 info-label2">Time</p>
@@ -105,7 +105,7 @@
                 <div class="row">
                     <div class="col-md-6">
 
-                        <div class="white_card_header">
+                        <div class="white_card_header1">
                             <div class="box_header m-0">
                                 <div class="main-title">
                                     <p class="m-0 info-label2">Repeat</p>
@@ -122,7 +122,7 @@
                     </div>
                     <div class="col-md-6">
 
-                        <div class="white_card_header">
+                        <div class="white_card_header1">
                             <div class="box_header m-0">
                                 <div class="main-title">
                                     <p class="m-0 info-label2">Calender</p>
@@ -141,7 +141,7 @@
                 <div class="row">
                     <div class="col-md-6">
 
-                        <div class="white_card_header">
+                        <div class="white_card_header1">
                             <div class="box_header m-0">
                                 <div class="main-title">
                                     <p class="m-0 info-label2">Alert</p>
