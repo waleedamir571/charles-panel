@@ -27,6 +27,15 @@ body {
     max-width: 1310px;
   }
 }
+
+.airport-red{
+  color: #FF5757;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px; /* 80% */
+letter-spacing: 0.2px;
+}
 .header-section {
   border-bottom: 1px solid #ddd;
 }
@@ -72,8 +81,42 @@ body {
   display: block; /* Show the white icon when hovering over the first image */
 }
 
+.w-50{
+  width: 50%;
+}
+
 .driver-icon {
   transition: 0.3s ease;  /* Smooth transition */
+}
+
+/* Date input text (placeholder-like appearance before selection) */
+input[type="date"],
+input[type="time"],
+input[type="number"] {
+    color: #969AA8;
+   
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+
+/* Chrome/Safari: Calendar icon color */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(57%) sepia(5%) saturate(194%) hue-rotate(187deg) brightness(92%) contrast(84%);
+  cursor: pointer;
+}
+
+/* Firefox: Calendar icon color */
+input[type="date"]::-moz-focus-inner {
+  color: #969AA8;
+}
+
+/* Remove default arrow in some browsers */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-clear-button {
+  display: none;
 }
 
 
@@ -332,6 +375,14 @@ letter-spacing: -0.25px;
 .preview-box span {
   font-size: 22px;
   font-weight: 400;
+}
+
+.info-label1{
+  color: #636363;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
 
 .preview-box button {
@@ -630,6 +681,16 @@ line-height: normal;
 .info-row {
   padding: 8px 15px;
   border-bottom: 1px solid #f0f0f0;
+}
+
+.info-label2 {
+  font-weight: 600;
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px;
+  /* color: #333; */
 }
 
 .info-label {
@@ -6414,15 +6475,12 @@ line-height: normal;
 
 /* line 406, G:/admin_project/10 admin/cryptocurrency/scss/_sidebar.scss */
 .sidebar #sidebar_menu>li ul li a {
-
   white-space: nowrap;
-
-  padding: 10px 0 10px 8px !important;
+  padding: 10px 0px 10px 25px !important;
   margin-top: 0;
   margin-left: 0px;
   /* text-transform: capitalize; */
   color: #FFF;
-
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
@@ -6653,11 +6711,18 @@ body::-webkit-scrollbar {
   background: transparent;
 }
 
+ol, ul {
+  padding-left: 0rem !important;
+}
 /* line 590, G:/admin_project/10 admin/cryptocurrency/scss/_sidebar.scss */
-.sidebar.dark_sidebar #sidebar_menu>li ul li a.active,
-.sidebar.dark_sidebar #sidebar_menu>li ul li a:hover {
-  background: #091023 !important;
+.sidebar.dark_sidebar #sidebar_menu>li ul li a.active, .sidebar.dark_sidebar #sidebar_menu>li ul li a:hover {
+  /* background: #091023 !important; */
   color: #fff !important;
+  border-radius: 15px;
+  background: #8FADD5 !important;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 /* line 595, G:/admin_project/10 admin/cryptocurrency/scss/_sidebar.scss */
@@ -7409,7 +7474,7 @@ body::-webkit-scrollbar {
 
 /* line 45, G:/admin_project/10 admin/cryptocurrency/scss/_dashboard_part.scss */
 .white_card .white_card_header {
-  padding: 22px 30px;
+  padding: 22px 0px;
 }
 
 /* line 53, G:/admin_project/10 admin/cryptocurrency/scss/_dashboard_part.scss */

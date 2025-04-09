@@ -107,7 +107,7 @@
               <a href="#" class="menu-link"><img src="img/home/inspect.png"> Inspect</a>
               <a href="#" class="menu-link"><img src="img/home/tickets.png"> Tickets</a>
               <a href="#" class="menu-link"><img src="img/home/docs.png"> Docs</a>
-              <a href="#" class="menu-link"><img src="img/home/alarms.png"> Alarms</a>
+              <a href="driver-reminder.php" class="menu-link"><img src="img/home/alarms.png"> Alarms</a>
             </div>
           
             <!-- Calendar Dropdown Items -->
