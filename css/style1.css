@@ -28,9 +28,129 @@ body {
   }
 }
 
+.ptb-15{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.line-container {
+  background: #E0E0E0;
+  height: 100%;
+  border-top: 1px solid #E0E0E0; /* Creates a horizontal line across the page */
+}
+
+.dotgreen {
+ 
+  height: 25px;
+  width: 25px;
+  background-color: #14AE5CB2;
+  border-radius: 50%;
+  display: inline-block;
+
+}
+
+.dotpink {
+ 
+    height: 25px;
+    width: 25px;
+    background-color: #D65E62B2;
+    border-radius: 50%;
+    display: inline-block;
+
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dotyellow {
+ 
+  height: 25px;
+  width: 25px;
+  background-color: #FFB600B2;
+  border-radius: 50%;
+  display: inline-block;
+
+}
+
+.job-ticket7 {
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.75rem;
+  color: white;
+  transition: all 0.2s ease;
+  border-radius: 15px;
+  border-radius: 6px;
+  background: #F8F8F8;
+  /* border-radius: 6px; */
+  border: 1px solid #BBB;
+}
+
+.report{
+  color: #0571D3;
+text-align: center;
+
+font-size: 22px;
+font-style: normal;
+font-weight: 600;
+line-height: 22px; /* 100% */
+letter-spacing: -0.25px;
+}
+
 .h-30{
   border-radius: 20px !important;
   height: 30px;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.card-body {
+  font-size: 1rem;
+}
+
+.status-box {
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+.status-pending {
+  background-color: #f44336; /* Red */
+}
+.status-warning {
+  background-color: #ff9800; /* Yellow */
+}
+.status-completed {
+  background-color: #4caf50; /* Green */
+}
+.circle-status {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.view-report-btn {
+  background-color: #4D8BCE;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.view-report-btn:hover {
+  background-color: #3c78b3;
+}
+.truck-info {
+  margin-bottom: 10px;
 }
 
 .dropdown .dropdown-menu {
@@ -42,6 +162,15 @@ body {
   border: 0.5px solid rgba(198, 195, 195, 0.28);
   background: #4E5456;
   color: white;
+}
+
+.year{
+  color: #969AA8;
+
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
 }
 
 .dropdown .dropdown-menu1 {
@@ -132,16 +261,57 @@ body {
   font-weight: 500;
 }
 
+.overflow {
+  height: 35rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* Customize scroll bar */
+.overflow::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+}
+
+.overflow::-webkit-scrollbar-thumb {
+  background: #B3D8FE; /* Thumb color (scroll handle) */
+  border-radius: 8px;
+}
+
+.overflow::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+  border-radius: 8px;
+}
+
 .form-inline-group label {
   white-space: nowrap;
   margin: 0;
   font-weight: 500;
   color: #000;
-  font-family: Outfit;
+  
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.overdue{
+  color: #FFB600;
+text-align: center;
+
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.pending{
+  color: #D65E62;
+text-align: center;
+
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
 }
 
 
@@ -197,6 +367,34 @@ letter-spacing: 0.2px;
   transition: background 0.3s ease;
 }
 
+.job-ticket5 {
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.75rem;
+  color: white;
+  transition: all 0.2s ease;
+  border-radius: 15px;
+  border-radius: 10px;
+  background: #F8F8F8;
+  border-radius: 10px;
+  border: 1px solid #D65E62;
+  background: rgba(214, 94, 98, 0.20);
+}
+
+.job-ticket6 {
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.75rem;
+  color: white;
+  transition: all 0.2s ease;
+  border-radius: 15px;
+  border-radius: 10px;
+  background: #F8F8F8;
+  border-radius: 10px;
+  border: 1px solid #FFB600;
+  background: rgba(255, 182, 0, 0.30);
+ 
+  
+}
+
 .job-ticket3 {
  
   padding: 1rem 1.5rem;
@@ -250,6 +448,28 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
+.asset-unit{
+  color: #000;
+text-align: center;
+
+font-size: 22px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+
+.job-ticket4 {
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.75rem;
+    color: white;
+    transition: all 0.2s ease;
+    border-radius: 15px;
+   
+    border-radius: 10px;
+    background: #F8F8F8;
+}
+
 /* Firefox: Calendar icon color */
 input[type="date"]::-moz-focus-inner {
   color: #969AA8;
@@ -259,6 +479,15 @@ input[type="date"]::-moz-focus-inner {
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-clear-button {
   display: none;
+}
+
+.good{
+  color: #14AE5C;
+text-align: center;
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
 }
 
 
@@ -15309,9 +15538,9 @@ table.lms_table_active3.dataTable thead .sorting_desc::after {
 
 /* line 36, G:/admin_project/10 admin/cryptocurrency/scss/_product.scss */
 .text-muted {
-  /* color: #a4abc5 !important; */
-  color: #000 !important;
-  font-size: 20px;
+  color: #A4ABC5 !important;
+  /* color: #000 !important; */
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;

@@ -5,7 +5,11 @@
 
 <!--/ menu  -->
 <div class="main_content_iner">
+
+
+<div class="white_card card_height_100 mb_30">
 <div class="row align-items-center mb-4">
+
         <div class="col-md-3">
             <h1 class="fw-bold fs-4 mb-0">My Documents</h1>
         </div>
@@ -93,6 +97,7 @@
 
       </div>
       
+    </div>
     </div>
   </div>
 
