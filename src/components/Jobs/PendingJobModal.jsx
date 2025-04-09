@@ -48,7 +48,7 @@ const PendingJobModal = ({ job, onClose }) => {
         </div>
       ) : (
         <div
-          className="job-modal-content text-black d-flex flex-column"
+          className="job-modal-content text-black d-flex flex-column p-3"
           ref={modalRef}
         >
           <div className="job-modal-scrollable">
