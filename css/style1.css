@@ -28,6 +28,11 @@ body {
   }
 }
 
+.h-30{
+  border-radius: 20px !important;
+  height: 30px;
+}
+
 .dropdown .dropdown-menu {
   border: 0;
   padding: 6px 0 10px 0;
@@ -710,7 +715,7 @@ line-height: normal;
 .job-text{
   color: #000;
     /* font-family: Outfit; */
-    font-size: 30px;
+    font-size: 32px !important;
     font-style: normal;
     font-weight: 600;
     line-height: normal;

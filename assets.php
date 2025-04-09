@@ -45,7 +45,7 @@
             <path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3h9.05zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8h2.05zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1h9.05z"/>
           </svg>
         </button>
-        <a href="set-reminder.php" class="btn_1">+ Add</a>
+        <a href="set-reminder.php" class="btn_1">+ Add Assets</a>
       </div>
     </div>
 
@@ -53,15 +53,18 @@
         <div class="job-ticket2">
             <div class="">
                 <div class="row align-items-center">
-                    <div class="col-md-2">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                        <span class="heading t-2">All</span>
+                    <div class="col-md-3">
+                      
+                        <span class="heading ">Type</span>
                     </div>
-                    <div class="col-md-9">
-                        <span class="heading">Projects</span>
+                    <div class="col-md-3 ">
+                        <span class="heading">Unit No</span>
                     </div>
-                   <div class="col-md-1">
-                    <span class="heading">Date</span>
+                   <div class="col-md-3 text-center">
+                    <span class="heading">Alerts</span>
+                   </div>
+                   <div class="col-md-3 text-end">
+                    <span class="heading">Status</span>
                    </div>
                 </div>
               

@@ -176,7 +176,7 @@
                                                     <span class="text-muted">Status</span>
                                                 </div>
                                                 <div class="col-md-10">
-                                                    <div class="progress" style="height: 16px;">
+                                                    <div class="progress h-30" >
                                                         <div class="progress-bar bg-lime-400" role="progressbar"
                                                             style="width: 60%" aria-valuenow="60" aria-valuemin="0"
                                                             aria-valuemax="100">60%</div>
@@ -228,7 +228,7 @@
                                                     <span class="text-muted">Status</span>
                                                 </div>
                                                 <div class="col-md-10">
-                                                    <div class="progress" style="height: 16px;">
+                                                    <div class="progress  h-30" >
                                                         <div class="progress-bar bg-green-300" role="progressbar"
                                                             style="width: 80%" aria-valuenow="80" aria-valuemin="0"
                                                             aria-valuemax="100">80%</div>
@@ -284,7 +284,7 @@
                                                     <span class="text-muted">Status</span>
                                                 </div>
                                                 <div class="col-md-10">
-                                                    <div class="progress" style="height: 16px;">
+                                                    <div class="progress  h-30" >
                                                         <div class="progress-bar bg-yellow-400" role="progressbar"
                                                             style="width: 30%" aria-valuenow="30" aria-valuemin="0"
                                                             aria-valuemax="100">30%</div>
@@ -337,7 +337,7 @@
                                                     <span class="text-muted">Status</span>
                                                 </div>
                                                 <div class="col-md-10">
-                                                    <div class="progress" style="height: 16px;">
+                                                    <div class="progress  h-30" >
                                                         <div class="progress-bar bg-green-500" role="progressbar"
                                                             style="width: 100%" aria-valuenow="100" aria-valuemin="0"
                                                             aria-valuemax="100">100%</div>
