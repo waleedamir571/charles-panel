@@ -3,11 +3,8 @@ import Header from "../components/Header";
 import Network from "../components/Network";
 import Footer from "../components/Footer";
 import Sidebar from "../components/Sidebar";
-import useScriptLoader from "../utils/loadScripts";
 
 const NetworkPage = () => {
-  useScriptLoader();
-
   return (
     <>
       <Sidebar />

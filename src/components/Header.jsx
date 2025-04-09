@@ -15,7 +15,7 @@ const Header = () => {
                 <span className="dash">
                   {" "}
                   <img className="" src="/assets/img/home/Vector.png" alt="" />{" "}
-                  Dashboard{" "}
+                  <span className="ps-3">Dashboard{" "}</span>
                 </span>
               </div>
               <div className="header_right d-flex justify-content-between align-items-center">

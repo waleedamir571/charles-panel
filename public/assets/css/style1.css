@@ -28,6 +28,968 @@ body {
   }
 }
 
+.h-30{
+  border-radius: 20px !important;
+  height: 30px !important;
+}
+
+.dropdown .dropdown-menu {
+  border: 0;
+  padding: 6px 0 10px 0;
+  margin: 0;
+  border-radius: 0 !important;
+  border-radius: 0px 0px 6px 6px;
+  border: 0.5px solid rgba(198, 195, 195, 0.28);
+  background: #4E5456;
+  color: white;
+}
+
+.dropdown .dropdown-menu1 {
+  border: 0;
+  padding: 6px 0 10px 0;
+  margin: 0;
+  border-radius: 0 !important;
+  /* background: grey; */
+  color: #FFF !important;
+  /* font-family: Outfit; */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  border-radius: 6px 6px 0px 0px;
+  /* border: 0.5px solid rgba(198, 195, 195, 0.28); */
+  background: #4E5456;
+}
+
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: .255em;
+  vertical-align: .255em;
+  content: "";
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-bottom: 0;
+  border-left: .3em solid transparent;
+  display: none;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.segmented-input {
+  width: 100%;
+  padding: 6px 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-radius: 6px;
+  position: relative;
+  z-index: 2;
+}
+
+.tire-section {
+  position: relative;
+  background-color: #f8f9fa;
+  padding-bottom: 14px; /* Space for the bottom line */
+}
+
+.tire-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  border-top: 5px solid #53585C;
+  border-radius: 6px;
+  background: repeating-linear-gradient(to right, #53585C, #53585C 1px, transparent 1px, transparent calc(100% / 3));
+  z-index: 1;
+}
+
+
+.form-inline-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.submit-btn1 {
+  background-color: #3b82f6;
+  border: none;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  border-radius: 9px;
+  background: #4F84CA;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.form-inline-group label {
+  white-space: nowrap;
+  margin: 0;
+  font-weight: 500;
+  color: #000;
+  font-family: Outfit;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+
+.form-inline-group input {
+  border: none;
+  border-bottom: 1px solid #5F6366;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  padding: 4px 8px;
+  flex: 1;
+}
+
+.submit-btn {
+  padding: 10px 30px;
+  background-color: #4D8BCE;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #3c78b3;
+}
+
+.airport-red{
+  color: #FF5757;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px; /* 80% */
+letter-spacing: 0.2px;
+}
+.header-section {
+  border-bottom: 1px solid #ddd;
+}
+
+.time-tracker {
+ 
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Basic styling for the menu items */
+.menu-item {
+  padding: 10px;
+  color: black;
+  display: block; /* Ensure anchor takes up the full space */
+  text-decoration: none; /* Remove underlines from the anchor tag */
+  transition: background 0.3s ease;
+}
+
+.job-ticket3 {
+ 
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.75rem;
+  color: white;
+  
+  transition: all 0.2s ease;
+  border-radius: 15px;
+  background: #244761;
+}
+.btn-fixed {
+  position: fixed;
+  bottom: 30px;
+  left: 25px;
+  z-index: 9999;
+}
+
+.driver-icon-white {
+  display: none;  /* Hide the white icon by default */
+  transition: 0.3s ease;
+}
+
+.driver-icon:hover + .driver-icon-white {
+  display: block; /* Show the white icon when hovering over the first image */
+}
+
+.w-50{
+  width: 50%;
+}
+
+.driver-icon {
+  transition: 0.3s ease;  /* Smooth transition */
+}
+
+/* Date input text (placeholder-like appearance before selection) */
+input[type="date"],
+input[type="time"],
+input[type="number"] {
+    color: #969AA8;
+   
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+
+/* Chrome/Safari: Calendar icon color */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(57%) sepia(5%) saturate(194%) hue-rotate(187deg) brightness(92%) contrast(84%);
+  cursor: pointer;
+}
+
+/* Firefox: Calendar icon color */
+input[type="date"]::-moz-focus-inner {
+  color: #969AA8;
+}
+
+/* Remove default arrow in some browsers */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+
+
+.btn-info2 {
+  color: #000 !important;
+  border-color: #4F84CA !important;
+  border-radius: 16px !important;
+  background: #4F84CA !important;
+  color: #FFF !important; 
+  height: 65px !important;
+  padding: 0px 50px 0px 50px !important;
+  justify-content: flex-end !important;
+  width: 100% !important;
+  gap: 89.989px !important;
+  flex-shrink: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
+}
+
+.heading{
+  color: #FFF;
+text-align: center;
+
+font-size: 22px;
+font-style: normal;
+font-weight: 300;
+line-height: 22px; /* 100% */
+letter-spacing: -0.25px;
+}
+
+.t-2{
+  position: relative;
+  top: 7px;
+  left: 10px;
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.job-ticket2 {
+  border-radius: 10px;
+  background: #4E5456;
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.75rem;
+  color: white;
+  /* display: flex;
+  justify-content: space-between; */
+  /* align-items: center; */
+  transition: all 0.2s ease;
+  border-radius: 10px;
+}
+
+/* Active state styling */
+.menu-item.active {
+  border-radius: 6px;
+  background: rgba(12, 31, 31, 0.06);
+  color: black !important; /* Ensure the text color remains black */
+}
+
+/* Optional: Style for the text inside p tag */
+.invoice-date {
+  margin: 0;
+}
+
+.invoice-date {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* .pb-10:hover{
+  border-radius: 6px;
+    background: rgba(12, 31, 31, 0.06);
+    padding: 10px;
+    color: black;
+} */
+
+.ticket-modal {
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 580px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+.ticket-grid {
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  margin-bottom: 32px;
+}
+
+.ticket-grid td {
+  padding: 12px;
+  border-right: 1px solid #e5e7eb;
+}
+
+.ticket-grid td:last-child {
+  border-right: none;
+}
+
+.cancel-btn {
+  background-color: #fca5a5;
+  border: none;
+  color: white;
+  padding: 8px 40px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.cancel-btn:hover {
+  background-color: #f87171;
+}
+
+.submit-btn {
+  background-color: #3b82f6;
+  border: none;
+  color: white;
+  padding: 8px 40px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #2563eb;
+}
+
+.time-details {
+  display: flex;
+  border: 1px solid #e2e2e2;
+}
+
+.time-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.time-box:not(:last-child) {
+  border-right: 1px solid #e2e2e2;
+}
+
+.time-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.start-label, .total-label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.time-info {
+  text-align: right;
+}
+
+.time-value {
+  font-weight: 500;
+  color: #333;
+}
+
+.date-value {
+  font-size: 14px;
+  color: #777;
+}
+
+.grid-boxes {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-box {
+  padding: 12px 15px;
+  text-align: center;
+  color: #999;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.grid-box:last-child {
+  border-bottom: none;
+}
+
+
+.top-tabs {
+  display: flex
+;
+  /* background-color: #1b355d; */
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  padding: 15px;
+  color: #ccc;
+  background-color: transparent; /* no background by default */
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Initially, hide the white image */
+/* Initially, hide the white image */
+/* Initially, hide the white image */
+/* Initially, hide the white image */
+.driver-icon-white {
+  display: none; /* Hide the white icon by default */
+}
+
+/* When the tab is active, hide the default image and show the white image */
+.tab-item.active .driver-icon {
+  display: none;  /* Hide the default image when active */
+}
+
+.tab-item.active .driver-icon-white {
+  display: block; /* Show the white image when active */
+}
+
+/* Tab item styling when active */
+.tab-item.active {
+  background-color: #3a5a8b;
+  color: #fff;
+  border-bottom-left-radius: 12px;
+  border-radius: 20px 20px 0px 20px;
+}
+
+/* Ensure no hover effect changes the image */
+.tab-item:hover .driver-icon,
+.tab-item:hover .driver-icon-white {
+  display: block; /* Do nothing on hover (no image change) */
+}
+
+
+
+
+
+
+.preview-box {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex
+;
+  justify-content: space-between;
+  align-items: center;
+  fill: #F8F8F8;
+  stroke-width: 1px;
+  stroke: #DFDFDF;
+  border-radius: 10px;
+}
+.preview-box span {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.info-label1{
+  color: #636363;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.preview-box button {
+  background-color: transparent;
+  border: 0px solid #ccc;
+  padding: 5px 15px;
+  /* cursor: pointer; */
+  font-weight: 400;
+  font-size: 20px;
+  opacity: 0.6;
+}
+.date-section {
+  margin-bottom: 20px;
+}
+
+.line {
+  width: 87%;
+  height: 1px;
+  background-color: #A1A7A8;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+}
+
+.fs-148{
+  color: #000;
+
+font-size: 60px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+
+
+.date-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #C0C2C2;
+  /* font-family: Outfit; */
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+
+.tab-item img {
+  /* display: block; */
+  margin: 0 auto 5px;
+  /* width: 28px;
+  height: 28px; */
+}
+.h-25{
+  height: 25px;
+  border-radius: 25px;
+}
+
+.bg-green{
+  background-color: #BFE745;
+}
+
+.dropdown-menu-items {
+  background-color: #2c4876;
+  padding: 10px 0;
+  border-radius: 16px;
+  background: #566781;
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.menu-link:hover {
+ 
+  border-radius: 15px;
+  background: #8FADD5;
+  color: white;
+}
+
+.menu-link img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.truck{
+  color: #000;
+
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.blue-section {
+  background-color: #1a4e8c;
+  color: white;
+  padding: 20px;
+  height: 100%;
+  min-height: 180px;
+  position: relative;
+  border-radius: 20px 0px 0px 0px;
+  background: linear-gradient(90deg, #1F385D 0%, #4175C3 100%);
+  position: relative;
+  left: 1%;
+}
+
+
+
+.tabs-bg{
+  /* border-radius: 15px;
+background: #F8F8F8; */
+}
+
+  .custom-tabs .nav-link {
+    background-color: white;
+    color: black;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    margin-left: 0.5rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .pb-15{
+    padding-top: 15px;
+  }
+
+  .custom-tabs .nav-link.active {
+    background-color: #0d6efd !important;
+    color: white !important;
+    border-color: #0d6efd !important;
+}
+
+.btn-dark1 {
+  color: #fff;
+  background-color: #4E5456;
+  border-color: #4E5456;
+  border-radius: 25px;
+}
+
+
+.tab-link {
+  color: #555;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.tab-link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.stat-card {
+  text-align: center;
+ 
+}
+
+.card2{
+  border-radius: 5px;
+border: 1px solid #C8C8C8;
+
+background: #E8F2FC;
+}
+
+.tab-link.active {
+  background-color: #5193D0;
+  color: white;
+}
+
+.cost{
+  color: #000;
+
+font-size: 32px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
+
+.job-text{
+  color: #000;
+    /* font-family: Outfit; */
+    font-size: 32px !important;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* Job card styling */
+.job-card1 {
+  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 15px;
+  background: #F8F8F8;
+}
+.job-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.1rem;
+}
+
+/* Progress bar colors */
+.bg-yellow-400 {
+  background-color: #facc15 !important;
+}
+
+.bg-lime-400 {
+  background-color: #a3e635 !important;
+}
+
+.bg-green-300 {
+  background-color: #86efac !important;
+}
+
+.bg-green-500 {
+  background-color: #22c55e !important;
+}
+
+/* Icon styling */
+.icon-container {
+  padding: 5px 5px;
+}
+
+.text-primary {
+  color: #3b82f6 !important;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .search-container .input-group {
+    width: 100%;
+  }
+  
+  .d-flex.justify-content-between {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .search-container {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logo-box {
+  margin-right: 10px;
+}
+
+.logo-brackets {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.knotty {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.logistics {
+  font-size: 24px;
+  color: #4b87d0;
+}
+
+.address {
+  font-size: 14px;
+  position: absolute;
+  bottom: 20px;
+}
+
+/* Info Styling */
+.info-row {
+  padding: 8px 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.info-label2 {
+  font-weight: 600;
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px;
+  /* color: #333; */
+}
+
+.info-label {
+  font-weight: 600;
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 35px;
+  color: #333;
+}
+
+.info-value {
+
+  color: #969AA8;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+/* Time Section */
+.time-section {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.time-box {
+  padding: 15px;
+  border-right: 1px solid #ddd;
+}
+
+.tonnage-header {
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.hourly-value {
+  text-align: right;
+  padding: 5px 0;
+  font-style: italic;
+  color: #666;
+}
+
+.time-details {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.start-label, .stop-label, .total-label {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.time-value {
+  font-size: 13px;
+}
+
+.date-value {
+  font-size: 12px;
+  color: #666;
+}
+
+.time-grid {
+  margin-top: 10px;
+}
+
+.grid-box {
+  /* border: 1px solid #ddd; */
+  height: 30px;
+  display: flex;
+  align-items: normal;
+  justify-content: end;
+  color: #999;
+}
+
+
+
+/* Trailer Types */
+.type-section {
+  padding: 15px;
+}
+
+.trailer-types {
+  display: flex
+;
+  justify-content: space-around;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-top: 40px;
+  color: #000;
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+/* Load Count Section */
+.load-count-header {
+  text-align: center;
+  margin: 15px 0;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.load-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.load-table th {
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.load-table td {
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Edit Button */
+.edit-btn {
+  background-color: #4a7ab8;
+  color: white;
+  margin: 20px 0;
+  padding: 8px 40px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .blue-section {
+    min-height: auto;
+  }
+  
+  .address {
+    position: relative;
+    bottom: auto;
+    margin-top: 20px;
+  }
+  
+  .time-box {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .time-details {
+    font-size: 12px;
+  }
+}
 
 .filter-button {
   border: 1px solid #e2e8f0;
@@ -107,8 +1069,6 @@ body {
   -moz-appearance: none;
   appearance: none;
 }
-
-
 .invoice-name {
   color: #000;
   font-size: 22px;
@@ -116,6 +1076,10 @@ body {
   font-weight: 500;
   line-height: normal;
   padding-left: 30px;
+}
+
+.d-content{
+  display: flex;
 }
 .invoice-date {
   color: #6b7280;
@@ -835,7 +1799,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #302D43;
+  color: #000;
   
   font-weight: 600;
   line-height: 1.2;
@@ -4093,7 +5057,7 @@ p a:hover {
   font-size: 16px;
   font-weight: 300;
   padding: 4px 20px;
-  color: #242934;
+  color: white;
 }
 
 /* line 454, G:/admin_project/10 admin/cryptocurrency/scss/_button.scss */
@@ -4367,7 +5331,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th:first-child::before {
 .header_iner {
   width: 96%;
   position: fixed;
-  top: 0;
+  top: 13px;
   z-index: 99;
   padding: 15px 30px;
   position: relative;
@@ -5620,10 +6584,17 @@ table.dataTable {
   padding-left: 20px;
 }
 
+.active{
+  color: #9FB703;
+
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
 .dash {
   color: #000;
-
-
   font-size: 26px;
   font-style: normal;
   font-weight: 400;
@@ -5632,7 +6603,7 @@ table.dataTable {
 
 /* line 389, G:/admin_project/10 admin/cryptocurrency/scss/_sidebar.scss */
 .sidebar #sidebar_menu>li ul {
-  padding: 30px 3px 5px 20px;
+  padding: 8px 3px 5px 20px;
   background: transparent;
   border-radius: 0 0 4px 4px;
   margin-left: 0px;
@@ -5646,20 +6617,18 @@ table.dataTable {
 
 /* line 406, G:/admin_project/10 admin/cryptocurrency/scss/_sidebar.scss */
 .sidebar #sidebar_menu>li ul li a {
-
   white-space: nowrap;
-
-  padding: 10px 0 10px 8px !important;
+  padding: 10px 0px 10px 25px !important;
   margin-top: 0;
   margin-left: 0px;
   /* text-transform: capitalize; */
   color: #FFF;
-
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
   letter-spacing: -0.44px;
+  text-decoration: none;
 }
 
 /* line 417, G:/admin_project/10 admin/cryptocurrency/scss/_sidebar.scss */
@@ -5885,11 +6854,18 @@ body::-webkit-scrollbar {
   background: transparent;
 }
 
+ol, ul {
+  padding-left: 0rem !important;
+}
 /* line 590, G:/admin_project/10 admin/cryptocurrency/scss/_sidebar.scss */
-.sidebar.dark_sidebar #sidebar_menu>li ul li a.active,
-.sidebar.dark_sidebar #sidebar_menu>li ul li a:hover {
-  background: #091023 !important;
+.sidebar.dark_sidebar #sidebar_menu>li ul li a.active, .sidebar.dark_sidebar #sidebar_menu>li ul li a:hover {
+  /* background: #091023 !important; */
   color: #fff !important;
+  border-radius: 15px;
+  background: #8FADD5 !important;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 /* line 595, G:/admin_project/10 admin/cryptocurrency/scss/_sidebar.scss */
@@ -6212,7 +7188,7 @@ body::-webkit-scrollbar {
   background: #F9F9F9;
   margin: 0;
   z-index: 22;
-  border-radius: 0px;
+  border-radius: 20px;
   padding: 30px 30px;
 }
 
@@ -6642,6 +7618,10 @@ body::-webkit-scrollbar {
 /* line 45, G:/admin_project/10 admin/cryptocurrency/scss/_dashboard_part.scss */
 .white_card .white_card_header {
   padding: 22px 30px;
+}
+
+.white_card .white_card_header1 {
+  padding: 22px 0px;
 }
 
 /* line 53, G:/admin_project/10 admin/cryptocurrency/scss/_dashboard_part.scss */
@@ -14330,7 +15310,12 @@ table.lms_table_active3.dataTable thead .sorting_desc::after {
 
 /* line 36, G:/admin_project/10 admin/cryptocurrency/scss/_product.scss */
 .text-muted {
-  color: #a4abc5 !important;
+  /* color: #a4abc5 !important; */
+  color: #000 !important;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 /* line 39, G:/admin_project/10 admin/cryptocurrency/scss/_product.scss */

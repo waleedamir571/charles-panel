@@ -6,8 +6,6 @@ import Footer from "../components/Footer";
 import useScriptLoader from "../utils/loadScripts";
 
 const HomePage = () => {
-  useScriptLoader();
-
   return (
     <>
       <Sidebar />

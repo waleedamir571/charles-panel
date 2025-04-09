@@ -447,6 +447,12 @@
   position: relative;
 }
 
+.metismenu{
+  background: none !important;
+  position: static !important;
+  font-family: "Outfit", sans-serif !important;
+}
+
 @media (max-width: 991px) {
   .responsive-bg {
     height: 100vh !important;

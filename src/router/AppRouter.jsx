@@ -7,6 +7,7 @@ import NetworkPage from "../pages/NetworkPage";
 import JobsPage from "../pages/JobsPage";
 import JobTicketPage from "../pages/JobTicketPage";
 import JobInvitePage from "../pages/JobInvitePage";
+import TicketPage from "../pages/TicketPage";
 
 const AppRouter = () => {
   return (
@@ -15,6 +16,7 @@ const AppRouter = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/network" element={<NetworkPage />} />
         <Route path="/jobs" element={<JobsPage />} />
+        <Route path="/ticket" element={<TicketPage />} />
         <Route path="/job-ticket" element={<JobTicketPage />} />
         <Route path="/job-invite" element={<JobInvitePage />} />
         <Route path="/signup" element={<SignUpPage />} />
