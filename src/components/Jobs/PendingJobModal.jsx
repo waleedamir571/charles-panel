@@ -139,7 +139,7 @@ const PendingJobModal = ({ job, onClose }) => {
             </div>
 
             <div className="mt-4 text-black project-summary">
-              <h6 className="fw-bold mb-4 fs-4">Project Summary</h6>
+              <h6 className="fw-bold mb-4 fs-4">PIT Information</h6>
 
               <div className="row mb-3 fs-5">
                 <div className="col">

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaCalendarAlt } from "react-icons/fa";
 import PendingJobModal from "./PendingJobModal";
 import CurrentJobModal from "./CurrentJobModal";
+import { Link } from "react-router-dom";
 
 const jobData = {
   pending: [
@@ -292,14 +293,12 @@ function JobList({ tab }) {
 
         {/* Create button */}
         <div className="add_button ms-2">
-          <a
-            href="#"
-            data-bs-toggle="modal"
-            data-bs-target="#addcategory"
+          <Link
+            to="/job-invite"
             className="btn_1 btn bg-purple text-white p-2 px-3"
           >
             + Create Invite
-          </a>
+          </Link>
         </div>
       </div>
 
