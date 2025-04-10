@@ -1,0 +1,162 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+const JobTickets = () => {
+  return (
+    <>
+      <div className="main_content_iner">
+        <div className="d-flex justify-content-between align-items-center mb-4">
+          <h1 className="gps fs-4 mb-0">Job Tickets</h1>
+          <div className="d-flex gap-2">
+            <div className="search-container">
+              <input
+                type="text"
+                className="form-control form-control1 search-input"
+                placeholder="Search..."
+                style={{ width: "256px" }}
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                className="bi bi-search search-icon"
+                viewBox="0 0 16 16"
+              >
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+              </svg>
+            </div>
+            <div className="grid-icon">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7 3H3V7H7V3Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M15 3H11V7H15V3Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7 11H3V15H7V11Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M15 11H11V15H15V11Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+
+            <Link
+              to=""
+              data-bs-toggle="modal"
+              data-bs-target="#addcategory"
+              className="btn_1 text-decoration-none"
+            >
+              + Add
+            </Link>
+          </div>
+        </div>
+
+        <div className="mt-4">
+          <div className="job-ticket">
+            <div className="d-flex align-items-center gap-2">
+              <span className="airport">(LAX) Airport,</span>
+              <span className="location">Los Angeles</span>
+            </div>
+            <div className="d-flex align-items-center gap-4">
+              <span className="airport">2JB872HB</span>
+              <span className="airport">12-21-24</span>
+            </div>
+          </div>
+
+          <div className="job-ticket">
+            <div className="d-flex align-items-center gap-2">
+              <span className="airport">(LAX) Airport,</span>
+              <span className="location">Los Angeles</span>
+            </div>
+            <div className="d-flex align-items-center gap-4">
+              <span className="airport">2JB872HB</span>
+              <span className="airport">12-21-24</span>
+            </div>
+          </div>
+
+          <div className="job-ticket">
+            <div className="d-flex align-items-center gap-2">
+              <span className="airport">(LAX) Airport,</span>
+              <span className="location">Los Angeles</span>
+            </div>
+            <div className="d-flex align-items-center gap-4">
+              <span className="airport">2JB872HB</span>
+              <span className="airport">12-21-24</span>
+            </div>
+          </div>
+
+          <div className="job-ticket">
+            <div className="d-flex align-items-center gap-2">
+              <span className="airport">(LAX) Airport,</span>
+              <span className="location">Los Angeles</span>
+            </div>
+            <div className="d-flex align-items-center gap-4">
+              <span className="airport">2JB872HB</span>
+              <span className="airport">12-21-24</span>
+            </div>
+          </div>
+
+          <div className="job-ticket">
+            <div className="d-flex align-items-center gap-2">
+              <span className="airport">(LAX) Airport,</span>
+              <span className="location">Los Angeles</span>
+            </div>
+            <div className="d-flex align-items-center gap-4">
+              <span className="airport">2JB872HB</span>
+              <span className="airport">12-21-24</span>
+            </div>
+          </div>
+
+          <div className="job-ticket">
+            <div className="d-flex align-items-center gap-2">
+              <span className="airport">(LAX) Airport,</span>
+              <span className="location">Los Angeles</span>
+            </div>
+            <div className="d-flex align-items-center gap-4">
+              <span className="airport">2JB872HB</span>
+              <span className="airport">12-21-24</span>
+            </div>
+          </div>
+
+          <div className="job-ticket">
+            <div className="d-flex align-items-center gap-2">
+              <span className="airport">(LAX) Airport,</span>
+              <span className="location">Los Angeles</span>
+            </div>
+            <div className="d-flex align-items-center gap-4">
+              <span className="airport">2JB872HB</span>
+              <span className="airport">12-21-24</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default JobTickets;

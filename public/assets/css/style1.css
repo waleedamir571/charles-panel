@@ -28,9 +28,276 @@ body {
   }
 }
 
+.overflow-1 {
+  height: 32rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+
+span.status-text {
+  color: #FFF;
+  font-family: Outfit;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.job-ticket9 {
+  border-radius: 5px 5px 0px 0px;
+background: #D65E62;
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.75rem;
+  color: white;
+  
+}
+
+.form-control2 {
+  border-color: white !important; 
+  width: 75%;
+}
+
+.file-input-container {
+  position: relative;
+  width: 80%;
+  height: 209px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid #969AA8;
+  background: #F8F8F8;
+}
+
+.file-input-container input[type="file"] {
+  display: none;
+}
+
+.plus-icon {
+  background-color: #555;
+  border-radius: 50%;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.file-input-container span {
+ 
+  color: #000;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* .file-input-container:hover {
+  border-color: #007bff;
+} */
+
+.close1 {
+  color: #000;
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+  border-radius: 6px;
+  border: 1px solid #D4D7E3;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: 0.22px;
+  padding: 10px 80px;
+}
+
+.close2{
+  color: #000;
+
+text-align: center;
+font-feature-settings: 'liga' off, 'clig' off;
+border-radius: 6px;
+color: white;
+background: #14AE5C;
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: 160%; /* 35.2px */
+letter-spacing: 0.22px;
+padding: 10px 70px;
+}
+
+.other{
+  color: #FFB600;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.oil{
+  color: #D65E62;
+
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.fs-14{
+  color: #969AA8;
+
+
+
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px;
+}
+.w-30{
+  width: 30%;
+}
+
+.summary{
+  color: #000;
+text-align: center;
+
+font-size: 36px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.ptb-15{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.line-container {
+  background: #E0E0E0;
+  height: 100%;
+  border-top: 1px solid #E0E0E0; /* Creates a horizontal line across the page */
+}
+
+.dotgreen {
+ 
+  height: 25px;
+  width: 25px;
+  background-color: #14AE5CB2;
+  border-radius: 50%;
+  display: inline-block;
+
+}
+
+.dotpink {
+ 
+    height: 25px;
+    width: 25px;
+    background-color: #D65E62B2;
+    border-radius: 50%;
+    display: inline-block;
+
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dotyellow {
+ 
+  height: 25px;
+  width: 25px;
+  background-color: #FFB600B2;
+  border-radius: 50%;
+  display: inline-block;
+
+}
+
+.job-ticket7 {
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.75rem;
+  color: white;
+  transition: all 0.2s ease;
+  border-radius: 15px;
+  border-radius: 6px;
+  background: #F8F8F8;
+  /* border-radius: 6px; */
+  border: 1px solid #BBB;
+}
+
+.report{
+  color: #0571D3;
+text-align: center;
+
+font-size: 22px;
+font-style: normal;
+font-weight: 600;
+line-height: 22px; /* 100% */
+letter-spacing: -0.25px;
+}
+
 .h-30{
   border-radius: 20px !important;
-  height: 30px !important;
+  height: 30px;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.card-body {
+  font-size: 1rem;
+}
+
+.status-box {
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+.status-pending {
+  background-color: #f44336; /* Red */
+}
+.status-warning {
+  background-color: #ff9800; /* Yellow */
+}
+.status-completed {
+  background-color: #4caf50; /* Green */
+}
+.circle-status {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.view-report-btn {
+  background-color: #4D8BCE;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.view-report-btn:hover {
+  background-color: #3c78b3;
+}
+.truck-info {
+  margin-bottom: 10px;
 }
 
 .dropdown .dropdown-menu {
@@ -42,6 +309,15 @@ body {
   border: 0.5px solid rgba(198, 195, 195, 0.28);
   background: #4E5456;
   color: white;
+}
+
+.year{
+  color: #969AA8;
+
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
 }
 
 .dropdown .dropdown-menu1 {
@@ -78,6 +354,7 @@ body {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
+  color: black;
 }
 
 .segmented-input {
@@ -132,16 +409,57 @@ body {
   font-weight: 500;
 }
 
+.overflow {
+  height: 35rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* Customize scroll bar */
+.overflow::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+}
+
+.overflow::-webkit-scrollbar-thumb {
+  background: #B3D8FE; /* Thumb color (scroll handle) */
+  border-radius: 8px;
+}
+
+.overflow::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+  border-radius: 8px;
+}
+
 .form-inline-group label {
   white-space: nowrap;
   margin: 0;
   font-weight: 500;
   color: #000;
-  font-family: Outfit;
+  
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.overdue{
+  color: #FFB600;
+text-align: center;
+
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.pending{
+  color: #D65E62;
+text-align: center;
+
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
 }
 
 
@@ -163,7 +481,7 @@ body {
   border: none;
   border-radius: 6px;
   font-size: 16px;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .submit-btn:hover {
@@ -195,6 +513,34 @@ letter-spacing: 0.2px;
   display: block; /* Ensure anchor takes up the full space */
   text-decoration: none; /* Remove underlines from the anchor tag */
   transition: background 0.3s ease;
+}
+
+.job-ticket5 {
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.75rem;
+  color: white;
+  transition: all 0.2s ease;
+  border-radius: 15px;
+  border-radius: 10px;
+  background: #F8F8F8;
+  border-radius: 10px;
+  border: 1px solid #D65E62;
+  background: rgba(214, 94, 98, 0.20);
+}
+
+.job-ticket6 {
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.75rem;
+  color: white;
+  transition: all 0.2s ease;
+  border-radius: 15px;
+  border-radius: 10px;
+  background: #F8F8F8;
+  border-radius: 10px;
+  border: 1px solid #FFB600;
+  background: rgba(255, 182, 0, 0.30);
+ 
+  
 }
 
 .job-ticket3 {
@@ -250,6 +596,28 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
+.asset-unit{
+  color: #000;
+text-align: center;
+
+font-size: 22px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+
+.job-ticket4 {
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.75rem;
+    color: white;
+    transition: all 0.2s ease;
+    border-radius: 15px;
+   
+    border-radius: 10px;
+    background: #F8F8F8;
+}
+
 /* Firefox: Calendar icon color */
 input[type="date"]::-moz-focus-inner {
   color: #969AA8;
@@ -261,22 +629,31 @@ input[type="date"]::-webkit-clear-button {
   display: none;
 }
 
+.good{
+  color: #14AE5C;
+text-align: center;
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
 
 .btn-info2 {
-  color: #000 !important;
-  border-color: #4F84CA !important;
-  border-radius: 16px !important;
-  background: #4F84CA !important;
-  color: #FFF !important; 
-  height: 65px !important;
-  padding: 0px 50px 0px 50px !important;
-  justify-content: flex-end !important;
-  width: 100% !important;
-  gap: 89.989px !important;
-  flex-shrink: 0 !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  display: block !important;
+  color: #000;
+  border-color: #4F84CA;
+  border-radius: 16px;
+  background: #4F84CA;
+  color: #FFF; 
+  height: 65px;
+  padding: 0px 50px 0px 50px;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 89.989px;
+  flex-shrink: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .heading{
@@ -741,19 +1118,19 @@ line-height: normal;
 
 /* Progress bar colors */
 .bg-yellow-400 {
-  background-color: #facc15 !important;
+  background-color: #facc15;
 }
 
 .bg-lime-400 {
-  background-color: #a3e635 !important;
+  background-color: #a3e635;
 }
 
 .bg-green-300 {
-  background-color: #86efac !important;
+  background-color: #86efac;
 }
 
 .bg-green-500 {
-  background-color: #22c55e !important;
+  background-color: #22c55e;
 }
 
 /* Icon styling */
@@ -1172,6 +1549,24 @@ background: #0E64A2;
   justify-content: center;
   border: 1px solid #e2e8f0;
   border-radius: 6px;
+}
+
+.text-24{
+  color: #000;
+
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.pre-trip {
+  color: #000;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding-top: 12px;
 }
 
 
@@ -6603,7 +6998,7 @@ line-height: normal;
 
 /* line 389, G:/admin_project/10 admin/cryptocurrency/scss/_sidebar.scss */
 .sidebar #sidebar_menu>li ul {
-  padding: 8px 3px 5px 20px;
+  padding: 30px 3px 5px 20px;
   background: transparent;
   border-radius: 0 0 4px 4px;
   margin-left: 0px;
@@ -6628,7 +7023,6 @@ line-height: normal;
   font-weight: 400;
   line-height: 21px;
   letter-spacing: -0.44px;
-  text-decoration: none;
 }
 
 /* line 417, G:/admin_project/10 admin/cryptocurrency/scss/_sidebar.scss */
@@ -7626,7 +8020,7 @@ ol, ul {
 
 /* line 53, G:/admin_project/10 admin/cryptocurrency/scss/_dashboard_part.scss */
 .white_card .white_card_body {
-  padding: 5px 30px 25px 30px;
+  padding: 25px 30px 25px 30px;
 }
 
 /* line 57, G:/admin_project/10 admin/cryptocurrency/scss/_dashboard_part.scss */
@@ -15310,9 +15704,9 @@ table.lms_table_active3.dataTable thead .sorting_desc::after {
 
 /* line 36, G:/admin_project/10 admin/cryptocurrency/scss/_product.scss */
 .text-muted {
-  /* color: #a4abc5 !important; */
-  color: #000 !important;
-  font-size: 20px;
+  color: #A4ABC5 !important;
+  /* color: #000 !important; */
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;

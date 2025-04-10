@@ -10,7 +10,7 @@ const tabs = [
 
 function JobTabs({ activeTab, setActiveTab }) {
   return (
-    <div className="bg-white p-3 rounded shadow-sm">
+    <div className="bg-white p-3 rounded-4 shadow-sm">
       <h5 className="mb-2 text-black fs-3 fw-medium">My Jobs</h5>
       <hr className='text-gray fs-2'/>
       {tabs.map(tab => (

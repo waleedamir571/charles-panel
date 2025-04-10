@@ -249,7 +249,7 @@ function JobList({ tab }) {
   );
 
   return (
-    <div className="p-4 bg-white rounded shadow-sm ">
+    <div className="p-4 bg-white rounded-4 shadow-sm ">
       <div className="box_right d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 mb-3">
         <div className="d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-3 w-100">
           {/* Search box */}
@@ -294,7 +294,7 @@ function JobList({ tab }) {
         {/* Create button */}
         <div className="add_button ms-2">
           <Link
-            to="/job-invite"
+            to="invite"
             className="btn_1 btn bg-purple text-white p-2 px-3"
           >
             + Create Invite

@@ -33,6 +33,24 @@
   background: none !important;
 }
 
+.bg-d-blue {
+  background-color: #244761 !important;
+}
+
+.bg-purple {
+  background-color: #5193d0 !important;
+}
+
+.bg-gray {
+  background-color: #f8f8f8 !important;
+}
+
+.menu-link-active {
+  border-radius: 15px;
+  background: #8fadd5;
+  color: white;
+}
+
 .custom-label {
   font-size: 14px;
   color: #000;
@@ -341,8 +359,6 @@
   color: #000;
 }
 
-
-
 /* Network Modal */
 .network-modal-overlay {
   position: fixed;
@@ -405,7 +421,7 @@
 
 /* Add alternating colors for even and odd items */
 .network-item:nth-child(even) {
-  background-color: #E8F2FC; /* Light blue for even rows */
+  background-color: #e8f2fc; /* Light blue for even rows */
   color: black;
 }
 
@@ -424,16 +440,16 @@
 }
 
 .network-modal-content::-webkit-scrollbar-thumb {
-  background: #B3D8FE;
+  background: #b3d8fe;
   border-radius: 4px;
 }
 
 .network-modal-content::-webkit-scrollbar-thumb:hover {
-  background: #E5E5E5;
+  background: #e5e5e5;
 }
 
 .network-modal-content::-webkit-scrollbar-track {
-  background: #E5E5E5;
+  background: #e5e5e5;
 }
 
 .job-invite-content {
@@ -447,11 +463,100 @@
   position: relative;
 }
 
-.metismenu{
+.metismenu {
   background: none !important;
   position: static !important;
   font-family: "Outfit", sans-serif !important;
 }
+
+.sidebar #sidebar_menu > li ul {
+  padding: 8px 3px 5px 20px !important;
+}
+
+.btn-info2 {
+  color: #000 !important;
+  border-color: #4f84ca !important;
+  border-radius: 16px !important;
+  background: #4f84ca !important;
+  color: #fff !important;
+  height: 65px !important;
+  padding: 0px 50px 0px 50px !important;
+  justify-content: flex-end !important;
+  width: 100% !important;
+  gap: 89.989px !important;
+  flex-shrink: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
+}
+
+.form-check-input {
+  width: 1em !important;
+  height: 1em !important;
+  margin-top: 0.25em !important;
+  vertical-align: top !important;
+  background-color: #fff !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+  border: 1px solid rgba(0, 0, 0, 0.25) !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  -webkit-print-color-adjust: exact !important;
+  color-adjust: exact !important;
+  fill: #405f75 !important ;
+  stroke-width: 1px !important;
+  stroke: #aeaeae !important;
+  width: 34px !important;
+  height: 34px !important;
+}
+
+.h-30{
+  border-radius: 20px !important;
+  height: 40px !important;
+}
+
+.btn-dark1 {
+  color: #fff !important;
+  background-color: #4e5456 !important;
+  border-color: #4e5456 !important;
+  border-radius: 25px !important;
+}
+
+.job-ticket2 {
+  padding: 0.8rem 1.5rem !important;
+}
+
+.heading {
+  line-height: 0 !important;
+}
+
+.sidebar {
+  scrollbar-width: none;
+}
+
+.job-ticket4 {
+  padding: .5rem 1.5rem !important;
+}
+
+.card-body{
+  padding: 1rem !important;
+}
+
+.bg-yellow-400 {
+  background-color: #facc15 !important;
+}
+.bg-lime-400 {
+  background-color: #a3e635 !important;
+}
+.bg-green-300 {
+  background-color: #86efac !important;
+}
+.bg-green-500 {
+  background-color: #22c55e !important;
+}
+
 
 @media (max-width: 991px) {
   .responsive-bg {

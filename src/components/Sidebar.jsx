@@ -4,11 +4,11 @@ import MetisMenu from "metismenujs";
 
 const Sidebar = () => {
   const [isSidebarMini, setIsSidebarMini] = useState(false);
-  const [isDashboardOpen, setIsDashboardOpen] = useState(true); // To track if Dashboard is open
+  const [isDashboardOpen, setIsDashboardOpen] = useState(true); 
   const [activeTab, setActiveTab] = useState(null);
-  const dropdownRef = useRef();
   const location = useLocation();
 
+  // Initialize MetisMenu only once
   useEffect(() => {
     const metisMenu = new MetisMenu("#sidebar_menu");
 
@@ -31,33 +31,61 @@ const Sidebar = () => {
     };
   }, []);
 
-  // Determine if the current link is active
-  const isActive = (path) => location.pathname === path;
+  // Update active state based on URL
+  const isActive = (basePath) => location.pathname.startsWith(basePath);
 
+  // Track if we are inside a dashboard-related route
   useEffect(() => {
-    const handleOutsideClick = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setActiveTab(false);
-      }
-    };
-    document.addEventListener("mousedown", handleOutsideClick);
-    return () => document.removeEventListener("mousedown", handleOutsideClick);
-  }, [activeTab]);
+    const dashboardPaths = [
+      "/network",
+      "/jobs",
+      "/ticket",
+      "/assets",
+      "/schedule",
+      "/billing",
+      "/manage",
+    ];
+    const isDashboardPath = dashboardPaths.some((path) =>
+      location.pathname.startsWith(path)
+    );
 
-  useEffect(() => {
-    // Make sure Dashboard remains open if the current location is inside the dashboard section
-    if (
-      location.pathname.includes("/network") ||
-      location.pathname.includes("/jobs") ||
-      location.pathname.includes("/ticket") ||
-      location.pathname.includes("/assets") ||
-      location.pathname.includes("/schedule") ||
-      location.pathname.includes("/billing") ||
-      location.pathname.includes("/manage")
-    ) {
+    if (isDashboardPath && !isSidebarMini) {
       setIsDashboardOpen(true);
+    } else if (location.pathname === "/" && isSidebarMini) {
+      setIsDashboardOpen(false);
+    }
+  }, [location, isSidebarMini]);
+
+  useEffect(() => {
+    // If the current URL is within driver-related paths, open the Driver tab
+    if (
+      location.pathname.includes("/driver/")
+    ) {
+      setActiveTab("driverTab");
+    }
+
+    // If the current URL is within calendar-related paths, open the Calendar tab
+    if (
+      location.pathname.includes("/calendar") ||
+      location.pathname.includes("/events") ||
+      location.pathname.includes("/meetings")
+    ) {
+      setActiveTab("calendarTab");
     }
   }, [location]);
+
+
+  const getLinkClass = (path) => {
+    if (location.pathname.startsWith(path)) {
+      return "menu-link menu-link-active";
+    }
+    return "menu-link";
+  };
+
+  const toggleTab = (tab) => {
+    // Toggle between opening and closing the tab
+    setActiveTab(activeTab === tab ? null : tab);
+  };
 
   return (
     <nav className="sidebar dark_sidebar">
@@ -78,7 +106,8 @@ const Sidebar = () => {
           className={
             location.pathname.includes("/network") ||
             location.pathname.includes("/jobs") ||
-            location.pathname.includes("/ticket")
+            location.pathname.includes("/ticket") ||
+            location.pathname.includes("/assets")
               ? "mm-active"
               : ""
           }
@@ -91,7 +120,7 @@ const Sidebar = () => {
             <div className="nav_icon_small">
               <img src="/assets/img/menu-icon/1.svg" alt="" />
             </div>
-            <div className="nav_title fs-5-5 mt-1">
+            <div className="nav_title mt-1">
               <span>Dashboard</span>
             </div>
           </a>
@@ -99,20 +128,29 @@ const Sidebar = () => {
             <li>
               <Link
                 to="/network"
-                className={`${isActive("/network") ? "active" : ""} fs-5-5`}
+                className={`${
+                  isActive("/network") ? "active" : ""
+                } text-decoration-none`}
               >
                 <img src="/assets/img/home/network.png" alt="" /> Network
               </Link>
             </li>
             <li>
-              <Link to="/jobs" className={isActive("/jobs") ? "active" : ""}>
+              <Link
+                to="/jobs"
+                className={`${
+                  isActive("/jobs") ? "active" : ""
+                } text-decoration-none`}
+              >
                 <img src="/assets/img/home/job.png" alt="" /> Job
               </Link>
             </li>
             <li>
               <Link
                 to="/ticket"
-                className={`${isActive("/ticket") ? "active" : ""} fs-5-5`}
+                className={`${
+                  isActive("/ticket") ? "active" : ""
+                } text-decoration-none`}
               >
                 <img src="/assets/img/home/ticket.png" alt="" /> Ticket
               </Link>
@@ -120,7 +158,9 @@ const Sidebar = () => {
             <li>
               <Link
                 to="/assets"
-                className={`${isActive("/assets") ? "active" : ""} fs-5-5`}
+                className={`${
+                  isActive("/assets") ? "active" : ""
+                } text-decoration-none`}
               >
                 <img src="/assets/img/home/assets.png" alt="" /> Assets
               </Link>
@@ -128,7 +168,9 @@ const Sidebar = () => {
             <li>
               <Link
                 to="/schedule"
-                className={`${isActive("/schedule") ? "active" : ""} fs-5-5`}
+                className={`${
+                  isActive("/schedule") ? "active" : ""
+                } text-decoration-none`}
               >
                 <img src="/assets/img/home/schedule.png" alt="" /> Schedule
               </Link>
@@ -136,7 +178,9 @@ const Sidebar = () => {
             <li>
               <Link
                 to="/billing"
-                className={`${isActive("/billing") ? "active" : ""} fs-5-5`}
+                className={`${
+                  isActive("/billing") ? "active" : ""
+                } text-decoration-none`}
               >
                 <img src="/assets/img/home/billing.png" alt="" /> Billing
               </Link>
@@ -144,7 +188,9 @@ const Sidebar = () => {
             <li>
               <Link
                 to="/manage"
-                className={`${isActive("/manage") ? "active" : ""} fs-5-5`}
+                className={`${
+                  isActive("/manage") ? "active" : ""
+                } text-decoration-none`}
               >
                 <img src="/assets/img/home/manage.png" alt="" /> Manage Co.
               </Link>
@@ -154,12 +200,8 @@ const Sidebar = () => {
         <div className="menu-container mt-4 mx-auto">
           <div className="top-tabs">
             <div
-              className={`tab-item ${
-                activeTab === "driverTab" ? "active" : ""
-              }`}
-              onClick={() =>
-                setActiveTab(activeTab === "driverTab" ? null : "driverTab")
-              }
+              className={`tab-item ${activeTab === "driverTab" ? "active" : ""}`}
+              onClick={() => toggleTab("driverTab")}
             >
               <img
                 src={
@@ -172,12 +214,8 @@ const Sidebar = () => {
               <div>Driver</div>
             </div>
             <div
-              className={`tab-item ${
-                activeTab === "calendarTab" ? "active" : ""
-              }`}
-              onClick={() =>
-                setActiveTab(activeTab === "calendarTab" ? null : "calendarTab")
-              }
+              className={`tab-item ${activeTab === "calendarTab" ? "active" : ""}`}
+              onClick={() => toggleTab("calendarTab")}
             >
               <img
                 src={
@@ -193,30 +231,29 @@ const Sidebar = () => {
 
           {/** Driver Dropdown */}
           <div
-            ref={dropdownRef}
-            className="dropdown-menu-items"
+            className="dropdown-menu-items p-0 pt-2"
             style={{
               display: activeTab === "driverTab" ? "block" : "none",
               zIndex: "9999",
             }}
           >
-            <a href="#" className="menu-link">
+            <Link to="" className="menu-link">
               <img src="/assets/img/home/inspect.png" alt="" /> Inspect
-            </a>
-            <a href="#" className="menu-link">
+            </Link>
+            <Link to="/driver/job-tickets" className={getLinkClass("/driver/job-tickets")}>
               <img src="/assets/img/home/tickets.png" alt="" /> Tickets
-            </a>
-            <a href="#" className="menu-link">
+            </Link>
+            <Link to="/driver/documents" className={getLinkClass("/driver/documents")}>
               <img src="/assets/img/home/docs.png" alt="" /> Docs
-            </a>
-            <a href="#" className="menu-link">
+            </Link>
+            <Link to="/driver/reminder" className={`${getLinkClass("/driver/reminder")} ${getLinkClass("/driver/set-reminder")}`}>
               <img src="/assets/img/home/alarms.png" alt="" /> Alarms
-            </a>
+            </Link>
           </div>
 
           {/** Calendar Dropdown */}
           <div
-            className="dropdown-menu-items"
+            className="dropdown-menu-items p-0 pt-2"
             style={{ display: activeTab === "calendarTab" ? "block" : "none" }}
           >
             <a href="#" className="menu-link">

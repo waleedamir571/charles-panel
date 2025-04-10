@@ -3,7 +3,6 @@ import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
 import Main from "../components/Main";
 import Footer from "../components/Footer";
-import useScriptLoader from "../utils/loadScripts";
 
 const HomePage = () => {
   return (
