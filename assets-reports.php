@@ -270,8 +270,9 @@ input[type="checkbox"] {
                 <div class="accordion-item">
                   <div class="accordion-header ok">
                     <h3>Tires</h3>
+                    <img src="img/home/icon.png" alt="">
                     <div class="status">
-                      <span class="chevron">▾</span>
+                     
                       <span class="status-text ok">Ok</span>
                     </div>
                   </div>
@@ -325,8 +326,9 @@ input[type="checkbox"] {
                 <div class="accordion-item">
                   <div class="accordion-header ok">
                     <h3>Gauges</h3>
+                    <img src="img/home/icon.png" alt="">
                     <div class="status">
-                      <span class="chevron">▾</span>
+                      <!-- <span class="chevron">▾</span> -->
                       <span class="status-text ok">Ok</span>
                     </div>
                   </div>

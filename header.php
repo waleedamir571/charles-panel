@@ -159,69 +159,63 @@
                                     <!-- single_notify  -->
                                     <div class="single_notify d-flex align-items-center">
                                         <div class="notify_thumb">
-                                            <a href="#"><img src="img/staf/2.png" alt=""></a>
+                                            <a href="#"><img src="img/home/noti-user.png" alt=""></a>
                                         </div>
                                         <div class="notify_content">
-                                            <a href="#"><h5>Cool Marketing </h5></a>
-                                            <p>Lorem ipsum dolor sit amet</p>
+                                            <a href="#"><h5>Landstar System <span class="fs-light">is interested in your projects</span>  </h5></a>
+                                           
+                                            <p>8 mins ago</p>
                                         </div>
                                     </div>
                                     <!-- single_notify  -->
                                     <div class="single_notify d-flex align-items-center">
                                         <div class="notify_thumb">
-                                            <a href="#"><img src="img/staf/4.png" alt=""></a>
+                                            <a href="#"><img src="img/home/noti-user.png" alt=""></a>
                                         </div>
                                         <div class="notify_content">
-                                            <a href="#"><h5>Awesome packages</h5></a>
-                                            <p>Lorem ipsum dolor sit amet</p>
+                                            <a href="#"><h5>Landstar System <span class="fs-light">is interested in your projects</span>  </h5></a>
+                                           
+                                            <p>8 mins ago</p>
                                         </div>
                                     </div>
                                     <!-- single_notify  -->
                                     <div class="single_notify d-flex align-items-center">
                                         <div class="notify_thumb">
-                                            <a href="#"><img src="img/staf/3.png" alt=""></a>
+                                            <a href="#"><img src="img/home/noti-user.png" alt=""></a>
                                         </div>
                                         <div class="notify_content">
-                                            <a href="#"><h5>what a packages</h5></a>
-                                            <p>Lorem ipsum dolor sit amet</p>
+                                            <a href="#"><h5>Landstar System <span class="fs-light">is interested in your projects</span>  </h5></a>
+                                           
+                                            <p>8 mins ago</p>
                                         </div>
                                     </div>
-                                    <!-- single_notify  -->
                                     <div class="single_notify d-flex align-items-center">
                                         <div class="notify_thumb">
-                                            <a href="#"><img src="img/staf/2.png" alt=""></a>
+                                            <a href="#"><img src="img/home/noti-user.png" alt=""></a>
                                         </div>
                                         <div class="notify_content">
-                                            <a href="#"><h5>Cool Marketing </h5></a>
-                                            <p>Lorem ipsum dolor sit amet</p>
+                                            <a href="#"><h5>Landstar System <span class="fs-light">is interested in your projects</span>  </h5></a>
+                                           
+                                            <p>8 mins ago</p>
                                         </div>
                                     </div>
-                                    <!-- single_notify  -->
                                     <div class="single_notify d-flex align-items-center">
                                         <div class="notify_thumb">
-                                            <a href="#"><img src="img/staf/4.png" alt=""></a>
+                                            <a href="#"><img src="img/home/noti-user.png" alt=""></a>
                                         </div>
                                         <div class="notify_content">
-                                            <a href="#"><h5>Awesome packages</h5></a>
-                                            <p>Lorem ipsum dolor sit amet</p>
+                                            <a href="#"><h5>Landstar System <span class="fs-light">is interested in your projects</span>  </h5></a>
+                                           
+                                            <p>8 mins ago</p>
                                         </div>
                                     </div>
-                                    <!-- single_notify  -->
-                                    <div class="single_notify d-flex align-items-center">
-                                        <div class="notify_thumb">
-                                            <a href="#"><img src="img/staf/3.png" alt=""></a>
-                                        </div>
-                                        <div class="notify_content">
-                                            <a href="#"><h5>what a packages</h5></a>
-                                            <p>Lorem ipsum dolor sit amet</p>
-                                        </div>
-                                    </div>
+                                   
                                 </div>
-                                <div class="nofity_footer">
+                                <!-- <div class="nofity_footer">
                                     <div class="submit_button text-center pt_20">
                                         <a href="#" class="btn_1 green">See More</a>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <!--/ Menu_NOtification_Wrap  -->
                             </li>
