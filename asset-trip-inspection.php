@@ -8,6 +8,7 @@
     </div>
     <div class="white_card card_height_100 mb_30">
         <div class="white_card_body">
+            <div class="job-ticket4">
             <div class="mt-4">
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h1 class="gps fs-4 mb-0">Inspection</h1>
@@ -33,7 +34,7 @@
 
 
                         <div class=" mb-0">
-                            <input type="number" class="form-control" name="inputDate" id="inputDate">
+                            <input type="number" class="form-control" name="inputDate" id="inputDate" placeholder="No.">
                         </div>
 
                     </div>
@@ -50,7 +51,7 @@
 
 
                         <div class="">
-                            <input type="number" class="form-control" name="inputTime" id="inputTime">
+                            <input type="number" class="form-control" name="inputTime" id="inputTime" placeholder="Type">
                         </div>
 
                     </div>
@@ -69,7 +70,7 @@
 
 
                         <div class=" mb-0">
-                            <input type="number" class="form-control" name="inputTime" id="inputTime">
+                            <input type="number" class="form-control" name="inputTime" id="inputTime"  placeholder="No.">
                         </div>
 
                     </div>
@@ -87,7 +88,7 @@
 
                         <div class="">
 
-                            <input type="date" class="form-control" name="inputDate" id="inputDate">
+                            <input type="date" class="form-control" name="inputDate" id="inputDate" placeholder="Choose date">
                         </div>
 
                     </div>
@@ -107,7 +108,7 @@
 
 
                         <div class=" mb-0">
-                            <input type="time" class="form-control" name="inputNumber" id="inputNumber">
+                            <input type="time" class="form-control" name="inputNumber" id="inputNumber" placeholder="Select time">
                         </div>
 
                     </div>
@@ -155,6 +156,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
 
         </div>

@@ -28,6 +28,153 @@ body {
   }
 }
 
+.overflow-1 {
+  height: 32rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+
+span.status-text {
+  color: #FFF;
+  font-family: Outfit;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.job-ticket9 {
+  border-radius: 5px 5px 0px 0px;
+background: #D65E62;
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.75rem;
+  color: white;
+  
+}
+
+.form-control2 {
+  border-color: white !important; 
+  width: 75%;
+}
+
+.file-input-container {
+  position: relative;
+  width: 80%;
+  height: 209px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid #969AA8;
+  background: #F8F8F8;
+}
+
+.file-input-container input[type="file"] {
+  display: none;
+}
+
+.plus-icon {
+  background-color: #555;
+  border-radius: 50%;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.file-input-container span {
+ 
+  color: #000;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* .file-input-container:hover {
+  border-color: #007bff;
+} */
+
+.close1 {
+  color: #000;
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+  border-radius: 6px;
+  border: 1px solid #D4D7E3;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: 0.22px;
+  padding: 10px 80px;
+}
+
+.close2{
+  color: #000;
+
+text-align: center;
+font-feature-settings: 'liga' off, 'clig' off;
+border-radius: 6px;
+color: white;
+background: #14AE5C;
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: 160%; /* 35.2px */
+letter-spacing: 0.22px;
+padding: 10px 70px;
+}
+
+.other{
+  color: #FFB600;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.oil{
+  color: #D65E62;
+
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.fs-14{
+  color: #969AA8;
+
+
+
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px;
+}
+.w-30{
+  width: 30%;
+}
+
+.summary{
+  color: #000;
+text-align: center;
+
+font-size: 36px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
 .ptb-15{
   padding-top: 15px;
   padding-bottom: 15px;
@@ -207,6 +354,7 @@ line-height: normal;
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
+  color: black;
 }
 
 .segmented-input {
@@ -333,7 +481,7 @@ line-height: normal;
   border: none;
   border-radius: 6px;
   font-size: 16px;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .submit-btn:hover {
@@ -1401,6 +1549,24 @@ background: #0E64A2;
   justify-content: center;
   border: 1px solid #e2e8f0;
   border-radius: 6px;
+}
+
+.text-24{
+  color: #000;
+
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.pre-trip {
+  color: #000;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding-top: 12px;
 }
 
 
@@ -7854,7 +8020,7 @@ ol, ul {
 
 /* line 53, G:/admin_project/10 admin/cryptocurrency/scss/_dashboard_part.scss */
 .white_card .white_card_body {
-  padding: 5px 30px 25px 30px;
+  padding: 25px 30px 25px 30px;
 }
 
 /* line 57, G:/admin_project/10 admin/cryptocurrency/scss/_dashboard_part.scss */

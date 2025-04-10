@@ -13,6 +13,8 @@
                     <!-- Column 1: Heading -->
                     <div class="col-md-6 col-12 mb-2 mb-md-0">
                         <h1 class="fw-bold fs-4 mb-0">John Doe</h1>
+                        <br>
+                        <div class="line-container"></div>
                     </div>
 
                     <!-- Right: Search + Filter + Tabs -->
@@ -60,7 +62,7 @@
 
             <div class="row g-4">
                 <div class="col-lg-6">
-                    <div class="card p-4 h-100 shadow-sm">
+                    <div class=" p-4 h-100 shadow-sm">
 
                         <p class="text-muted">(LAX) Airport, Los Angeles, CA</p>
 
@@ -84,9 +86,9 @@
                         <div class="row g-3 my-3  job-card1">
                             <div class="col-md-6">
                                 <div class="stat-card">
-                                    <div class="stat-label payslip-text">Total Load
+                                    <div class="stat-label payslip-text">Total Load <br>
                                         Transported</div>
-                                    <div class="stat-value job-text pt-30">1,680 <small class="text-muted">T</small>
+                                    <div class="stat-value summary pt-30">1,680 <small class="text-muted">T</small>
                                     </div>
                                 </div>
                             </div>
@@ -95,7 +97,7 @@
                             <div class="col-md-6">
                                 <div class="stat-card">
                                     <div class="stat-label payslip-text">Total Distance</div>
-                                    <div class="stat-value job-text pt-30">200<small
+                                    <div class="stat-value summary pt-30">200<small
                                             class="text-muted ms-1">MILES</small></div>
                                 </div>
                             </div>
@@ -111,6 +113,7 @@
                         <div class="date-section">
                             <div class="date-title">Today <div class="line"></div>
                             </div>
+                            <br>
                             <div class="preview-box">
                                 <span>25TH - November - 2024</span>
                                 <button>Preview</button>
@@ -124,6 +127,7 @@
                         <!-- This Week Section -->
                         <div class="date-section">
                             <div class="date-title">This Week <div class="line"></div></div>
+                            <br>
                             <div class="preview-box">
                                 <span>23TH - November - 2024</span>
                                 <button>Preview</button>
