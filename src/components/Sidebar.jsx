@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import MetisMenu from "metismenujs";
 
 const Sidebar = () => {
   const [isSidebarMini, setIsSidebarMini] = useState(false);
-  const [isDashboardOpen, setIsDashboardOpen] = useState(true); 
+  const [isDashboardOpen, setIsDashboardOpen] = useState(true); // Track dashboard open state
   const [activeTab, setActiveTab] = useState(null);
   const location = useLocation();
 
@@ -49,18 +49,15 @@ const Sidebar = () => {
       location.pathname.startsWith(path)
     );
 
+    // Ensure the dashboard remains open unless manually toggled
     if (isDashboardPath && !isSidebarMini) {
       setIsDashboardOpen(true);
-    } else if (location.pathname === "/" && isSidebarMini) {
-      setIsDashboardOpen(false);
     }
-  }, [location, isSidebarMini]);
+  }, [location, isSidebarMini]); // Ensure that the dashboard status is updated only when needed
 
   useEffect(() => {
     // If the current URL is within driver-related paths, open the Driver tab
-    if (
-      location.pathname.includes("/driver/")
-    ) {
+    if (location.pathname.includes("/driver/")) {
       setActiveTab("driverTab");
     }
 
@@ -73,7 +70,6 @@ const Sidebar = () => {
       setActiveTab("calendarTab");
     }
   }, [location]);
-
 
   const getLinkClass = (path) => {
     if (location.pathname.startsWith(path)) {
@@ -197,10 +193,14 @@ const Sidebar = () => {
             </li>
           </ul>
         </li>
+
+        {/* Driver and Calendar Tabs */}
         <div className="menu-container mt-4 mx-auto">
           <div className="top-tabs">
             <div
-              className={`tab-item ${activeTab === "driverTab" ? "active" : ""}`}
+              className={`tab-item ${
+                activeTab === "driverTab" ? "active" : ""
+              }`}
               onClick={() => toggleTab("driverTab")}
             >
               <img
@@ -214,7 +214,9 @@ const Sidebar = () => {
               <div>Driver</div>
             </div>
             <div
-              className={`tab-item ${activeTab === "calendarTab" ? "active" : ""}`}
+              className={`tab-item ${
+                activeTab === "calendarTab" ? "active" : ""
+              }`}
               onClick={() => toggleTab("calendarTab")}
             >
               <img
@@ -237,16 +239,30 @@ const Sidebar = () => {
               zIndex: "9999",
             }}
           >
-            <Link to="" className="menu-link">
+            <Link
+              to="/driver/inspect"
+              className={getLinkClass("/driver/inspect")}
+            >
               <img src="/assets/img/home/inspect.png" alt="" /> Inspect
             </Link>
-            <Link to="/driver/job-tickets" className={getLinkClass("/driver/job-tickets")}>
+            <Link
+              to="/driver/job-tickets"
+              className={getLinkClass("/driver/job-tickets")}
+            >
               <img src="/assets/img/home/tickets.png" alt="" /> Tickets
             </Link>
-            <Link to="/driver/documents" className={getLinkClass("/driver/documents")}>
+            <Link
+              to="/driver/documents"
+              className={getLinkClass("/driver/documents")}
+            >
               <img src="/assets/img/home/docs.png" alt="" /> Docs
             </Link>
-            <Link to="/driver/reminder" className={`${getLinkClass("/driver/reminder")} ${getLinkClass("/driver/set-reminder")}`}>
+            <Link
+              to="/driver/reminder"
+              className={`${getLinkClass("/driver/reminder")} ${getLinkClass(
+                "/driver/set-reminder"
+              )}`}
+            >
               <img src="/assets/img/home/alarms.png" alt="" /> Alarms
             </Link>
           </div>

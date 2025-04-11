@@ -16,7 +16,7 @@ const TripInspection = () => {
                 <div className="d-flex justify-content-between align-items-center mb-4">
                   <h1 className="gps fs-4 mb-0">Inspection</h1>
                   <div className="d-flex gap-2">
-                    <p>
+                    <p className="fs-6">
                       Check any item that needs attention. Provide details under
                       comments sections.
                     </p>

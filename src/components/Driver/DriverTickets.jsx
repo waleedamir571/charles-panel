@@ -4,7 +4,7 @@ const DriverTickets = () => {
   return (
     <>
       <div className="main_content_iner">
-        <div className="container-fluid p-0 white_card card_height_100 mb_30">
+        <div className="container-fluid p-0 white_card card_height_100">
           <div className="">
             <div className="white_card_header">
               <div className="row align-items-center">
@@ -110,7 +110,7 @@ const DriverTickets = () => {
                   </div>
                 </div>
               </div>
-              <hr style={{ color: "#cecaca" }} />
+              <hr style={{ color: "#cecaca", marginBottom: '0' }} />
             </div>
           </div>
           <div className="tab-content" id="myTabContent">
@@ -123,8 +123,8 @@ const DriverTickets = () => {
               <div className="white_card_body">
                 <div className="row g-4">
                   <div className="col-md-6">
-                    <div className="card job-card1 bg-gray border-none p-2 rounded-4">
-                      <div className="card-body">
+                    <div className="card job-card1 bg-gray border-none p-2 rounded-4 mt-0">
+                      <div className="card-body mt-0">
                         <div className="mb-3">
                           <h3 className="card-title mb-0 job-text">
                             (LAX) Airport,{" "}

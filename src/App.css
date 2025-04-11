@@ -470,7 +470,7 @@
 }
 
 .sidebar #sidebar_menu > li ul {
-  padding: 8px 3px 5px 20px !important;
+  padding: 8px 0px 5px 0px !important;
 }
 
 .btn-info2 {
@@ -557,6 +557,22 @@
   background-color: #22c55e !important;
 }
 
+p{
+  margin-bottom: 0 !important;
+}
+
+.resize-none{
+  resize: none !important;
+}
+
+.john {
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.white_card_header{
+  padding-bottom: 0 !important;
+}
 
 @media (max-width: 991px) {
   .responsive-bg {

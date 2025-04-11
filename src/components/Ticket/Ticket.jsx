@@ -8,7 +8,7 @@ const Ticket = () => {
       <div className="main_content_iner">
         <div className="container-fluid p-0 white_card card_height_100 rounded-4">
           <div className="">
-            <div className="white_card_header mb-0">
+            <div className="white_card_header mb-0 pb-0">
               <div className="row align-items-center">
                 <div className="col-md-6 col-12 mb-2 mb-md-0">
                   <h1 className="fw-medium fs-3 mb-0">Job Tickets</h1>

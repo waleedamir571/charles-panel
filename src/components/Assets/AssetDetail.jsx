@@ -13,10 +13,10 @@ const AssetDetail = () => {
               </h1>
 
               <div className="d-flex gap-2">
-                <p className="asset-unit mb-0">
+                <p className="asset-unit mb-0 me-3" style={{ marginBottom: "0" }}>
                   Date Entered <span className="year">: 01-21-2025</span>
                 </p>
-                <Link to="/" className="btn_1 text-decoration-none">
+                <Link to="/assets/detail/maintainance" className="btn_1 text-decoration-none">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -43,7 +43,10 @@ const AssetDetail = () => {
                   </svg>
                   &nbsp; Maintenance
                 </Link>
-                <Link to="trip-inspection" className="btn_1 text-decoration-none">
+                <Link
+                  to="trip-inspection"
+                  className="btn_1 text-decoration-none"
+                >
                   Inspect
                 </Link>
               </div>
@@ -57,7 +60,7 @@ const AssetDetail = () => {
               <div className="row">
                 <div className="col-md-12 mb-4">
                   <div className=" job-ticket4">
-                    <div className="card-body">
+                    <div className="card-body mt-3">
                       <div className="row truck-info">
                         <div className="col-md-2">
                           <img
@@ -70,17 +73,22 @@ const AssetDetail = () => {
                           <div className="row">
                             <div className="col-md-4">
                               <div className="info-label2 d-flex flex-column justify-content-start align-items-start">
-                                Truck No :<span className="year fw-normal">2345332</span>
+                                Truck No :
+                                <span className="year fw-normal">2345332</span>
                               </div>
                             </div>
                             <div className="col-md-4 ">
                               <div className="info-label2 d-flex flex-column justify-content-start align-items-start">
-                              Make :<span className="year fw-normal">Peterbilt</span>
+                                Make :
+                                <span className="year fw-normal">
+                                  Peterbilt
+                                </span>
                               </div>
                             </div>
                             <div className="col-md-4">
                               <div className="info-label2 d-flex flex-column justify-content-start align-items-start">
-                              Model :<span className="year fw-normal">359</span>
+                                Model :
+                                <span className="year fw-normal">359</span>
                               </div>
                             </div>
                           </div>
@@ -88,12 +96,16 @@ const AssetDetail = () => {
                           <div className="row">
                             <div className="col-md-4">
                               <div className="info-label2 d-flex flex-column justify-content-start align-items-start">
-                              Year :<span className="year fw-normal">2007</span>
+                                Year :
+                                <span className="year fw-normal">2007</span>
                               </div>
                             </div>
                             <div className="col-md-4">
                               <div className="info-label2 d-flex flex-column justify-content-start align-items-start">
-                              Odometer :<span className="year fw-normal">230,332 Miles</span>
+                                Odometer :
+                                <span className="year fw-normal">
+                                  230,332 Miles
+                                </span>
                               </div>
                             </div>
                           </div>
@@ -176,7 +188,7 @@ const AssetDetail = () => {
                           </div>
                         </div>
 
-                        <div className="job-ticket7">
+                        <Link to="/assets/report" className="job-ticket7">
                           <div className="  gap-2 px-2">
                             <div className="row align-items-center">
                               <div className="col-md-4 pt-1">
@@ -198,7 +210,7 @@ const AssetDetail = () => {
                               </div>
                             </div>
                           </div>
-                        </div>
+                        </Link>
                         <div className="job-ticket7">
                           <div className="  gap-2 px-2">
                             <div className="row align-items-center">

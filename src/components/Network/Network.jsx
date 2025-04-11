@@ -4,89 +4,355 @@ import { Link } from "react-router-dom";
 const Network = () => {
   return (
     <div className="main_content_iner">
-      <div className="container-fluid p-0">
-        <div className="row justify-content-center">
-          <div className="col-lg-12">
-            <div className="white_card card_height_100 rounded-4">
-              <div className="white_card_body pt-4">
-                <div className="QA_section">
-                  <div className="white_box_tittle list_header">
-                    <h3>Network</h3>
-                    <div className="box_right d-flex lms_block">
-                      <div className="serach_field_2">
-                        <div className="search_inner">
-                          <form action="#">
-                            <div className="search_field">
-                              <input
-                                type="text"
-                                placeholder="Search content here..."
-                              />
-                            </div>
-                            <button type="submit">
-                              <i className="ti-search"></i>
-                            </button>
-                          </form>
-                        </div>
+      <div className="white_card card_height_100 mb_30 rounded-4">
+        <div className="white_card_body">
+          <div className="d-flex justify-content-between align-items-center mb-4">
+            <h1 className="fw-medium fs-3 mb-0">Network</h1>
+
+            <div className="d-flex gap-2">
+              <div className="search-container">
+                <input
+                  type="text"
+                  className="form-control search-input"
+                  placeholder="Search..."
+                  style={{ width: "256px" }}
+                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  className="bi bi-search search-icon"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg>
+              </div>
+              <button className="filter-button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  className="bi bi-sliders"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3h9.05zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8h2.05zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1h9.05z"
+                  />
+                </svg>
+              </button>
+              <a href="/" className="btn_1 text-decoration-none">
+                + Send Invite
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-4">
+            <div className="overflow">
+              <Link to="/network/details" className="text-decoration-none">
+                <div className="job-ticket4">
+                  <div className="  gap-2">
+                    <div className="row align-items-center">
+                      <div className="col-md-1">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="gridRadios"
+                          id="gridRadios2"
+                          value="option2"
+                        />
                       </div>
-                      <div className="add_button ms-2">
-                        <Link
-                          to="/network/details"
-                          className="btn_1 text-decoration-none"
-                        >
-                          + Send Invite
-                        </Link>
+                      <div className="col-md-9">
+                        <div className="job">Knotty Logistic LLC</div>
+                      </div>
+                      <div className="col-md-2 text-center">
+                        <span className="asset-unit">PREVIEW</span>
                       </div>
                     </div>
                   </div>
-                  <hr style={{ color: "#cecaca" }} />
+                </div>
+              </Link>
 
-                  <div className="QA_table mb_30">
-                    <table className="table lms_table_active3">
-                      <thead>
-                        <tr>
-                          <th scope="col">
-                            <a href="#" className="question_content">
-                              <input
-                                className="form-check-input"
-                                type="radio"
-                                name="gridRadios"
-                                id="gridRadios2"
-                                value="option2"
-                              />
-                            </a>
-                          </th>
-                          <th scope="col" className="job">
-                            Knotty Logistic LLC
-                          </th>
-                          <th scope="col">PREVIEW</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {[...Array(20)].map((_, i) => (
-                          <tr key={i}>
-                            <th scope="row">
-                              <Link
-                                to="/network/details"
-                                className="question_content"
-                              >
-                                <input
-                                  className="form-check-input"
-                                  type="radio"
-                                  name="gridRadios"
-                                  id={`gridRadios${i}`}
-                                  value="option2"
-                                />
-                              </Link>
-                            </th>
-                            <td className="job">Knotty Logistic LLC</td>
-                            <td>PREVIEW</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
+              <Link to="/network/details" className="text-decoration-none">
+                <div className="job-ticket4">
+                  <div className="  gap-2">
+                    <div className="row align-items-center">
+                      <div className="col-md-1">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="gridRadios"
+                          id="gridRadios2"
+                          value="option2"
+                        />
+                      </div>
+                      <div className="col-md-9">
+                        <div className="job">Knotty Logistic LLC</div>
+                      </div>
+                      <div className="col-md-2 text-center">
+                        <span className="asset-unit">PREVIEW</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
+              <Link to="/network/details" className="text-decoration-none">
+                <div className="job-ticket4">
+                  <div className="  gap-2">
+                    <div className="row align-items-center">
+                      <div className="col-md-1">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="gridRadios"
+                          id="gridRadios2"
+                          value="option2"
+                        />
+                      </div>
+                      <div className="col-md-9">
+                        <div className="job">Knotty Logistic LLC</div>
+                      </div>
+                      <div className="col-md-2 text-center">
+                        <span className="asset-unit">PREVIEW</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              <Link to="/network/details" className="text-decoration-none">
+                <div className="job-ticket4">
+                  <div className="  gap-2">
+                    <div className="row align-items-center">
+                      <div className="col-md-1">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="gridRadios"
+                          id="gridRadios2"
+                          value="option2"
+                        />
+                      </div>
+                      <div className="col-md-9">
+                        <div className="job">Knotty Logistic LLC</div>
+                      </div>
+                      <div className="col-md-2 text-center">
+                        <span className="asset-unit">PREVIEW</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              <Link to="/network/details" className="text-decoration-none">
+                <div className="job-ticket4">
+                  <div className="  gap-2">
+                    <div className="row align-items-center">
+                      <div className="col-md-1">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="gridRadios"
+                          id="gridRadios2"
+                          value="option2"
+                        />
+                      </div>
+                      <div className="col-md-9">
+                        <div className="job">Knotty Logistic LLC</div>
+                      </div>
+                      <div className="col-md-2 text-center">
+                        <span className="asset-unit">PREVIEW</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              <Link to="/network/details" className="text-decoration-none">
+                <div className="job-ticket4">
+                  <div className="  gap-2">
+                    <div className="row align-items-center">
+                      <div className="col-md-1">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="gridRadios"
+                          id="gridRadios2"
+                          value="option2"
+                        />
+                      </div>
+                      <div className="col-md-9">
+                        <div className="job">Knotty Logistic LLC</div>
+                      </div>
+                      <div className="col-md-2 text-center">
+                        <span className="asset-unit">PREVIEW</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              <Link to="/network/details" className="text-decoration-none">
+                <div className="job-ticket4">
+                  <div className="  gap-2">
+                    <div className="row align-items-center">
+                      <div className="col-md-1">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="gridRadios"
+                          id="gridRadios2"
+                          value="option2"
+                        />
+                      </div>
+                      <div className="col-md-9">
+                        <div className="job">Knotty Logistic LLC</div>
+                      </div>
+                      <div className="col-md-2 text-center">
+                        <span className="asset-unit">PREVIEW</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              <Link to="/network/details" className="text-decoration-none">
+                <div className="job-ticket4">
+                  <div className="  gap-2">
+                    <div className="row align-items-center">
+                      <div className="col-md-1">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="gridRadios"
+                          id="gridRadios2"
+                          value="option2"
+                        />
+                      </div>
+                      <div className="col-md-9">
+                        <div className="job">Knotty Logistic LLC</div>
+                      </div>
+                      <div className="col-md-2 text-center">
+                        <span className="asset-unit">PREVIEW</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              <Link to="/network/details" className="text-decoration-none">
+                <div className="job-ticket4">
+                  <div className="  gap-2">
+                    <div className="row align-items-center">
+                      <div className="col-md-1">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="gridRadios"
+                          id="gridRadios2"
+                          value="option2"
+                        />
+                      </div>
+                      <div className="col-md-9">
+                        <div className="job">Knotty Logistic LLC</div>
+                      </div>
+                      <div className="col-md-2 text-center">
+                        <span className="asset-unit">PREVIEW</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              <Link to="/network/details" className="text-decoration-none">
+                <div className="job-ticket4">
+                  <div className="  gap-2">
+                    <div className="row align-items-center">
+                      <div className="col-md-1">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="gridRadios"
+                          id="gridRadios2"
+                          value="option2"
+                        />
+                      </div>
+                      <div className="col-md-9">
+                        <div className="job">Knotty Logistic LLC</div>
+                      </div>
+                      <div className="col-md-2 text-center">
+                        <span className="asset-unit">PREVIEW</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              <Link to="/network/details" className="text-decoration-none">
+                <div className="job-ticket4">
+                  <div className="  gap-2">
+                    <div className="row align-items-center">
+                      <div className="col-md-1">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="gridRadios"
+                          id="gridRadios2"
+                          value="option2"
+                        />
+                      </div>
+                      <div className="col-md-9">
+                        <div className="job">Knotty Logistic LLC</div>
+                      </div>
+                      <div className="col-md-2 text-center">
+                        <span className="asset-unit">PREVIEW</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              <Link to="/network/details" className="text-decoration-none">
+                <div className="job-ticket4">
+                  <div className="  gap-2">
+                    <div className="row align-items-center">
+                      <div className="col-md-1">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="gridRadios"
+                          id="gridRadios2"
+                          value="option2"
+                        />
+                      </div>
+                      <div className="col-md-9">
+                        <div className="job">Knotty Logistic LLC</div>
+                      </div>
+                      <div className="col-md-2 text-center">
+                        <span className="asset-unit">PREVIEW</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              <Link to="/network/details" className="text-decoration-none">
+                <div className="job-ticket4">
+                  <div className="  gap-2">
+                    <div className="row align-items-center">
+                      <div className="col-md-1">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="gridRadios"
+                          id="gridRadios2"
+                          value="option2"
+                        />
+                      </div>
+                      <div className="col-md-9">
+                        <div className="job">Knotty Logistic LLC</div>
+                      </div>
+                      <div className="col-md-2 text-center">
+                        <span className="asset-unit">PREVIEW</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+           
             </div>
           </div>
         </div>

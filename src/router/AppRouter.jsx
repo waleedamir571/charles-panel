@@ -21,6 +21,11 @@ import DriverDocsPage from "../pages/Driver/DriverDocsPage";
 import DriverReminderPage from "../pages/Driver/DriverReminderPage";
 import DriverSetReminderPage from "../pages/Driver/DriverSetReminderPage";
 import AddAssetPage from "../pages/Assets/AddAssetPage";
+import JobTicketDetailPage from "../pages/Network/JobTicketDetailPage";
+import AssetMaintainancePage from "../pages/Assets/AssetMaintainancePage";
+import AssetReportPage from "../pages/Assets/AssetReportPage";
+import DriverInspectPage from "../pages/Driver/DriverInspectPage";
+import ProfilePage from "../pages/ProfilePage";
 
 const AppRouter = () => {
   return (
@@ -33,6 +38,10 @@ const AppRouter = () => {
           path="/network/details/job-tickets"
           element={<JobTicketsPage />}
         />
+        <Route
+          path="/network/details/job-tickets/details"
+          element={<JobTicketDetailPage />}
+        />
         <Route path="/network/details/invoices" element={<InvoicePage />} />
         <Route path="/network/details/documents" element={<DocumentPage />} />
         <Route path="/jobs" element={<JobsPage />} />
@@ -44,12 +53,18 @@ const AppRouter = () => {
           element={<TicketIndexDetailPage />}
         />
         <Route path="/assets" element={<AssetsPage />} />
-        <Route path="/assets" element={<AssetsPage />} />
         <Route path="/assets/add" element={<AddAssetPage />} />
+        <Route path="/assets/report" element={<AssetReportPage />} />
+        <Route path="/assets/detail" element={<AssetDetailPage />} />
+        <Route
+          path="/assets/detail/maintainance"
+          element={<AssetMaintainancePage />}
+        />
         <Route
           path="/assets/detail/trip-inspection"
           element={<TripInspectionPage />}
         />
+        <Route path="/driver/inspect" element={<DriverInspectPage />} />
         <Route path="/driver/job-tickets" element={<DriverTicketsPage />} />
         <Route path="/driver/documents" element={<DriverDocsPage />} />
         <Route path="/driver/reminder" element={<DriverReminderPage />} />
@@ -57,6 +72,7 @@ const AppRouter = () => {
           path="/driver/set-reminder"
           element={<DriverSetReminderPage />}
         />
+        <Route path="/profile" element={<ProfilePage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/login" element={<LoginPage />} />
       </Routes>

@@ -231,7 +231,7 @@ function JobList({ tab }) {
         <h3 className="fs-5 pt-2">{job.company}</h3>
       </div>
       {tab === "pending" ? (
-        <div className="d-flex align-items-center justify-content-end text-muted job-date">
+        <div className="d-flex align-items-center justify-content-end text-gray job-date">
           <FaCalendarAlt className={`me-2 text-${job.color}`} />
           {formatDate(job.dateRange[0])} - {formatDate(job.dateRange[1])}
         </div>

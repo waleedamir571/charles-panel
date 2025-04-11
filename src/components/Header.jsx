@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -6,16 +7,19 @@ const Header = () => {
       {/* <!-- menu  --> */}
       <div className="container-fluid g-0">
         <div className="row">
-          <div className="col-lg-12 p-0 ">
+          <div className="col-lg-12 p-0 mx-3">
             <div className="header_iner d-flex justify-content-between align-items-center">
               <div className="sidebar_icon d-lg-none">
                 <i className="ti-menu"></i>
               </div>
-              <div className="line_icon open_miniSide d-none d-lg-block">
-                <span className="dash">
+              <div className="line_icon d-none d-lg-block">
+                <span className="dash position-relative">
                   {" "}
-                  <img className="" src="/assets/img/home/Vector.png" alt="" />{" "}
-                  <span className="ps-3">Dashboard{" "}</span>
+                  <img
+                    className="position-absolute pt-2"
+                    src="/assets/img/home/Vector.png"
+                  />{" "}
+                  <span className="ps-6 pt-3">Dashboard </span>
                 </span>
               </div>
               <div className="header_right d-flex justify-content-between align-items-center">
@@ -24,14 +28,17 @@ const Header = () => {
                                 <a className="CHATBOX_open nav-link-notify" href="#"> <img src="/assets/img/icon/msg.svg" alt="" />   </a>
                             </li> --> */}
                   <li>
-                    <a
+                    <div className="d-flex gap-4">
+                      <img src="/images/language-icon.svg" alt="" />
+                      <img src="/images/moon-icon.svg" alt="" />
+                      <img src="/images/bell-icon.svg" alt="" />
+                    </div>
+                    {/* <a
                       className="bell_notification_clicker nav-link-notify"
                       href="#"
                     >
                       {" "}
-                      <img src="/assets/img/icon/bell.svg" alt="" />
-                      {/* <!-- <span>2</span> --> */}
-                    </a>
+                    </a> */}
                     {/* <!-- Menu_NOtification_Wrap  --> */}
                     <div className="Menu_NOtification_Wrap">
                       <div className="notification_Header">
@@ -148,9 +155,15 @@ const Header = () => {
                       <h5>Jiue Anderson</h5>
                     </div>
                     <div className="profile_info_details">
-                      <a href="#">My Profile </a>
-                      <a href="#">Settings</a>
-                      <a href="#">Log Out </a>
+                      <Link to="/profile" className="text-decoration-none">
+                        My Profile{" "}
+                      </Link>
+                      <a href="#" className="text-decoration-none">
+                        Settings
+                      </a>
+                      <a href="#" className="text-decoration-none">
+                        Log Out{" "}
+                      </a>
                     </div>
                   </div>
                 </div>

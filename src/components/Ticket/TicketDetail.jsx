@@ -78,64 +78,63 @@ const TicketDetail = () => {
             <div className="row g-4">
               <div className="col-lg-6">
                 <div className="card p-4 h-100 shadow-sm">
-                  <p className="text-muted">(LAX) Airport, Los Angeles, CA</p>
 
-                  <div className="row g-3 my-3">
+                  <div className="row ">
                     <div className="col-md-4">
-                      <div className="stat-card">
+                      <div className="bg-gray p-4 text-center rounded-2">
                         <div className="stat-label payslip-text">
                           Total Hours
                         </div>
-                        <div className="stat-value job-text pt-30">122h</div>
+                        <div className="stat-value job-text pt-3">122h</div>
                       </div>
                     </div>
 
                     <div className="col-md-4">
-                      <div className="stat-card">
+                      <div className="bg-gray p-4 text-center rounded-2">
                         <div className="stat-label payslip-text">
                           Total Drivers
                         </div>
-                        <div className="stat-value job-text pt-30">148</div>
+                        <div className="stat-value job-text pt-3">148</div>
                       </div>
                     </div>
 
                     <div className="col-md-4">
-                      <div className="stat-card">
+                      <div className="bg-gray p-4 text-center rounded-2">
                         <div className="stat-label payslip-text">
                           Total Trucks
                         </div>
-                        <div className="stat-value job-text pt-30">148</div>
+                        <div className="stat-value job-text pt-3">148</div>
                       </div>
                     </div>
                   </div>
 
                   <div className="row g-3 my-3">
                     <div className="col-md-4">
-                      <div className="stat-card">
+                      <div className="bg-gray p-4 text-center rounded-2">
                         <div className="stat-label payslip-text">
                           Rate Per Unit
                         </div>
-                        <div className="stat-value job-text pt-30">$28/T</div>
+                        <div className="stat-value job-text pt-3">$28/T</div>
                       </div>
                     </div>
 
                     <div className="col-md-4">
-                      <div className="stat-card">
+                      <div className="bg-gray p-4 text-center rounded-2">
                         <div className="stat-label payslip-text">
                           Total Load Transported
                         </div>
-                        <div className="stat-value job-text pt-30">
+                        <div className="stat-value job-text pt-3">
                           1,680<small className="text-muted">T</small>
                         </div>
                       </div>
                     </div>
 
                     <div className="col-md-4">
-                      <div className="stat-card">
+                      <div className="bg-gray p-4 text-center rounded-2">
                         <div className="stat-label payslip-text">
                           Total Distance
                         </div>
-                        <div className="stat-value job-text pt-30">
+                        <div className="stat-value job-text pt-3">
                           200<small className="text-muted ms-1">MILES</small>
                         </div>
                       </div>
