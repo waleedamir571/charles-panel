@@ -1,9 +1,34 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const AddAsset = () => {
   return (
     <>
       <div className="main_content_iner">
+        <div className="white_card_body bg-white px-4 py-3 mb-3 rounded-4">
+          <div className="d-flex align-items-center mb-2 fs-3">
+            <Link to="/" className="text-dark fw-medium text-decoration-none ">
+              Dashboard
+            </Link>
+            <img
+              src="/images/bread-arrow.svg"
+              alt="arrow"
+              style={{ margin: "0 10px" }}
+            />
+            <Link
+              to="/assets"
+              className="text-dark fw-medium text-decoration-none "
+            >
+              <span className="text-dark fw-medium">Assets</span>
+            </Link>
+            <img
+              src="/images/bread-arrow.svg"
+              alt="arrow"
+              style={{ margin: "0 10px" }}
+            />
+            <span className="bread-text fw-medium">Add Assets</span>
+          </div>
+        </div>{" "}
         <div className="white_card card_height_100 mb_30">
           <div className="white_card_body">
             <div className="d-flex justify-content-between align-items-center mb-4">
@@ -30,7 +55,7 @@ const AddAsset = () => {
                       <div className="row truck-info">
                         <div className="col-md-2">
                           <div className="file-input-container">
-                            <label style={{textAlign: "-webkit-center"}}>
+                            <label style={{ textAlign: "-webkit-center" }}>
                               <div className="plus-icon">+</div>
                               <span>Select Type</span>
                               <input type="file" />

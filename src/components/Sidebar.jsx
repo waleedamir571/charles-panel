@@ -4,9 +4,25 @@ import MetisMenu from "metismenujs";
 
 const Sidebar = () => {
   const [isSidebarMini, setIsSidebarMini] = useState(false);
-  const [isDashboardOpen, setIsDashboardOpen] = useState(true); // Track dashboard open state
-  const [activeTab, setActiveTab] = useState(null);
+  const dashboardPaths = [
+    "/network",
+    "/jobs",
+    "/ticket",
+    "/assets",
+    "/schedule",
+    "/billing",
+    "/manage",
+  ];
+
   const location = useLocation();
+
+  const isDashboardRoute = dashboardPaths.some((path) =>
+    location.pathname.startsWith(path)
+  );
+
+  const [isDashboardOpen, setIsDashboardOpen] = useState(isDashboardRoute);
+
+  const [activeTab, setActiveTab] = useState(null);
 
   // Initialize MetisMenu only once
   useEffect(() => {
@@ -79,8 +95,12 @@ const Sidebar = () => {
   };
 
   const toggleTab = (tab) => {
-    // Toggle between opening and closing the tab
-    setActiveTab(activeTab === tab ? null : tab);
+    if (activeTab === tab) {
+      setActiveTab(null); // close if same tab clicked
+    } else {
+      setActiveTab(tab);
+      setIsDashboardOpen(false); // close dashboard
+    }
   };
 
   return (
@@ -102,7 +122,7 @@ const Sidebar = () => {
           className={
             location.pathname.includes("/network") ||
             location.pathname.includes("/jobs") ||
-            location.pathname.includes("/ticket") ||
+            location.pathname.startsWith("/ticket") ||
             location.pathname.includes("/assets")
               ? "mm-active"
               : ""
@@ -112,6 +132,12 @@ const Sidebar = () => {
             className="has-arrow text-decoration-none"
             href="#"
             aria-expanded="false"
+            onClick={(e) => {
+              e.preventDefault(); // prevent navigation
+              setIsDashboardOpen(!isDashboardOpen);
+              setActiveTab(null);
+            }}
+            data-toggle="none"
           >
             <div className="nav_icon_small">
               <img src="/assets/img/menu-icon/1.svg" alt="" />
@@ -120,10 +146,13 @@ const Sidebar = () => {
               <span>Dashboard</span>
             </div>
           </a>
-          <ul>
+          <ul
+            className={isDashboardOpen ? "mm-collapse mm-show" : "mm-collapse"}
+          >
             <li>
               <Link
                 to="/network"
+                onClick={(e) => e.stopPropagation()}
                 className={`${
                   isActive("/network") ? "active" : ""
                 } text-decoration-none`}
@@ -134,6 +163,7 @@ const Sidebar = () => {
             <li>
               <Link
                 to="/jobs"
+                onClick={(e) => e.stopPropagation()}
                 className={`${
                   isActive("/jobs") ? "active" : ""
                 } text-decoration-none`}

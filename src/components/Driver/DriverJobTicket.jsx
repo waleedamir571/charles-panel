@@ -1,37 +1,25 @@
 import React from "react";
-import styles from "./TicketIndexDetail.module.css";
 import { Link } from "react-router-dom";
 
-const TicketIndexDetail = () => {
+const DriverJobTicket = () => {
   return (
     <>
       <div className="main_content_iner">
         <div className="white_card_body bg-white px-4 py-3 mb-3 rounded-4">
           <div className="d-flex align-items-center mb-2 fs-3">
-            <Link to="/" className="text-dark fw-medium text-decoration-none ">
-              Dashboard
-            </Link>
+            <span to="/" className="text-dark fw-medium text-decoration-none ">
+              Driver
+            </span>
             <img
               src="/images/bread-arrow.svg"
               alt="arrow"
               style={{ margin: "0 10px" }}
             />
             <Link
-              to="/network"
+              to="/driver/job-tickets"
               className="text-dark fw-medium text-decoration-none "
             >
-              <span className="text-dark fw-medium">Network</span>
-            </Link>
-            <img
-              src="/images/bread-arrow.svg"
-              alt="arrow"
-              style={{ margin: "0 10px" }}
-            />
-            <Link
-              to="/network/details"
-              className="text-dark fw-medium text-decoration-none "
-            >
-              <span className=" fw-medium">Knotty Logistic LLC</span>
+              Tickets
             </Link>
             <img
               src="/images/bread-arrow.svg"
@@ -40,7 +28,7 @@ const TicketIndexDetail = () => {
             />
             <span className="bread-text fw-medium">Job Ticket</span>
           </div>
-        </div>{" "}
+        </div>
         <div className="card">
           <div className="row">
             <div className="col-md-12">
@@ -113,23 +101,45 @@ const TicketIndexDetail = () => {
                   </div>
                 </div>
 
-                <div className="row time-details">
-                  <div className="col-4">
-                    <div className="start-label">START</div>
-                    <div className="time-value">8:43 AM</div>
-                    <div className="date-value">1/15/2013</div>
-                    <div className="grid-box">M</div>
-                    <div className="grid-box">M</div>
-                  </div>
-                  <div className="col-4">
-                    <div className="stop-label">STOP</div>
-                    <div className="time-value">8:43 AM</div>
-                    <div className="date-value">1/15/2013</div>
-                    <div className="grid-box">M</div>
-                    <div className="grid-box">M</div>
-                  </div>
-                  <div className="col-4">
-                    <div className="total-label">TOTAL</div>
+                <div className="time-tracker">
+                  <div className="time-details">
+                    <div className="time-box">
+                      <div className="time-header">
+                        <div className="start-label">START</div>
+                        <div className="time-info">
+                          <div className="time-value">8:43 AM</div>
+                          <div className="date-value">1/25/2025</div>
+                        </div>
+                      </div>
+                      <div className="grid-boxes">
+                        <div className="grid-box">M</div>
+                        <div className="grid-box">M</div>
+                      </div>
+                    </div>
+
+                    <div className="time-box">
+                      <div className="time-header">
+                        <div className="start-label">STOP</div>
+                        <div className="time-info">
+                          <div className="time-value">8:43 AM</div>
+                          <div className="date-value">1/25/2025</div>
+                        </div>
+                      </div>
+                      <div className="grid-boxes">
+                        <div className="grid-box">M</div>
+                        <div className="grid-box">M</div>
+                      </div>
+                    </div>
+
+                    <div className="time-box">
+                      <div className="time-header">
+                        <div className="total-label">TOTAL</div>
+                      </div>
+                      <div className="grid-boxes">
+                        <div className="grid-box">M</div>
+                        <div className="grid-box">M</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -153,7 +163,7 @@ const TicketIndexDetail = () => {
             <div className="col-md-12">
               <h3 className="load-count-header">LOAD COUNT</h3>
               <div className="table-responsive">
-                <table className={`${styles.table} table-bordered load-table`}>
+                <table className="table table-bordered load-table">
                   <thead>
                     <tr>
                       <th>
@@ -219,9 +229,33 @@ const TicketIndexDetail = () => {
             </div>
           </div>
 
-          <div className="row align-items-center">
+          <div className="row align-items-center gap-2">
             <div className="col-md-12 text-center">
-              <button className="edit-btn border-none">
+              <button className="edit-btn border-none m-3">
+                Download{" "}
+                <span className="ms-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    height="19"
+                    viewBox="0 0 17 19"
+                    fill="none"
+                  >
+                    <path
+                      d="M1 13.3818V15.2568C1 15.7541 1.19754 16.231 1.54917 16.5827C1.90081 16.9343 2.37772 17.1318 2.875 17.1318H14.125C14.6223 17.1318 15.0992 16.9343 15.4508 16.5827C15.8025 16.231 16 15.7541 16 15.2568V13.3818M3.8125 7.75684L8.5 12.4443M8.5 12.4443L13.1875 7.75684M8.5 12.4443V1.19434"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <button
+                className="edit-btn border-none"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModalLong"
+              >
                 Edit{" "}
                 <span className="ms-2">
                   <svg
@@ -252,8 +286,133 @@ const TicketIndexDetail = () => {
           </div>
         </div>
       </div>
+
+      <div
+        className="modal fade"
+        id="exampleModalLong"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog" role="document">
+          <div className="modal-content p-4">
+            <div className="modal-body">
+              <h2 className="fs-4 fw-medium mb-3">Original Ticket Info</h2>
+              <hr style={{ color: "#cecaca", marginTop: "0" }} />
+
+              <div className="ticket-grid">
+                <table className="table table-borderless mb-0 border border-danger-subtle">
+                  <tbody>
+                    <tr>
+                      <td
+                        className="border border-danger-subtle"
+                        style={{ width: "50px" }}
+                      ></td>
+                      <td
+                        className="border border-danger-subtle"
+                        style={{ width: "50px" }}
+                      ></td>
+                      <td
+                        className="border border-danger-subtle"
+                        style={{ width: "50px" }}
+                      ></td>
+                      <td
+                        className="border border-danger-subtle fs-6"
+                        style={{ minWidth: "150px" }}
+                      >
+                        Jerry Lassagpit
+                      </td>
+                      <td
+                        className="border border-danger-subtle fs-6"
+                        style={{ minWidth: "150px" }}
+                      >
+                        Mc Kenzie C8
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h2 className="fs-4 fw-medium mb-3">Updated Version</h2>
+              <hr style={{ color: "#cecaca", marginTop: "0" }} />
+
+              <div className="ticket-grid">
+                <table className="table table-borderless mb-0 border border-danger-subtle w-auto">
+                  <tbody>
+                    <tr>
+                      <td
+                        className="border border-danger-subtle py-2 "
+                        style={{ fontSize: "14px" }}
+                      >
+                        2:15 AM
+                      </td>
+                      <td
+                        className="border border-danger-subtle py-2 "
+                        style={{ fontSize: "14px" }}
+                      >
+                        4:25 AM
+                      </td>
+                      <td
+                        className="border border-danger-subtle py-2 "
+                        style={{ fontSize: "14px" }}
+                      >
+                        23224
+                      </td>
+                      <td
+                        className="border border-danger-subtle py-2 "
+                        style={{ fontSize: "14px" }}
+                      >
+                        630
+                      </td>
+                      <td
+                        className="border border-danger-subtle py-2 "
+                        style={{ fontSize: "14px" }}
+                      >
+                        Jerry Lassagpit
+                      </td>
+                      <td
+                        className="border border-danger-subtle py-2  text-muted"
+                        style={{ fontSize: "14px" }}
+                      >
+                        Mc Kenzie C8
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div className="d-flex gap-4 justify-content-center"></div>
+            </div>
+            <div className="modal-footer">
+              <button className="cancel-btn" data-bs-dismiss="modal">
+                Cancel
+              </button>
+              <button className="submit-btn btn bg-purple text-white">
+                Submit for Review
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="modal fade"
+        id="successModal"
+        tabindex="-1"
+        aria-labelledby="successModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-body text-center">
+              <img className="" src="/assets/img/home/successful.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
 
-export default TicketIndexDetail;
+export default DriverJobTicket;

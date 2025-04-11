@@ -5,6 +5,41 @@ const JobTickets = () => {
   return (
     <>
       <div className="main_content_iner">
+        <div className="white_card_body bg-white px-4 py-3 mb-3 rounded-4">
+          <div className="d-flex align-items-center mb-2 fs-3">
+            <Link to="/" className="text-dark fw-medium text-decoration-none ">
+              Dashboard
+            </Link>
+            <img
+              src="/images/bread-arrow.svg"
+              alt="arrow"
+              style={{ margin: "0 10px" }}
+            />
+            <Link
+              to="/network"
+              className="text-dark fw-medium text-decoration-none "
+            >
+              <span className="text-dark fw-medium">Network</span>
+            </Link>
+            <img
+              src="/images/bread-arrow.svg"
+              alt="arrow"
+              style={{ margin: "0 10px" }}
+            />
+            <Link
+              to="/network/details"
+              className="text-dark fw-medium text-decoration-none "
+            >
+              <span className=" fw-medium">Knotty Logistic LLC</span>
+            </Link>
+            <img
+              src="/images/bread-arrow.svg"
+              alt="arrow"
+              style={{ margin: "0 10px" }}
+            />
+            <span className="bread-text fw-medium">Job Tickets</span>
+          </div>
+        </div>{" "}
         <div className="white_card card_height_100 rounded-4 p-4">
           <div className="d-flex justify-content-between align-items-center">
             <h1 className="fw-medium fs-3 mb-0">Job Tickets</h1>
@@ -66,20 +101,18 @@ const JobTickets = () => {
                 </svg>
               </div>
 
-              <Link
-                to=""
-                data-bs-toggle="modal"
-                data-bs-target="#addcategory"
-                className="btn_1 text-decoration-none"
-              >
+              <button className="btn_1 text-decoration-none">
                 + &nbsp;&nbsp;Add
-              </Link>
+              </button>
             </div>
           </div>
           <hr style={{ color: "#cecaca", marginTop: "10px" }} />
 
           <div className="mt-4">
-            <Link to="/network/details/job-tickets/details" className="text-decoration-none">
+            <Link
+              to="/network/details/job-tickets/details"
+              className="text-decoration-none"
+            >
               <div className="job-ticket">
                 <div className="d-flex align-items-center gap-2">
                   <span className="airport">(LAX) Airport,</span>

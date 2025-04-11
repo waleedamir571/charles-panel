@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaCalendarAlt } from "react-icons/fa";
 import PendingJobModal from "./PendingJobModal";
 import CurrentJobModal from "./CurrentJobModal";
@@ -205,6 +205,19 @@ function JobList({ tab }) {
   const todayJobs = filteredJobs.filter((job) => isToday(job.dateRange[0]));
   const weekJobs = filteredJobs.filter((job) => isThisWeek(job.dateRange[0]));
 
+  useEffect(() => {
+    if (showModal) {
+      document.body.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+    } else {
+      document.body.style.backgroundColor = ""; // reset
+    }
+
+    return () => {
+      // Clean up when the component unmounts
+      document.body.style.backgroundColor = "";
+    };
+  }, [showModal]);
+
   const renderJobCard = (job, idx) => (
     <div
       key={idx}
@@ -293,10 +306,7 @@ function JobList({ tab }) {
 
         {/* Create button */}
         <div className="add_button ms-2">
-          <Link
-            to="invite"
-            className="btn_1 btn bg-purple text-white p-2 px-3"
-          >
+          <Link to="invite" className="btn_1 btn bg-purple text-white p-2 px-3">
             + Create Invite
           </Link>
         </div>
@@ -360,6 +370,9 @@ function JobList({ tab }) {
           <p className="text-muted">No jobs this week.</p>
         )}
       </div>
+
+      {showModal && <div className="modal-overlay"></div>}
+
       {showModal && selectedJob && tab === "pending" && (
         <PendingJobModal
           job={selectedJob}

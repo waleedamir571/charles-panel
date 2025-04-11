@@ -2,19 +2,19 @@ import React from "react";
 import Sidebar from "../../components/Sidebar";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import DriverInspection from "../../components/Driver/DriverInspection";
+import AssetDocs from "../../components/Assets/AssetDocs";
 
-const DriverInspectPage = () => {
+const AssetDocsPage = () => {
   return (
     <>
       <Sidebar />
       <section className="main_content dashboard_part large_header_bg">
         <Header />
-        <DriverInspection />
+        <AssetDocs />
       </section>
       <Footer />
     </>
   );
 };
 
-export default DriverInspectPage;
+export default AssetDocsPage;

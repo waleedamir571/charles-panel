@@ -1,9 +1,45 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const AssetMaintainance = () => {
   return (
     <>
       <div className="main_content_iner">
+        <div className="white_card_body bg-white px-4 py-3 mb-3 rounded-4">
+          <div className="d-flex align-items-center mb-2 fs-3">
+            <Link to="/" className="text-dark fw-medium text-decoration-none ">
+              Dashboard
+            </Link>
+            <img
+              src="/images/bread-arrow.svg"
+              alt="arrow"
+              style={{ margin: "0 10px" }}
+            />
+            <Link
+              to="/assets"
+              className="text-dark fw-medium text-decoration-none "
+            >
+              <span className="text-dark fw-medium">Assets</span>
+            </Link>
+            <img
+              src="/images/bread-arrow.svg"
+              alt="arrow"
+              style={{ margin: "0 10px" }}
+            />
+            <Link
+              to="/assets/detail"
+              className="text-dark fw-medium text-decoration-none "
+            >
+              <span className=" fw-medium">Truck no. 234332</span>
+            </Link>
+            <img
+              src="/images/bread-arrow.svg"
+              alt="arrow"
+              style={{ margin: "0 10px" }}
+            />
+            <span className="bread-text fw-medium">Maintenance</span>
+          </div>
+        </div>{" "}
         <div className="white_card card_height_100 mb_30 rounded-4">
           <div className="white_card_body">
             <div className="d-flex justify-content-between align-items-center">
@@ -16,13 +52,13 @@ const AssetMaintainance = () => {
                   Date Entered <span className="year">: 01-21-2025</span>
                 </p>
 
-                <a
-                  className="btn_1 text-decoration-none"
+                <button
+                  className="btn_1 text-decoration-none cursor-pointer"
                   data-bs-toggle="modal"
                   data-bs-target="#exampleModalLong"
                 >
                   Update Status
-                </a>
+                </button>
               </div>
             </div>
 
@@ -36,7 +72,10 @@ const AssetMaintainance = () => {
                   <div className=" job-ticket4">
                     <div className="card-body mt-3">
                       <div className="row truck-info">
-                        <div className="col-md-2" style={{borderRight: '2px solid #000 !important'}}>
+                        <div
+                          className="col-md-2"
+                          style={{ borderRight: "2px solid #000 !important" }}
+                        >
                           <img
                             className="w-100"
                             src="/assets/img/home/truck3.png"
@@ -84,9 +123,12 @@ const AssetMaintainance = () => {
                             </div>
                           </div>
                         </div>
-                        <div className="col-md-2">
+                        <Link
+                          to="/assets/detail/maintainance/docs"
+                          className="col-md-2 cursor-pointer"
+                        >
                           <img src="/assets/img/home/view-doc.png" alt="" />
-                        </div>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -168,6 +210,121 @@ const AssetMaintainance = () => {
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="modal fade"
+        id="exampleModalLong"
+        tabIndex="-1"
+        aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-dialog-centered p-3">
+          <div className="modal-content overflow">
+            <div className="modal-header">
+              <h5
+                className="modal-title summary fs-3 text-center mx-auto"
+                id="exampleModalLongTitle"
+              >
+                Maintenance Summary
+              </h5>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div className="modal-body">
+              <div className="ptb-15">
+                <p className="info-label2">Items</p>
+              </div>
+              <textarea
+                className="form-control form-control-lg bg-gray  resize-none fs-6"
+                maxLength="225"
+                rows="2"
+                placeholder="It is a long established fact"
+              ></textarea>
+              <br />
+
+              <div className="ptb-15">
+                <p className="info-label2">Service Description</p>
+              </div>
+              <textarea
+                className="form-control form-control-lg bg-gray resize-none fs-6"
+                maxLength="225"
+                rows="3"
+                placeholder="It is a long established fact that a reader will be distracted..."
+              ></textarea>
+
+              <div className="ptb-15">
+                <div className="row">
+                  <div className="col-md-3 text-center">
+                    <img
+                      className="w-50"
+                      src="/assets/img/home/pdf.png"
+                      alt=""
+                    />
+                    <p className="fs-14 mt-2">1244.jpg</p>
+                  </div>
+                  <div className="col-md-3 text-center">
+                    <img
+                      className="w-50"
+                      src="/assets/img/home/pdf.png"
+                      alt=""
+                    />
+                    <p className="fs-14 mt-2">1244.jpg</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="ptb-15">
+                <p className="info-label2">Outstanding Reports</p>
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className="job-ticket5 p-2 rounded border mt-2">
+                      <div className="d-flex align-items-center gap-2">
+                        <input type="checkbox" />
+                        <span className="oil">Oil Leak</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="job-ticket6 p-2 rounded border mt-2">
+                      <div className="d-flex align-items-center gap-2">
+                        <input type="checkbox" />
+                        <span className="other">Other Equipment</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="modal-footer w-100 mx-auto">
+              <div className="row w-100">
+                <div className="col-6 pe-2">
+                  <button
+                    type="button"
+                    className="btn btn-lg bg-transparent w-100 border"
+                    data-bs-dismiss="modal"
+                  >
+                    Back
+                  </button>
+                </div>
+                <div className="col-6 ps-2">
+                  <button
+                    type="button"
+                    className="btn btn-lg btn-success w-100"
+                  >
+                    Resolved
+                  </button>
                 </div>
               </div>
             </div>

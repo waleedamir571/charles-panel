@@ -1,9 +1,45 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Invoice = () => {
   return (
     <>
       <div className="main_content_iner">
+        <div className="white_card_body bg-white px-4 py-3 mb-3 rounded-4">
+          <div className="d-flex align-items-center mb-2 fs-3">
+            <Link to="/" className="text-dark fw-medium text-decoration-none ">
+              Dashboard
+            </Link>
+            <img
+              src="/images/bread-arrow.svg"
+              alt="arrow"
+              style={{ margin: "0 10px" }}
+            />
+            <Link
+              to="/network"
+              className="text-dark fw-medium text-decoration-none "
+            >
+              <span className="text-dark fw-medium">Network</span>
+            </Link>
+            <img
+              src="/images/bread-arrow.svg"
+              alt="arrow"
+              style={{ margin: "0 10px" }}
+            />
+            <Link
+              to="/network/details"
+              className="text-dark fw-medium text-decoration-none "
+            >
+              <span className=" fw-medium">Knotty Logistic LLC</span>
+            </Link>
+            <img
+              src="/images/bread-arrow.svg"
+              alt="arrow"
+              style={{ margin: "0 10px" }}
+            />
+            <span className="bread-text fw-medium">Invoices</span>
+          </div>
+        </div>{" "}
         <div className="white_card card_height_100 rounded-4 p-4">
           <div className="d-flex justify-content-between align-items-center">
             <h1 className="fw-medium fs-3 mb-0">Invoices</h1>
@@ -43,7 +79,7 @@ const Invoice = () => {
               </button>
             </div>
           </div>
-          <hr style={{ color: "#cecaca", marginTop: '10px' }} />
+          <hr style={{ color: "#cecaca", marginTop: "10px" }} />
 
           <div className="d-flex justify-content-between align-items-center mb-3">
             <div className="d-flex align-items-center gap-2">

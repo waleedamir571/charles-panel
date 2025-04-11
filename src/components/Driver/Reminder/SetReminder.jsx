@@ -13,6 +13,19 @@ const SetReminder = () => {
   return (
     <>
       <div className="main_content_iner">
+        <div className="white_card_body bg-white px-4 py-3 mb-3 rounded-4">
+          <div className="d-flex align-items-center mb-2 fs-3">
+            <span to="/" className="text-dark fw-medium text-decoration-none ">
+              Driver
+            </span>
+            <img
+              src="/images/bread-arrow.svg"
+              alt="arrow"
+              style={{ margin: "0 10px" }}
+            />
+            <span className="bread-text fw-medium">Reminder</span>
+          </div>
+        </div>{" "}
         <div className="white_card card_height_100 mb_30 rounded-4 p-4">
           <div className="d-flex justify-content-between align-items-center">
             <h1 className="fw-medium fs-3 mb-0">Reminder</h1>

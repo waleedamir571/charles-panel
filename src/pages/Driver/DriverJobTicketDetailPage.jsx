@@ -2,19 +2,19 @@ import React from "react";
 import Sidebar from "../../components/Sidebar";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import DriverInspection from "../../components/Driver/DriverInspection";
+import DriverTicketDetail from "../../components/Driver/DriverTicketDetail";
 
-const DriverInspectPage = () => {
+const DriverJobTicketDetailPage = () => {
   return (
     <>
       <Sidebar />
       <section className="main_content dashboard_part large_header_bg">
         <Header />
-        <DriverInspection />
+        <DriverTicketDetail />
       </section>
       <Footer />
     </>
   );
 };
 
-export default DriverInspectPage;
+export default DriverJobTicketDetailPage;

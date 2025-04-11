@@ -2,10 +2,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Ticket = () => {
-  
   return (
     <>
       <div className="main_content_iner">
+        <div className="white_card_body bg-white px-4 py-3 mb-3 rounded-4">
+          <div className="d-flex align-items-center mb-2 fs-3">
+            <Link to="/" className="text-dark fw-medium text-decoration-none ">
+              Dashboard
+            </Link>
+            <img
+              src="/images/bread-arrow.svg"
+              alt="arrow"
+              style={{ margin: "0 8px" }}
+            />
+            <span className="bread-text fw-medium">Ticket</span>
+          </div>
+        </div>
         <div className="container-fluid p-0 white_card card_height_100 rounded-4">
           <div className="">
             <div className="white_card_header mb-0 pb-0">
@@ -81,7 +93,7 @@ const Ticket = () => {
                       >
                         <li className="nav-item" role="presentation">
                           <button
-                            className="nav-link  px-3 py-1"
+                            className="nav-link px-3 py-1"
                             id="index-tab"
                             data-bs-toggle="tab"
                             data-bs-target="#index"
@@ -112,7 +124,7 @@ const Ticket = () => {
                   </div>
                 </div>
               </div>
-              <hr style={{ color: "#cecaca" }} />
+              <hr style={{ color: "#cecaca", marginBottom: "0" }} />
             </div>
           </div>
           <div className="tab-content" id="myTabContent">

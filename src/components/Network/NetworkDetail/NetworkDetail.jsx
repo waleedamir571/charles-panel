@@ -30,10 +30,41 @@ const NetworkDetail = () => {
   return (
     <>
       <div className={styles.dashboard}>
+        <div className="white_card_body bg-white px-4 py-3 mb-3 rounded-4">
+          <div className="d-flex align-items-center mb-2 fs-3">
+            <Link
+              to="/"
+              className="text-dark fw-medium text-decoration-none "
+            >
+              Dashboard
+            </Link>
+            <img
+              src="/images/bread-arrow.svg"
+              alt="arrow"
+              style={{ margin: "0 10px" }}
+            />
+            <Link
+              to="/network"
+              className="text-dark fw-medium text-decoration-none "
+            >
+              <span className="text-dark fw-medium">Network</span>
+            </Link>
+            <img
+              src="/images/bread-arrow.svg"
+              alt="arrow"
+              style={{ margin: "0 10px" }}
+            />
+            <span className="bread-text fw-medium">Knotty Logistic LLC</span>
+          </div>
+        </div>{" "}
         {/* <!-- Header Section --> */}
         <div className={styles.header}>
           <img src="/assets/img/home/logo.png" alt="" />{" "}
-          <img src="/assets/img/home/star.png" alt="" style={{width: '12vw'}}/>
+          <img
+            src="/assets/img/home/star.png"
+            alt=""
+            style={{ width: "12vw" }}
+          />
           <div className={styles.rating}></div>
           <div className={styles["top-buttons"]}>
             <Link to="job-tickets" className="text-white fs-5">
@@ -55,7 +86,6 @@ const NetworkDetail = () => {
             </Link>
           </div>
         </div>
-
         <div className="row mt-3">
           {/* <!-- Left Column --> */}
           <div className="col-md-7">
@@ -124,7 +154,7 @@ const NetworkDetail = () => {
               </table>
               <div>
                 <p className="gps">Address</p>
-                <hr style={{ color: "#cecaca", marginBottom: '0' }} />
+                <hr style={{ color: "#cecaca", marginBottom: "0" }} />
 
                 <br />
                 <div className="box">

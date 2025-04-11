@@ -4,8 +4,21 @@ const Assets = () => {
   return (
     <>
       <div className="main_content_iner">
+        <div className="white_card_body bg-white px-4 py-3 mb-3 rounded-4">
+          <div className="d-flex align-items-center mb-2 fs-3">
+            <Link to="/" className="text-dark fw-medium text-decoration-none ">
+              Dashboard
+            </Link>
+            <img
+              src="/images/bread-arrow.svg"
+              alt="arrow"
+              style={{ margin: "0 8px" }}
+            />
+            <span className="bread-text fw-medium">Assets</span>
+          </div>
+        </div>
         <div className="white_card card_height_100 mb_30">
-          <div className="white_card_body">
+          <div className="white_card_body pt-1">
             <div className="d-flex justify-content-between align-items-center mb-1 mt-3">
               <h1 className="fs-2 mb-0 fw-medium">My Assets</h1>
 

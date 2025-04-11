@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./AssetReport.module.css";
+import { Link } from "react-router-dom";
 
 const AssetReport = () => {
   // State to manage the visibility of each section
@@ -15,6 +16,41 @@ const AssetReport = () => {
   return (
     <>
       <div className="main_content_iner">
+        <div className="white_card_body bg-white px-4 py-3 mb-3 rounded-4">
+          <div className="d-flex align-items-center mb-2 fs-3">
+            <Link to="/" className="text-dark fw-medium text-decoration-none ">
+              Dashboard
+            </Link>
+            <img
+              src="/images/bread-arrow.svg"
+              alt="arrow"
+              style={{ margin: "0 10px" }}
+            />
+            <Link
+              to="/assets"
+              className="text-dark fw-medium text-decoration-none "
+            >
+              <span className="text-dark fw-medium">Assets</span>
+            </Link>
+            <img
+              src="/images/bread-arrow.svg"
+              alt="arrow"
+              style={{ margin: "0 10px" }}
+            />
+            <Link
+              to="/assets/detail"
+              className="text-dark fw-medium text-decoration-none "
+            >
+              <span className=" fw-medium">Truck no. 234332</span>
+            </Link>
+            <img
+              src="/images/bread-arrow.svg"
+              alt="arrow"
+              style={{ margin: "0 10px" }}
+            />
+            <span className="bread-text fw-medium">Report</span>
+          </div>
+        </div>{" "}
         <div className="container-fluid p-0 white_card card_height_100 mb_30">
           <div className="white_card card_height_100 mb_30">
             <div className="white_card_body">

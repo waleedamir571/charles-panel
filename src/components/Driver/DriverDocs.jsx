@@ -3,6 +3,7 @@ import MyDocuments from "./Docs/MyDocuments";
 import Inspection from "./Docs/Inspection";
 import Logs from "./Docs/Logs";
 import AllDocs from "./Docs/AllDocs";
+import { Link } from "react-router-dom";
 
 const DriverDocs = () => {
   // State to keep track of the active tab
@@ -49,6 +50,29 @@ const DriverDocs = () => {
   return (
     <>
       <div className="main_content_iner">
+        <div className="white_card_body bg-white px-4 py-3 mb-3 rounded-4">
+          <div className="d-flex align-items-center mb-2 fs-3">
+            <Link to="/" className="text-dark fw-medium text-decoration-none ">
+              Driver
+            </Link>
+            <img
+              src="/images/bread-arrow.svg"
+              alt="arrow"
+              style={{ margin: "0 8px" }}
+            />
+            <span className="bread-text fw-medium">
+              {activeTab === "myDocuments"
+                ? "My Document"
+                : activeTab === "inspection"
+                ? "Inspection"
+                : activeTab === "logs"
+                ? "My Logs"
+                : activeTab === "all"
+                ? "All"
+                : ""}
+            </span>
+          </div>
+        </div>
         <div className="white_card card_height_100 mb_30 rounded-4">
           <div className="white_card_header">
             <div className="row align-items-center mb-4">
@@ -153,10 +177,23 @@ const DriverDocs = () => {
                   {/* Dropdown menu items */}
                   {isOpen && (
                     <div
-                      className="dropdown-menu"
+                      className={`custom-dropdown-menu ${isOpen ? "show" : ""}`}
                       aria-labelledby="dropdownMenuLink"
+                      style={{
+                        position: "absolute",
+                        top: "100%",
+                        right: 0,
+                        zIndex: 1000,
+                        background: "#42484D",
+                        color: "#fff",
+                        padding: "10px",
+                        border: "1px solid #ddd",
+                        borderRadius: "6px",
+                        minWidth: "150px",
+                        boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+                      }}
                     >
-                      <a className="dropdown-item" href="#">
+                      <a className="dropdown-item mb-3" href="#">
                         <img src="/assets/img/home/camera.png" alt="" />{" "}
                         &nbsp;&nbsp; Capture
                       </a>

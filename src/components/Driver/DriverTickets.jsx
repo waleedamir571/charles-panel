@@ -1,9 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const DriverTickets = () => {
   return (
     <>
       <div className="main_content_iner">
+        <div className="white_card_body bg-white px-4 py-3 mb-3 rounded-4">
+          <div className="d-flex align-items-center mb-2 fs-3">
+            <span to="/" className="text-dark fw-medium text-decoration-none ">
+              Driver
+            </span>
+            <img
+              src="/images/bread-arrow.svg"
+              alt="arrow"
+              style={{ margin: "0 10px" }}
+            />
+            <span className="bread-text fw-medium">Tickets</span>
+          </div>
+        </div>{" "}
         <div className="container-fluid p-0 white_card card_height_100">
           <div className="">
             <div className="white_card_header">
@@ -110,7 +124,7 @@ const DriverTickets = () => {
                   </div>
                 </div>
               </div>
-              <hr style={{ color: "#cecaca", marginBottom: '0' }} />
+              <hr style={{ color: "#cecaca", marginBottom: "0" }} />
             </div>
           </div>
           <div className="tab-content" id="myTabContent">
@@ -123,213 +137,243 @@ const DriverTickets = () => {
               <div className="white_card_body">
                 <div className="row g-4">
                   <div className="col-md-6">
-                    <div className="card job-card1 bg-gray border-none p-2 rounded-4 mt-0">
-                      <div className="card-body mt-0">
-                        <div className="mb-3">
-                          <h3 className="card-title mb-0 job-text">
-                            (LAX) Airport,{" "}
-                            <span className="fw-normal">Los Angeles, CA</span>
-                          </h3>
-                        </div>
+                    <Link
+                      to="/driver/job-tickets/detail"
+                      className="text-decoration-none"
+                    >
+                      <div className="card job-card1 bg-gray border-none p-2 rounded-4">
+                        <div className="card-body">
+                          <div className="mb-3">
+                            <h3 className="card-title mb-0 job-text">
+                              (LAX) Airport,{" "}
+                              <span className="fw-normal">Los Angeles, CA</span>
+                            </h3>
+                          </div>
 
-                        <div className="mb-3 mt-4">
-                          <div className="row align-items-center">
-                            <div className="col-md-2">
-                              <span className="text-muted">Status</span>
-                            </div>
-                            <div className="col-md-10">
-                              <div className="progress h-30">
-                                <div
-                                  className="progress-bar bg-green fs-5 text-black rounded-pill"
-                                  role="progressbar"
-                                  style={{ width: "60%" }}
-                                  aria-valuenow="60"
-                                  aria-valuemin="0"
-                                  aria-valuemax="100"
-                                >
-                                  60%
+                          <div className="mb-3 mt-4">
+                            <div className="row align-items-center">
+                              <div className="col-md-2">
+                                <span className="text-muted fs-5">Status</span>
+                              </div>
+                              <div className="col-md-10">
+                                <div className="progress h-30">
+                                  <div
+                                    className="progress-bar bg-green fs-5 text-black rounded-pill"
+                                    role="progressbar"
+                                    style={{ width: "60%" }}
+                                    aria-valuenow="60"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  >
+                                    60%
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
 
                   <div className="col-md-6">
-                    <div className="card job-card1 bg-gray border-none p-2 rounded-4">
-                      <div className="card-body">
-                        <div className="mb-3">
-                          <h3 className="card-title mb-0 job-text">
-                            (LAX) Airport,{" "}
-                            <span className="fw-normal">Los Angeles, CA</span>
-                          </h3>
-                        </div>
+                    <Link
+                      to="/driver/job-tickets/detail"
+                      className="text-decoration-none"
+                    >
+                      <div className="card job-card1 bg-gray border-none p-2 rounded-4">
+                        <div className="card-body">
+                          <div className="mb-3">
+                            <h3 className="card-title mb-0 job-text">
+                              (LAX) Airport,{" "}
+                              <span className="fw-normal">Los Angeles, CA</span>
+                            </h3>
+                          </div>
 
-                        <div className="mb-3 mt-4">
-                          <div className="row align-items-center">
-                            <div className="col-md-2">
-                              <span className="text-muted">Status</span>
-                            </div>
-                            <div className="col-md-10">
-                              <div className="progress h-30">
-                                <div
-                                  className="progress-bar bg-green fs-5 text-black rounded-pill"
-                                  role="progressbar"
-                                  style={{ width: "60%" }}
-                                  aria-valuenow="60"
-                                  aria-valuemin="0"
-                                  aria-valuemax="100"
-                                >
-                                  60%
+                          <div className="mb-3 mt-4">
+                            <div className="row align-items-center">
+                              <div className="col-md-2">
+                                <span className="text-muted fs-5">Status</span>
+                              </div>
+                              <div className="col-md-10">
+                                <div className="progress h-30">
+                                  <div
+                                    className="progress-bar bg-green fs-5 text-black rounded-pill"
+                                    role="progressbar"
+                                    style={{ width: "60%" }}
+                                    aria-valuenow="60"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  >
+                                    60%
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
 
                   <div className="col-md-6">
-                    <div className="card job-card1 bg-gray border-none p-2 rounded-4">
-                      <div className="card-body">
-                        <div className="mb-3">
-                          <h3 className="card-title mb-0 job-text">
-                            (LAX) Airport,{" "}
-                            <span className="fw-normal">Los Angeles, CA</span>
-                          </h3>
-                        </div>
+                    <Link
+                      to="/driver/job-tickets/detail"
+                      className="text-decoration-none"
+                    >
+                      <div className="card job-card1 bg-gray border-none p-2 rounded-4">
+                        <div className="card-body">
+                          <div className="mb-3">
+                            <h3 className="card-title mb-0 job-text">
+                              (LAX) Airport,{" "}
+                              <span className="fw-normal">Los Angeles, CA</span>
+                            </h3>
+                          </div>
 
-                        <div className="mb-3 mt-4">
-                          <div className="row align-items-center">
-                            <div className="col-md-2">
-                              <span className="text-muted">Status</span>
-                            </div>
-                            <div className="col-md-10">
-                              <div className="progress h-30">
-                                <div
-                                  className="progress-bar bg-green fs-5 text-black rounded-pill"
-                                  role="progressbar"
-                                  style={{ width: "60%" }}
-                                  aria-valuenow="60"
-                                  aria-valuemin="0"
-                                  aria-valuemax="100"
-                                >
-                                  60%
+                          <div className="mb-3 mt-4">
+                            <div className="row align-items-center">
+                              <div className="col-md-2">
+                                <span className="text-muted fs-5">Status</span>
+                              </div>
+                              <div className="col-md-10">
+                                <div className="progress h-30">
+                                  <div
+                                    className="progress-bar bg-green fs-5 text-black rounded-pill"
+                                    role="progressbar"
+                                    style={{ width: "60%" }}
+                                    aria-valuenow="60"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  >
+                                    60%
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
 
                   <div className="col-md-6">
-                    <div className="card job-card1 bg-gray border-none p-2 rounded-4">
-                      <div className="card-body">
-                        <div className="mb-3">
-                          <h3 className="card-title mb-0 job-text">
-                            (LAX) Airport,{" "}
-                            <span className="fw-normal">Los Angeles, CA</span>
-                          </h3>
-                        </div>
+                    <Link
+                      to="/driver/job-tickets/detail"
+                      className="text-decoration-none"
+                    >
+                      <div className="card job-card1 bg-gray border-none p-2 rounded-4">
+                        <div className="card-body">
+                          <div className="mb-3">
+                            <h3 className="card-title mb-0 job-text">
+                              (LAX) Airport,{" "}
+                              <span className="fw-normal">Los Angeles, CA</span>
+                            </h3>
+                          </div>
 
-                        <div className="mb-3 mt-4">
-                          <div className="row align-items-center">
-                            <div className="col-md-2">
-                              <span className="text-muted">Status</span>
-                            </div>
-                            <div className="col-md-10">
-                              <div className="progress h-30">
-                                <div
-                                  className="progress-bar bg-green fs-5 text-black rounded-pill"
-                                  role="progressbar"
-                                  style={{ width: "60%" }}
-                                  aria-valuenow="60"
-                                  aria-valuemin="0"
-                                  aria-valuemax="100"
-                                >
-                                  60%
+                          <div className="mb-3 mt-4">
+                            <div className="row align-items-center">
+                              <div className="col-md-2">
+                                <span className="text-muted fs-5">Status</span>
+                              </div>
+                              <div className="col-md-10">
+                                <div className="progress h-30">
+                                  <div
+                                    className="progress-bar bg-green fs-5 text-black rounded-pill"
+                                    role="progressbar"
+                                    style={{ width: "60%" }}
+                                    aria-valuenow="60"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  >
+                                    60%
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
 
                   <div className="col-md-6">
-                    <div className="card job-card1 bg-gray border-none p-2 rounded-4">
-                      <div className="card-body">
-                        <div className="mb-3">
-                          <h3 className="card-title mb-0 job-text">
-                            (LAX) Airport,{" "}
-                            <span className="fw-normal">Los Angeles, CA</span>
-                          </h3>
-                        </div>
+                    <Link
+                      to="/driver/job-tickets/detail"
+                      className="text-decoration-none"
+                    >
+                      <div className="card job-card1 bg-gray border-none p-2 rounded-4">
+                        <div className="card-body">
+                          <div className="mb-3">
+                            <h3 className="card-title mb-0 job-text">
+                              (LAX) Airport,{" "}
+                              <span className="fw-normal">Los Angeles, CA</span>
+                            </h3>
+                          </div>
 
-                        <div className="mb-3 mt-4">
-                          <div className="row align-items-center">
-                            <div className="col-md-2">
-                              <span className="text-muted">Status</span>
-                            </div>
-                            <div className="col-md-10">
-                              <div className="progress h-30">
-                                <div
-                                  className="progress-bar bg-green fs-5 text-black rounded-pill"
-                                  role="progressbar"
-                                  style={{ width: "60%" }}
-                                  aria-valuenow="60"
-                                  aria-valuemin="0"
-                                  aria-valuemax="100"
-                                >
-                                  60%
+                          <div className="mb-3 mt-4">
+                            <div className="row align-items-center">
+                              <div className="col-md-2">
+                                <span className="text-muted fs-5">Status</span>
+                              </div>
+                              <div className="col-md-10">
+                                <div className="progress h-30">
+                                  <div
+                                    className="progress-bar bg-green fs-5 text-black rounded-pill"
+                                    role="progressbar"
+                                    style={{ width: "60%" }}
+                                    aria-valuenow="60"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  >
+                                    60%
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
 
                   <div className="col-md-6">
-                    <div className="card job-card1 bg-gray border-none p-2 rounded-4">
-                      <div className="card-body">
-                        <div className="mb-3">
-                          <h3 className="card-title mb-0 job-text">
-                            (LAX) Airport,{" "}
-                            <span className="fw-normal">Los Angeles, CA</span>
-                          </h3>
-                        </div>
+                    <Link
+                      to="/driver/job-tickets/detail"
+                      className="text-decoration-none"
+                    >
+                      <div className="card job-card1 bg-gray border-none p-2 rounded-4">
+                        <div className="card-body">
+                          <div className="mb-3">
+                            <h3 className="card-title mb-0 job-text">
+                              (LAX) Airport,{" "}
+                              <span className="fw-normal">Los Angeles, CA</span>
+                            </h3>
+                          </div>
 
-                        <div className="mb-3 mt-4">
-                          <div className="row align-items-center">
-                            <div className="col-md-2">
-                              <span className="text-muted">Status</span>
-                            </div>
-                            <div className="col-md-10">
-                              <div className="progress h-30">
-                                <div
-                                  className="progress-bar bg-green fs-5 text-black rounded-pill"
-                                  role="progressbar"
-                                  style={{ width: "60%" }}
-                                  aria-valuenow="60"
-                                  aria-valuemin="0"
-                                  aria-valuemax="100"
-                                >
-                                  60%
+                          <div className="mb-3 mt-4">
+                            <div className="row align-items-center">
+                              <div className="col-md-2">
+                                <span className="text-muted fs-5">Status</span>
+                              </div>
+                              <div className="col-md-10">
+                                <div className="progress h-30">
+                                  <div
+                                    className="progress-bar bg-green fs-5 text-black rounded-pill"
+                                    role="progressbar"
+                                    style={{ width: "60%" }}
+                                    aria-valuenow="60"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  >
+                                    60%
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -343,7 +387,10 @@ const DriverTickets = () => {
             >
               <div className="white_card_body">
                 <div className="mt-2">
-                  <div className="job-ticket">
+                  <Link
+                    to="/driver/job-tickets/ticket"
+                    className="job-ticket text-decoration-none"
+                  >
                     <div className="d-flex align-items-center gap-2">
                       <span className="airport">(LAX) Airport,</span>
                       <span className="location">Los Angeles</span>
@@ -352,9 +399,12 @@ const DriverTickets = () => {
                       <span className="airport">2JB872HB</span>
                       <span className="airport">12-21-24</span>
                     </div>
-                  </div>
+                  </Link>
 
-                  <div className="job-ticket">
+                  <Link
+                    to="/driver/job-tickets/ticket"
+                    className="job-ticket text-decoration-none"
+                  >
                     <div className="d-flex align-items-center gap-2">
                       <span className="airport">(LAX) Airport,</span>
                       <span className="location">Los Angeles</span>
@@ -363,9 +413,12 @@ const DriverTickets = () => {
                       <span className="airport">2JB872HB</span>
                       <span className="airport">12-21-24</span>
                     </div>
-                  </div>
+                  </Link>
 
-                  <div className="job-ticket">
+                  <Link
+                    to="/driver/job-tickets/ticket"
+                    className="job-ticket text-decoration-none"
+                  >
                     <div className="d-flex align-items-center gap-2">
                       <span className="airport">(LAX) Airport,</span>
                       <span className="location">Los Angeles</span>
@@ -374,9 +427,12 @@ const DriverTickets = () => {
                       <span className="airport">2JB872HB</span>
                       <span className="airport">12-21-24</span>
                     </div>
-                  </div>
+                  </Link>
 
-                  <div className="job-ticket">
+                  <Link
+                    to="/driver/job-tickets/ticket"
+                    className="job-ticket text-decoration-none"
+                  >
                     <div className="d-flex align-items-center gap-2">
                       <span className="airport">(LAX) Airport,</span>
                       <span className="location">Los Angeles</span>
@@ -385,9 +441,12 @@ const DriverTickets = () => {
                       <span className="airport">2JB872HB</span>
                       <span className="airport">12-21-24</span>
                     </div>
-                  </div>
+                  </Link>
 
-                  <div className="job-ticket">
+                  <Link
+                    to="/driver/job-tickets/ticket"
+                    className="job-ticket text-decoration-none"
+                  >
                     <div className="d-flex align-items-center gap-2">
                       <span className="airport">(LAX) Airport,</span>
                       <span className="location">Los Angeles</span>
@@ -396,9 +455,12 @@ const DriverTickets = () => {
                       <span className="airport">2JB872HB</span>
                       <span className="airport">12-21-24</span>
                     </div>
-                  </div>
+                  </Link>
 
-                  <div className="job-ticket">
+                  <Link
+                    to="/driver/job-tickets/ticket"
+                    className="job-ticket text-decoration-none"
+                  >
                     <div className="d-flex align-items-center gap-2">
                       <span className="airport">(LAX) Airport,</span>
                       <span className="location">Los Angeles</span>
@@ -407,9 +469,12 @@ const DriverTickets = () => {
                       <span className="airport">2JB872HB</span>
                       <span className="airport">12-21-24</span>
                     </div>
-                  </div>
+                  </Link>
 
-                  <div className="job-ticket">
+                  <Link
+                    to="/driver/job-tickets/ticket"
+                    className="job-ticket text-decoration-none"
+                  >
                     <div className="d-flex align-items-center gap-2">
                       <span className="airport">(LAX) Airport,</span>
                       <span className="location">Los Angeles</span>
@@ -418,7 +483,7 @@ const DriverTickets = () => {
                       <span className="airport">2JB872HB</span>
                       <span className="airport">12-21-24</span>
                     </div>
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>

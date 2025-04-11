@@ -1,25 +1,45 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
+  const fileInputRef = useRef(null);
+  const [profileImage, setProfileImage] = useState("images/dummy-profile.svg");
+
+  const triggerFileInput = () => {
+    fileInputRef.current.click();
+  };
+
+  const changeImage = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const imageURL = URL.createObjectURL(file);
+      setProfileImage(imageURL);
+    }
+  };
   return (
     <>
-      <div class="main_content_iner">
-        <div class="white_card card_height_100 mb_30">
-          <div class="white_card_body">
-            <div class="row">
-              <div class="col-md-6 mb-4">
-                <div class="profile-section p-4">
-                  <div class="row mb-4">
-                    <div class="col d-flex">
-                      <div class="profile-image-container">
+      <div className="main_content_iner">
+        <div className="white_card_body bg-white px-4 py-3 mb-3 rounded-4">
+          <div className="d-flex align-items-center mb-2 fs-3">
+            <span className="text-dark fw-medium">Profile</span>
+          </div>
+        </div>
+        <div className="white_card card_height_100 mb_30 rounded-4">
+          <div className="white_card_body">
+            <div className="row">
+              <div className="col-md-6 mb-4">
+                <div className="profile-section p-4">
+                  <div className="row mb-4">
+                    <div className="col d-flex">
+                      <div className="profile-image-container">
                         <img
                           id="profileImage"
-                          src="/assets/img/home/user.png"
+                          src={profileImage}
                           alt="Profile"
-                          class="profile-image"
+                          className="profile-image rounded-full"
                         />
 
-                        <div class="edit-icon" onclick="triggerFileInput()">
+                        <div className="edit-icon" onClick={triggerFileInput}>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="21"
@@ -46,214 +66,219 @@ const Profile = () => {
 
                         <input
                           type="file"
-                          class="file-input"
+                          className="file-input"
+                          ref={fileInputRef}
                           id="imageInput"
                           accept="image/*"
-                          onchange="changeImage(event)"
+                          onChange={changeImage}
                         />
                       </div>
 
-                      <div class="top-options">
-                        <button class="option-button blue">
+                      <div className="top-options">
+                        <button className="option-button blue">
                           Manage Account
                         </button>
-                        <button class="option-button dark-blue">
+                        <button className="option-button dark-blue">
                           My Document
                         </button>
                       </div>
                     </div>
                   </div>
 
-                  <div class="detail-row">
-                    <div class="detail-content">
-                      <div class="detail-label">Full Name</div>
+                  <div className="detail-row">
+                    <div className="detail-content">
+                      <div className="detail-label">Full Name</div>
                       <input
                         type="text"
                         id="userName"
-                        class="custom-input"
+                        className="profile-custom-input"
                         value="James Elijah"
                       />
                     </div>
 
-                    <div class="action-buttons">
-                      <button class="icon-button">
-                        <i class="fas fa-eye fa-sm"></i>
+                    <div className="action-buttons">
+                      <button className="icon-button">
+                        <i className="fas fa-eye fa-sm text-white fw-bold"></i>
                       </button>
-                      <button class="icon-button">
-                        <i class="fas fa-pencil-alt fa-sm"></i>
+                      <button className="icon-button">
+                        <i className="fas fa-pencil-alt fa-sm  text-white fw-bold"></i>
                       </button>
                     </div>
                   </div>
 
-                  <div class="detail-row">
-                    <div class="detail-content">
-                      <div class="detail-label">Email Address</div>
+                  <div className="detail-row">
+                    <div className="detail-content">
+                      <div className="detail-label fs-6">Email Address</div>
                       <input
                         type="email"
                         id="userName"
-                        class="custom-input"
+                        className="profile-custom-input fs-6"
                         value="Info@Jameselijah.com"
                       />
                     </div>
-                    <div class="action-buttons">
-                      <button class="icon-button blue">
-                        <i class="fas fa-eye fa-sm"></i>
+                    <div className="action-buttons">
+                      <button className="icon-button bg-blue">
+                        <i className="fas fa-eye-slash fa-sm text-white fw-bold"></i>
                       </button>
-                      <button class="icon-button">
-                        <i class="fas fa-pencil-alt fa-sm"></i>
+                      <button className="icon-button">
+                        <i className="fas fa-pencil-alt fa-sm text-white fw-bold"></i>
                       </button>
                     </div>
                   </div>
 
-                  <div class="detail-row">
-                    <div class="detail-content">
-                      <div class="detail-label">Phone Number</div>
+                  <div className="detail-row">
+                    <div className="detail-content">
+                      <div className="detail-label fs-6">Phone Number</div>
                       <input
-                        type="number"
-                        id="userName"
-                        class="custom-input"
-                        value="479-785-6200"
+                        type="text"
+                        id="phone"
+                        className="profile-custom-input fs-6 text-black"
+                        placeholder="479-785-6200"
                       />
                     </div>
-                    <div class="action-buttons">
-                      <button class="icon-button">
-                        <i class="fas fa-eye fa-sm"></i>
+                    <div className="action-buttons">
+                      <button className="icon-button">
+                        <i className="fas fa-eye fa-sm text-white fw-bold"></i>
                       </button>
-                      <button class="icon-button">
-                        <i class="fas fa-pencil-alt fa-sm"></i>
+                      <button className="icon-button">
+                        <i className="fas fa-pencil-alt fa-sm text-white fw-bold"></i>
                       </button>
                     </div>
                   </div>
 
-                  <div class="detail-row">
-                    <div class="detail-content">
-                      <div class="detail-label">Location</div>
+                  <div className="detail-row">
+                    <div className="detail-content">
+                      <div className="detail-label fs-6">Location</div>
                       <input
                         type="text"
                         id="userName"
-                        class="custom-input"
+                        className="profile-custom-input fs-6"
                         value="3801 Old Greenwood Road Fort, AR.."
                       />
                     </div>
-                    <div class="action-buttons">
-                      <button class="icon-button">
-                        <i class="fas fa-eye fa-sm"></i>
+                    <div className="action-buttons">
+                      <button className="icon-button">
+                        <i className="fas fa-eye fa-sm text-white fw-bold"></i>
                       </button>
-                      <button class="icon-button">
-                        <i class="fas fa-pencil-alt fa-sm"></i>
+                      <button className="icon-button">
+                        <i className="fas fa-pencil-alt fa-sm text-white fw-bold"></i>
                       </button>
                     </div>
                   </div>
 
-                  <div class="detail-row">
-                    <div class="detail-content">
-                      <div class="detail-label">Designation</div>
+                  <div className="detail-row">
+                    <div className="detail-content">
+                      <div className="detail-label fs-6">Designation</div>
                       <input
                         type="text"
                         id="userName"
-                        class="custom-input"
+                        className="profile-custom-input fs-6"
                         value="Driver"
                       />
                     </div>
-                    <div class="action-buttons">
-                      <button class="icon-button">
-                        <i class="fas fa-eye fa-sm"></i>
+                    <div className="action-buttons">
+                      <button className="icon-button">
+                        <i className="fas fa-eye fa-sm text-white fw-bold"></i>
                       </button>
-                      <button class="icon-button">
-                        <i class="fas fa-pencil-alt fa-sm"></i>
+                      <button className="icon-button">
+                        <i className="fas fa-pencil-alt fa-sm text-white fw-bold"></i>
                       </button>
                     </div>
                   </div>
 
-                  <div class="detail-row">
-                    <div class="detail-content">
-                      <div class="detail-label">Bio</div>
+                  <div className="detail-row">
+                    <div className="detail-content">
+                      <div className="detail-label">Bio</div>
 
                       <input
                         type="text"
                         id="userName"
-                        class="custom-input"
+                        className="profile-custom-input"
                         value="Lorem ipsum dolor sit amet, from us in consectetur "
                       />
                     </div>
-                    <div class="action-buttons">
-                      <button class="icon-button">
-                        <i class="fas fa-eye fa-sm"></i>
+                    <div className="action-buttons">
+                      <button className="icon-button">
+                        <i className="fas fa-eye fa-sm text-white fw-bold"></i>
                       </button>
-                      <button class="icon-button">
-                        <i class="fas fa-pencil-alt fa-sm"></i>
+                      <button className="icon-button">
+                        <i className="fas fa-pencil-alt fa-sm text-white fw-bold"></i>
                       </button>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="col-md-6">
-                <div class="subscription-section p-4">
-                  <div class="row">
-                    <div class="col-md-4 offset-md-8">
-                      <div class="action-buttons-right">
-                        <button class="btn btn-sm btn-dark2">Update</button>
-                        <button class="btn btn-sm btn-primary1">Save</button>
+              <div className="col-md-6">
+                <div className="subscription-section p-4">
+                  <div className="row">
+                    <div className="col-md-4 offset-md-8">
+                      <div className="action-buttons-right">
+                        <button className="btn-sm bg-dark-gray text-white border-none fs-5 fw-medium">
+                          Update
+                        </button>
+                        <button className="btn-sm bg-purple text-white border-none fs-5 fw-medium">
+                          Save
+                        </button>
                       </div>
                     </div>
                   </div>
 
-                  <div class="row">
-                    <div class="col-md-12">
-                      <h5 class="mb-0 pkg">Package History</h5>
-                      <div class="ptb-15">
-                        <div class="line-container"></div>
+                  <div className="row">
+                    <div className="col-md-12">
+                      <h5 className="mb-0 pkg">Package History</h5>
+                      <div className="ptb-15">
+                        <div className="line-container"></div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="subscription-card p-3 mb-3">
-                    <div class="text-center mb-2">
-                      <h6 class="mb-1 monthly">Pro Monthly: Canceled</h6>
-                      <div class="ptb-15">
-                        <p class="text-muted small mb-2">
+                  <div className="subscription-card p-3 mb-3 py-4">
+                    <div className="text-center mb-2">
+                      <h6 className="mb-1 monthly">Pro Monthly: Canceled</h6>
+                      <div className="ptb-15">
+                        <p className="text-muted small mb-2">
                           Canceled Aug 23rd, 2024
                         </p>
                       </div>
                     </div>
-                    <div class="d-flex justify-content-center gap-2">
-                      <button class="btn btn-sm btn-outline1">Reactive</button>
-                      <button class="btn btn-sm btn-outline1">
+                    <div className="d-flex justify-content-center gap-2">
+                      <button className="btn-sm btn-outline1">Reactive</button>
+                      <button className="btn-sm btn-outline1">
                         Reactivate Annually
                       </button>
                     </div>
                   </div>
 
-                  <div class="subscription-card p-3 mb-3">
-                    <div class="text-center mb-2">
-                      <h6 class="mb-1">Pro Monthly: Canceled</h6>
-                      <div class="ptb-15">
-                        <p class="text-muted small mb-2">
+                  <div className="subscription-card p-3 mb-3 py-4">
+                    <div className="text-center mb-2">
+                      <h6 className="mb-1 monthly">Pro Monthly: Canceled</h6>
+                      <div className="ptb-15">
+                        <p className="text-muted small mb-2 fs-6">
                           Canceled Aug 23rd, 2024
                         </p>
                       </div>
                     </div>
-                    <div class="d-flex justify-content-center gap-2">
-                      <button class="btn btn-sm btn-outline1">Reactive</button>
-                      <button class="btn btn-sm btn-outline1">
+                    <div className="d-flex justify-content-center gap-2">
+                      <button className="btn-sm btn-outline1">Reactive</button>
+                      <button className="btn-sm btn-outline1">
                         Reactivate Annually
                       </button>
                     </div>
                   </div>
 
-                  <div class="subscription-card p-3">
-                    <div class="text-center mb-2">
-                      <h6 class="mb-1">Pro Monthly: Canceled</h6>
-                      <div class="ptb-15">
-                        <p class="text-muted small mb-2">
+                  <div className="subscription-card p-3 py-4">
+                    <div className="text-center mb-2">
+                      <h6 className="mb-1 monthly">Pro Monthly: Canceled</h6>
+                      <div className="ptb-15">
+                        <p className="text-muted small mb-2">
                           Canceled Aug 23rd, 2024
                         </p>
                       </div>
                     </div>
-                    <div class="d-flex justify-content-center gap-2">
-                      <button class="btn btn-sm btn-outline1">Reactive</button>
-                      <button class="btn btn-sm btn-outline1">
+                    <div className="d-flex justify-content-center gap-2">
+                      <button className="btn-sm btn-outline1">Reactive</button>
+                      <button className="btn-sm btn-outline1">
                         Reactivate Annually
                       </button>
                     </div>

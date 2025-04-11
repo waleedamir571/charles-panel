@@ -1,14 +1,41 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const [showNotifications, setShowNotifications] = useState(false);
+  const notificationRef = useRef(null);
+  const location = useLocation();
+  const toggleNotifications = () => {
+    setShowNotifications((prev) => !prev);
+  };
+
+  const handleClickOutside = (e) => {
+    if (
+      notificationRef.current &&
+      !notificationRef.current.contains(e.target)
+    ) {
+      setShowNotifications(false);
+    }
+  };
+
+  useEffect(() => {
+    if (showNotifications) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showNotifications]);
   return (
     <>
       {/* <!-- menu  --> */}
       <div className="container-fluid g-0">
         <div className="row">
-          <div className="col-lg-12 p-0 mx-3">
-            <div className="header_iner d-flex justify-content-between align-items-center">
+          <div className="col-lg-12 w-100">
+            <div className="header_iner d-flex justify-content-between align-items-center rounded-4">
               <div className="sidebar_icon d-lg-none">
                 <i className="ti-menu"></i>
               </div>
@@ -29,9 +56,14 @@ const Header = () => {
                             </li> --> */}
                   <li>
                     <div className="d-flex gap-4">
-                      <img src="/images/language-icon.svg" alt="" />
-                      <img src="/images/moon-icon.svg" alt="" />
-                      <img src="/images/bell-icon.svg" alt="" />
+                      <img src="/images/language-icon.svg" alt="" className="cursor-pointer" />
+                      <img src="/images/moon-icon.svg" alt="" className="cursor-pointer" />
+                      <img
+                        src="/images/bell-icon.svg"
+                        alt=""
+                        onClick={toggleNotifications}
+                        className="cursor-pointer"
+                      />
                     </div>
                     {/* <a
                       className="bell_notification_clicker nav-link-notify"
@@ -40,108 +72,134 @@ const Header = () => {
                       {" "}
                     </a> */}
                     {/* <!-- Menu_NOtification_Wrap  --> */}
-                    <div className="Menu_NOtification_Wrap">
+                    <div
+                      className={`Menu_NOtification_Wrap ${
+                        showNotifications ? "active" : ""
+                      }`}
+                    >
                       <div className="notification_Header">
                         <h4>Notifications</h4>
                       </div>
-                      <div className="Notification_body">
+                      <div className="Notification_body overflow">
                         {/* <!-- single_notify  --> */}
-                        <div className="single_notify d-flex align-items-center">
-                          <div className="notify_thumb">
-                            <a href="#">
-                              <img src="/assets/img/staf/2.png" alt="" />
-                            </a>
+                        <div className="single_notify d-flex align-items-center justify-content-center">
+                          <div className="notify_thumb mb-2">
+                            <Link to="/" className="text-decoration-none">
+                              <img
+                                src="/assets/img/home/noti-user.png"
+                                alt=""
+                              />
+                            </Link>
                           </div>
                           <div className="notify_content">
-                            <a href="#">
-                              <h5>Cool Marketing </h5>
-                            </a>
-                            <p>Lorem ipsum dolor sit amet</p>
+                            <Link to="/" className="text-decoration-none">
+                              <h5>
+                                Landstar System{" "}
+                                <span className="fs-light">
+                                  is interested in your projects
+                                </span>{" "}
+                              </h5>
+                            </Link>
+
+                            <p>8 mins ago</p>
                           </div>
                         </div>
                         {/* <!-- single_notify  --> */}
                         <div className="single_notify d-flex align-items-center">
-                          <div className="notify_thumb">
-                            <a href="#">
-                              <img src="/assets/img/staf/4.png" alt="" />
-                            </a>
+                          <div className="notify_thumb mb-2">
+                            <Link to="/" className="text-decoration-none">
+                              <img
+                                src="/assets/img/home/noti-user.png"
+                                alt=""
+                              />
+                            </Link>
                           </div>
                           <div className="notify_content">
-                            <a href="#">
-                              <h5>Awesome packages</h5>
-                            </a>
-                            <p>Lorem ipsum dolor sit amet</p>
+                            <Link to="/" className="text-decoration-none">
+                              <h5>
+                                Landstar System{" "}
+                                <span className="fs-light">
+                                  is interested in your projects
+                                </span>{" "}
+                              </h5>
+                            </Link>
+
+                            <p>8 mins ago</p>
                           </div>
                         </div>
                         {/* <!-- single_notify  --> */}
                         <div className="single_notify d-flex align-items-center">
-                          <div className="notify_thumb">
-                            <a href="#">
-                              <img src="/assets/img/staf/3.png" alt="" />
-                            </a>
+                          <div className="notify_thumb mb-2">
+                            <Link to="/" className="text-decoration-none">
+                              <img
+                                src="/assets/img/home/noti-user.png"
+                                alt=""
+                              />
+                            </Link>
                           </div>
                           <div className="notify_content">
-                            <a href="#">
-                              <h5>what a packages</h5>
-                            </a>
-                            <p>Lorem ipsum dolor sit amet</p>
+                            <Link to="/" className="text-decoration-none">
+                              <h5>
+                                Landstar System{" "}
+                                <span className="fs-light">
+                                  is interested in your projects
+                                </span>{" "}
+                              </h5>
+                            </Link>
+
+                            <p>8 mins ago</p>
                           </div>
                         </div>
-                        {/* <!-- single_notify  --> */}
                         <div className="single_notify d-flex align-items-center">
-                          <div className="notify_thumb">
-                            <a href="#">
-                              <img src="/assets/img/staf/2.png" alt="" />
-                            </a>
+                          <div className="notify_thumb mb-2">
+                            <Link to="/" className="text-decoration-none">
+                              <img
+                                src="/assets/img/home/noti-user.png"
+                                alt=""
+                              />
+                            </Link>
                           </div>
                           <div className="notify_content">
-                            <a href="#">
-                              <h5>Cool Marketing </h5>
-                            </a>
-                            <p>Lorem ipsum dolor sit amet</p>
+                            <Link to="/" className="text-decoration-none">
+                              <h5>
+                                Landstar System{" "}
+                                <span className="fs-light">
+                                  is interested in your projects
+                                </span>{" "}
+                              </h5>
+                            </Link>
+
+                            <p>8 mins ago</p>
                           </div>
                         </div>
-                        {/* <!-- single_notify  --> */}
                         <div className="single_notify d-flex align-items-center">
-                          <div className="notify_thumb">
-                            <a href="#">
-                              <img src="/assets/img/staf/4.png" alt="" />
-                            </a>
+                          <div className="notify_thumb mb-2">
+                            <Link to="/" className="text-decoration-none">
+                              <img
+                                src="/assets/img/home/noti-user.png"
+                                alt=""
+                              />
+                            </Link>
                           </div>
                           <div className="notify_content">
-                            <a href="#">
-                              <h5>Awesome packages</h5>
-                            </a>
-                            <p>Lorem ipsum dolor sit amet</p>
+                            <Link to="/" className="text-decoration-none">
+                              <h5>
+                                Landstar System{" "}
+                                <span className="fs-light">
+                                  is interested in your projects
+                                </span>{" "}
+                              </h5>
+                            </Link>
+
+                            <p>8 mins ago</p>
                           </div>
-                        </div>
-                        {/* <!-- single_notify  --> */}
-                        <div className="single_notify d-flex align-items-center">
-                          <div className="notify_thumb">
-                            <a href="#">
-                              <img src="/assets/img/staf/3.png" alt="" />
-                            </a>
-                          </div>
-                          <div className="notify_content">
-                            <a href="#">
-                              <h5>what a packages</h5>
-                            </a>
-                            <p>Lorem ipsum dolor sit amet</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="nofity_footer">
-                        <div className="submit_button text-center pt_20">
-                          <a href="#" className="btn_1 green">
-                            See More
-                          </a>
                         </div>
                       </div>
                     </div>
                     {/* <!--/ Menu_NOtification_Wrap  --> */}
                   </li>
                 </div>
-                <div className="profile_info d-flex align-items-center">
+                <div className="profile_info d-flex align-items-center cursor-pointer">
                   <div className="profile_thumb mr_20">
                     <img src="/assets/img/home/user.png" alt="" />
                   </div>
@@ -155,15 +213,22 @@ const Header = () => {
                       <h5>Jiue Anderson</h5>
                     </div>
                     <div className="profile_info_details">
-                      <Link to="/profile" className="text-decoration-none">
+                      <Link
+                        to="/profile"
+                        className={`text-decoration-none ${
+                          location.pathname === "profile"
+                            ? "profile-active"
+                            : ""
+                        }`}
+                      >
                         My Profile{" "}
                       </Link>
                       <a href="#" className="text-decoration-none">
                         Settings
                       </a>
-                      <a href="#" className="text-decoration-none">
+                      <Link to="/login" className="text-decoration-none">
                         Log Out{" "}
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

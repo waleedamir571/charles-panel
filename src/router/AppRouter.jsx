@@ -26,6 +26,9 @@ import AssetMaintainancePage from "../pages/Assets/AssetMaintainancePage";
 import AssetReportPage from "../pages/Assets/AssetReportPage";
 import DriverInspectPage from "../pages/Driver/DriverInspectPage";
 import ProfilePage from "../pages/ProfilePage";
+import AssetDocsPage from "../pages/Assets/AssetDocsPage";
+import DriverIndexTicketDetailPage from "../pages/Driver/DriverIndexTicketDetailPage";
+import DriverJobTicketDetailPage from "../pages/Driver/DriverJobTicketDetailPage";
 
 const AppRouter = () => {
   return (
@@ -61,11 +64,17 @@ const AppRouter = () => {
           element={<AssetMaintainancePage />}
         />
         <Route
+          path="/assets/detail/maintainance/docs"
+          element={<AssetDocsPage />}
+        />
+        <Route
           path="/assets/detail/trip-inspection"
           element={<TripInspectionPage />}
         />
         <Route path="/driver/inspect" element={<DriverInspectPage />} />
         <Route path="/driver/job-tickets" element={<DriverTicketsPage />} />
+        <Route path="/driver/job-tickets/ticket" element={<DriverIndexTicketDetailPage />} />
+        <Route path="/driver/job-tickets/detail" element={<DriverJobTicketDetailPage />} />
         <Route path="/driver/documents" element={<DriverDocsPage />} />
         <Route path="/driver/reminder" element={<DriverReminderPage />} />
         <Route
